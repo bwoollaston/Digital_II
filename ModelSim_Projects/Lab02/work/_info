@@ -15,7 +15,7 @@ L4
 VWo:`ffP3LP?LVY8gFekOh0
 Z6 OV;C;10.1d;51
 32
-Z7 !s108 1693245325.797000
+Z7 !s108 1693245837.219000
 Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate.vhd|
 Z9 !s107 C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate.vhd|
 Z10 o-work work -2002 -explicit -O0
@@ -52,7 +52,7 @@ VH[nQnaAN`?I<9>_A?HllK1
 R6
 32
 !i10b 1
-Z15 !s108 1693245325.986000
+Z15 !s108 1693245837.293000
 Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate_tb.vhd|
 Z17 !s107 C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate_tb.vhd|
 R10
@@ -63,8 +63,8 @@ R2
 Z18 DEx4 work 11 and_gate_tb 0 22 H[nQnaAN`?I<9>_A?HllK1
 l19
 L7
-VNP0C76?D1C5ia3aTn?Mfk0
-!s100 eK_^XDUA6SE>OLD5M84L[0
+Z19 VNP0C76?D1C5ia3aTn?Mfk0
+Z20 !s100 eK_^XDUA6SE>OLD5M84L[0
 R6
 32
 !i10b 1
