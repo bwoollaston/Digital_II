@@ -1,0 +1,75 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Eand_gate
+Z0 w1693245158
+Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z3 dC:\Users\woollastoncb\Digital_II\ModelSim_Projects
+Z4 8C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate.vhd
+Z5 FC:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate.vhd
+l0
+L4
+VWo:`ffP3LP?LVY8gFekOh0
+Z6 OV;C;10.1d;51
+32
+Z7 !s108 1693245325.797000
+Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate.vhd|
+Z9 !s107 C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate.vhd|
+Z10 o-work work -2002 -explicit -O0
+Z11 tExplicit 1
+!s100 e7=z:2L4Yk75IagD4IVXH0
+!i10b 1
+Artl
+R1
+R2
+DEx4 work 8 and_gate 0 22 Wo:`ffP3LP?LVY8gFekOh0
+l14
+L12
+VJ@N44bDDHTlAl2=Y1fj4E0
+!s100 RP2di=31>Gn=m^K@R@O?h1
+R6
+32
+R7
+R8
+R9
+R10
+R11
+!i10b 1
+Eand_gate_tb
+Z12 w1693245321
+R1
+R2
+R3
+Z13 8C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate_tb.vhd
+Z14 FC:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate_tb.vhd
+l0
+L4
+VH[nQnaAN`?I<9>_A?HllK1
+!s100 UH5l0_@7]GIAi?[P9>o:A2
+R6
+32
+!i10b 1
+Z15 !s108 1693245325.986000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate_tb.vhd|
+Z17 !s107 C:/Users/woollastoncb/Digital_II/ModelSim_Projects/and_gate_tb.vhd|
+R10
+R11
+Abehave
+R1
+R2
+Z18 DEx4 work 11 and_gate_tb 0 22 H[nQnaAN`?I<9>_A?HllK1
+l19
+L7
+VNP0C76?D1C5ia3aTn?Mfk0
+!s100 eK_^XDUA6SE>OLD5M84L[0
+R6
+32
+!i10b 1
+R15
+R16
+R17
+R10
+R11
