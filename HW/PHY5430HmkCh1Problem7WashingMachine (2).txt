@@ -1,0 +1,39 @@
+HW1
+
+Ch.1 #7
+
+See handout of description of the states
+
+Add the output HReset. This output reloads and starts the timer.
+
+Note: LAg and LSpin do not set YTime = 0.
+
+Also, you must use LPump to pump water into the washer
+ (even though this is different than a real washer that uses the home’s water pressure to pump water in).
+You also use LPUMP to pump water out of the washer.
+
+On the ASM chart, you only write the outputs that are activated.
+For example,
+to fill the washer with HOT water, you show LPUMP, HFILL, HHOT
+(not necessary together, but in the same state and in the same path in that state).
+
+To fill the washer with cold water, you show LPUMP and HFILL
+(not necessary together, but in the same state and same path in that state.
+
+The reason they need to be in the same path is that:
+HHOT does nothing by itself.
+HFILL does nothing by itself.
+
+NSTART is active low, so when it is high, it stops the actual timer; and
+the washing machine should stop pumping or agitating, then when it goes back low,
+it restarts the timer, and the washing machine resumes operation where it left off.
+
+You only have to do the first 2 states: “Fill and Start Wash” & “Wash and Empty”
+This must be a Mealy machine with conditional outputs.
+Do not use any extra states.
+Look at p.41 the Wiatrowski textbook for some ideas how to draw the ASM chart.
+Remember that every state has to have a rectangle, and that any outputs inside
+the rectange are always ON in that state (and might conflict with conditional
+outputs in that state).  So you can only enter a state into the rectangle.
+If a path is going up, it is leaving the state, so it has to connect to the rectangle
+to come back in.
