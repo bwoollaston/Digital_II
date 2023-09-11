@@ -1,0 +1,26 @@
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY decoder_1to4 IS
+  PORT(
+    i_EN  : IN  std_logic;
+    i_SEL : IN  std_logic_vector(1 DOWNTO 0);
+    o_OUT : OUT std_logic_vector(3 DOWNTO 0)
+  );
+END decoder_1to4;
+
+ARCHITECTURE arch OF decoder_1to4 IS
+  SIGNAL s_select : integer;
+  BEGIN
+    PROCESS(i_EN,i_SEL)
+      BEGIN
+      o_OUT <= "1111";
+      s_select <= to_integer(unsigned(i_SEL));
+      IF (i_EN < '1') THEN
+        o_OUT(s_select) <= i_EN;
+      ELSE
+        o_OUT <= "1111";
+      END IF;
+    END PROCESS
+END arch;
