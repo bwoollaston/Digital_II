@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\ModelSim\altera\13.0sp1
 Eeq
-Z0 w1693766124
+Z0 w1694440332
 Z1 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z2 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z3 dC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects
@@ -15,7 +15,7 @@ L4
 V>Zh3TaAeXa5=0;Z@5Dc@>3
 Z6 OV;C;10.1d;51
 32
-Z7 !s108 1693766418.597000
+Z7 !s108 1694440344.800000
 Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\EQ.vhd|
 Z9 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\EQ.vhd|
 Z10 o-work work -2002 -explicit -O0
@@ -28,7 +28,7 @@ R2
 DEx4 work 2 eq 0 22 >Zh3TaAeXa5=0;Z@5Dc@>3
 l13
 L11
-VD:VJXed@L9];]mZTS1kaU2
+Vin4af7a[k59Pg:]R?^4o;1
 R6
 32
 R7
@@ -36,23 +36,23 @@ R8
 R9
 R10
 R11
-!s100 A^I0`Gaf1;1>lF>U1k2:61
+!s100 iE2S:oGU1Bb<Sdg8KiDDC2
 !i10b 1
 Egt
 Z12 w1693765918
 R1
 R2
 R3
-Z13 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/GT.vhd
-Z14 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/GT.vhd
+Z13 8C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\GT.vhd
+Z14 FC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\GT.vhd
 l0
 L4
 V8mGYfPn^E:dC`ZChT;S752
 R6
 32
-Z15 !s108 1693766418.707000
-Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/GT.vhd|
-Z17 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/GT.vhd|
+Z15 !s108 1694440344.857000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\GT.vhd|
+Z17 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\GT.vhd|
 R10
 R11
 !s100 hMenP1U5egSR]g;U=fORc1
@@ -85,7 +85,7 @@ L4
 VcO^=_cmUHR[]E]K;;EXCM2
 R6
 32
-Z22 !s108 1693766418.782000
+Z22 !s108 1694440344.910000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\LT.vhd|
 Z24 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\LT.vhd|
 R10
@@ -109,39 +109,57 @@ R11
 !s100 K5^[nn^GgLgE6=dfG3PLd0
 !i10b 1
 Etb_twobitcomp
-w1693766413
+Z26 w1694439495
+Z27 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R1
 R2
 R3
-8C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd
-FC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd
+Z28 8C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd
+Z29 FC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd
 l0
-L4
-V;J9B?KJ4aoFIzgacJN0<k0
-!s100 ZaFjEQQU8RBZIL]IUL@P^2
+L5
+VfU96Qb7k2IeCXK]IfnaXP2
+!s100 0EnWUKbDMEEYG?ON3F`zi1
 R6
 32
 !i10b 1
-!s108 1693784596.452000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd|
-!s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd|
+Z30 !s108 1694440345.024000
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd|
+Z32 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd|
+R10
+R11
+Atest
+R27
+R1
+R2
+Z33 DEx4 work 13 tb_twobitcomp 0 22 fU96Qb7k2IeCXK]IfnaXP2
+l23
+L8
+Z34 VCd@jjhlDB9zVO6::3Hbb22
+Z35 !s100 7RNCSDbQ40VfKLV_ITkLT2
+R6
+32
+!i10b 1
+R30
+R31
+R32
 R10
 R11
 Etwobitcomp
-Z26 w1693766249
+Z36 w1693766249
 R1
 R2
 R3
-Z27 8C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd
-Z28 FC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd
+Z37 8C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd
+Z38 FC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd
 l0
 L4
 V^18gl4jGRUD>F]IV1jdOU3
 R6
 32
-Z29 !s108 1693766418.860000
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd|
-Z31 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd|
+Z39 !s108 1694440344.969000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd|
+Z41 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd|
 R10
 R11
 !s100 OIcj]0JZj5OZPRmdYI`]50
@@ -155,12 +173,12 @@ DEx4 work 10 twobitcomp 0 22 ^18gl4jGRUD>F]IV1jdOU3
 l17
 L11
 V4SZbbPDJ2PhOTNF9o>ko;2
+!s100 EZ;IWS<P7obX9G:?o7]CQ2
 R6
 32
-R29
-R30
-R31
+R39
+R40
+R41
 R10
 R11
-!s100 EZ;IWS<P7obX9G:?o7]CQ2
 !i10b 1

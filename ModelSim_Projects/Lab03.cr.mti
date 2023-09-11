@@ -1,10 +1,18 @@
-C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/GT.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/GT.vhd
+C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/GT.vhd {1 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\GT.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity gt
 -- Compiling architecture arch of gt
+
+} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/LT.vhd {1 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\LT.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity lt
+-- Compiling architecture arch of lt
 
 } {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/twobitcomp.vhd {1 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\twobitcomp.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -16,54 +24,14 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading entity gt
 -- Loading entity lt
 
-} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/LT.vhd {1 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\LT.vhd}
+} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/tb_twobitcomp.vhd {2 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity lt
--- Compiling architecture arch of lt
-
-} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/tb_twobitcomp.vhd {0 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
 -- Compiling entity tb_twobitcomp
 -- Compiling architecture test of tb_twobitcomp
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(9): (vcom-1115) Subtype indication found where type mark is required.
-
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(13): Illegal sequential statement.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(14): Target of signal assignment is not a signal.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(14): near "'": syntax error
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(15): Target of signal assignment is not a signal.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(15): near "'": syntax error
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(16): Target of signal assignment is not a signal.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(16): near "'": syntax error
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(17): Target of signal assignment is not a signal.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(17): near "'": syntax error
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(18): Target of signal assignment is not a signal.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(18): near "'": syntax error
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(20): near "PROCESS": expecting IF
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(27): near "is": expecting ';'
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(39): near "o_aeq2b": expecting ',' or ')'
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(40): Illegal sequential statement.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(44): Illegal target for signal assignment.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(44): (vcom-1136) Unknown identifier "test_inA".
-
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(45): Illegal target for signal assignment.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(45): (vcom-1136) Unknown identifier "test_inB".
-
-** Warning: [4] C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(46): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(47): near "END": expecting ';'
-** Error: C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(52): near "PROCESS": expecting LOOP
-
-} {8.0 9.0 10.0 27.0 28.0 30.0 32.0 34.0} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/EQ.vhd {1 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\EQ.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity eq
--- Compiling architecture arch of eq
+** Warning: [4] C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\tb_twobitcomp.vhd(38): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 
 } {} {}}

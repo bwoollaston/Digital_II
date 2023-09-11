@@ -1,0 +1,52 @@
+|twobitcomp_vhdl
+aeqb <= twobitcomp:inst.o_aeq2b
+i_a0 => twobitcomp:inst.i_a[0]
+i_a1 => twobitcomp:inst.i_a[1]
+i_b0 => twobitcomp:inst.i_b[0]
+i_b1 => twobitcomp:inst.i_b[1]
+agtb <= twobitcomp:inst.o_agtb
+altb <= twobitcomp:inst.o_altb
+
+
+|twobitcomp_vhdl|twobitcomp:inst
+i_a[0] => eq:comp_eq.i_A[0]
+i_a[0] => gt:comp_gt.i_A[0]
+i_a[0] => lt:comp_lt.i_A[0]
+i_a[1] => eq:comp_eq.i_A[1]
+i_a[1] => gt:comp_gt.i_A[1]
+i_a[1] => lt:comp_lt.i_A[1]
+i_b[0] => eq:comp_eq.i_b[0]
+i_b[0] => gt:comp_gt.i_B[0]
+i_b[0] => lt:comp_lt.i_B[0]
+i_b[1] => eq:comp_eq.i_b[1]
+i_b[1] => gt:comp_gt.i_B[1]
+i_b[1] => lt:comp_lt.i_B[1]
+o_aeq2b <= eq:comp_eq.o_AEQ2B
+o_agtb <= gt:comp_gt.o_AGTB
+o_altb <= lt:comp_lt.o_ALTB
+
+
+|twobitcomp_vhdl|twobitcomp:inst|eq:comp_eq
+i_A[0] => Mux0.IN17
+i_A[1] => Mux0.IN16
+i_B[0] => Mux0.IN19
+i_B[1] => Mux0.IN18
+o_AEQ2B <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|twobitcomp_vhdl|twobitcomp:inst|gt:comp_gt
+i_A[0] => LessThan0.IN2
+i_A[1] => LessThan0.IN1
+i_B[0] => LessThan0.IN4
+i_B[1] => LessThan0.IN3
+o_AGTB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|twobitcomp_vhdl|twobitcomp:inst|lt:comp_lt
+i_A[0] => Mux0.IN17
+i_A[1] => Mux0.IN16
+i_B[0] => Mux0.IN19
+i_B[1] => Mux0.IN18
+o_ALTB <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
