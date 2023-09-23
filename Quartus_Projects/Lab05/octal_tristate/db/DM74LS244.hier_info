@@ -1,0 +1,75 @@
+|DM74LS244
+i_LG1 => tristate:gen_tri1:0:comp_tri1.i_oe
+i_LG1 => tristate:gen_tri1:1:comp_tri1.i_oe
+i_LG1 => tristate:gen_tri1:2:comp_tri1.i_oe
+i_LG1 => tristate:gen_tri1:3:comp_tri1.i_oe
+i_LG2 => tristate:gen_tri2:0:comp_tri2.i_oe
+i_LG2 => tristate:gen_tri2:1:comp_tri2.i_oe
+i_LG2 => tristate:gen_tri2:2:comp_tri2.i_oe
+i_LG2 => tristate:gen_tri2:3:comp_tri2.i_oe
+i_A1[0] => tristate:gen_tri1:0:comp_tri1.i_in
+i_A1[1] => tristate:gen_tri1:1:comp_tri1.i_in
+i_A1[2] => tristate:gen_tri1:2:comp_tri1.i_in
+i_A1[3] => tristate:gen_tri1:3:comp_tri1.i_in
+i_A2[0] => tristate:gen_tri2:0:comp_tri2.i_in
+i_A2[1] => tristate:gen_tri2:1:comp_tri2.i_in
+i_A2[2] => tristate:gen_tri2:2:comp_tri2.i_in
+i_A2[3] => tristate:gen_tri2:3:comp_tri2.i_in
+o_Y1[0] <= tristate:gen_tri1:0:comp_tri1.o_OUT
+o_Y1[1] <= tristate:gen_tri1:1:comp_tri1.o_OUT
+o_Y1[2] <= tristate:gen_tri1:2:comp_tri1.o_OUT
+o_Y1[3] <= tristate:gen_tri1:3:comp_tri1.o_OUT
+o_Y2[0] <= tristate:gen_tri2:0:comp_tri2.o_OUT
+o_Y2[1] <= tristate:gen_tri2:1:comp_tri2.o_OUT
+o_Y2[2] <= tristate:gen_tri2:2:comp_tri2.o_OUT
+o_Y2[3] <= tristate:gen_tri2:3:comp_tri2.o_OUT
+
+
+|DM74LS244|tristate:\gen_tri1:0:comp_tri1
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DM74LS244|tristate:\gen_tri1:1:comp_tri1
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DM74LS244|tristate:\gen_tri1:2:comp_tri1
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DM74LS244|tristate:\gen_tri1:3:comp_tri1
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DM74LS244|tristate:\gen_tri2:0:comp_tri2
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DM74LS244|tristate:\gen_tri2:1:comp_tri2
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DM74LS244|tristate:\gen_tri2:2:comp_tri2
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DM74LS244|tristate:\gen_tri2:3:comp_tri2
+i_oe => o_OUT.OE
+i_in => o_OUT.DATAIN
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+

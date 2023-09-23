@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.all;
 ENTITY mux_8input IS
   PORT(
     i_EN      : IN  std_logic;
-    i_SEL     : IN  std_logic_vector(2 DOWNTO 0);                      --MUX select lines
+    i_SEL     : IN  std_logic_vector(2 DOWNTO 0);   --MUX select lines
     i_Data    : IN  std_logic_vector(7 DOWNTO 0);   --MUX Data Lines
     o_OUT     : OUT std_logic                       --MUX output
   );
@@ -14,7 +14,7 @@ ARCHITECTURE arch OF mux_8input IS
   BEGIN
     PROCESS(i_EN,i_SEL)
       BEGIN
-      IF (i_EN = '1') THEN
+      IF (i_EN = '0') THEN
         CASE i_SEL IS
           WHEN "000" => o_OUT <= i_Data(0);
           WHEN "001" => o_OUT <= i_Data(1);

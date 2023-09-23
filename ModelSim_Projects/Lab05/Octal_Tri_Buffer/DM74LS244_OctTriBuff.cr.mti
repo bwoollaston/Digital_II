@@ -1,1 +1,18 @@
+C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab05/Octal_Tri_Buffer/tristate.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab05/Octal_Tri_Buffer/tristate.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tristate
+-- Compiling architecture arch of tristate
 
+} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab05/Octal_Tri_Buffer/DM74LS244.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab05/Octal_Tri_Buffer/DM74LS244.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DM74LS244
+-- Compiling architecture arch of DM74LS244
+-- Loading entity tristate
+
+} {} {}}
