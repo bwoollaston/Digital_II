@@ -1,0 +1,17 @@
+|nand_latch_sch
+o_Q <= nand_latch:inst.o_Q
+i_S => nand_latch:inst.i_S
+i_R => nand_latch:inst.i_R
+o_Qbar <= nand_latch:inst.o_Qbar
+
+
+|nand_latch_sch|nand_latch:inst
+i_S => o_Q.IN1
+i_S => o_Qbar.IN0
+i_S => o_Qbar.IN0
+i_R => o_Qbar.IN1
+i_R => o_Q.IN0
+o_Q <= o_Q.DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= o_Qbar.DB_MAX_OUTPUT_PORT_TYPE
+
+

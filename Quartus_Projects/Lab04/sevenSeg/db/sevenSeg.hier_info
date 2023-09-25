@@ -1,4 +1,19 @@
-|sevenSeg
+|sevenSeg_schematic
+o_0 <= OUT[0].DB_MAX_OUTPUT_PORT_TYPE
+i_0 => sevenSeg:inst.i_inputs[0]
+i_1 => sevenSeg:inst.i_inputs[1]
+i_2 => sevenSeg:inst.i_inputs[2]
+i_3 => sevenSeg:inst.i_inputs[3]
+o_1 <= OUT[1].DB_MAX_OUTPUT_PORT_TYPE
+o_2 <= OUT[2].DB_MAX_OUTPUT_PORT_TYPE
+o_3 <= OUT[3].DB_MAX_OUTPUT_PORT_TYPE
+o_4 <= OUT[4].DB_MAX_OUTPUT_PORT_TYPE
+o_5 <= OUT[5].DB_MAX_OUTPUT_PORT_TYPE
+o_6 <= OUT[6].DB_MAX_OUTPUT_PORT_TYPE
+o_7 <= OUT[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sevenSeg_schematic|sevenSeg:inst
 i_inputs[0] => Mux0.IN19
 i_inputs[0] => Mux1.IN19
 i_inputs[0] => Mux2.IN19

@@ -11,6 +11,6 @@ END tristate;
 ARCHITECTURE arch OF tristate IS
   BEGIN
   WITH i_oe SELECT
-    o_OUT <=  i_in WHEN '1',
+    o_OUT <=  i_in WHEN '0',
               'Z' WHEN OTHERS;
 END arch;

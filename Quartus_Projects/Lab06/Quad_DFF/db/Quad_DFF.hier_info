@@ -1,0 +1,20 @@
+|DFF_schematic
+o_Q <= Quad_DFF:inst.o_Q
+i_EN => Quad_DFF:inst.i_EN
+i_D => Quad_DFF:inst.i_D
+o_Qbar <= Quad_DFF:inst.o_Qbar
+
+
+|DFF_schematic|Quad_DFF:inst
+i_EN => Mux0.IN5
+i_EN => Mux1.IN5
+i_D => Mux0.IN2
+i_D => Mux0.IN3
+i_D => Mux0.IN4
+i_D => Mux1.IN4
+i_D => Mux1.IN2
+i_D => Mux1.IN3
+o_Q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+
+

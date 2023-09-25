@@ -1,7 +1,7 @@
-Fitter Status : Successful - Sat Sep 23 13:57:10 2023
+Fitter Status : Successful - Mon Sep 25 15:17:24 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : DM74LS244
-Top-level Entity Name : DM74LS244
+Top-level Entity Name : DM74LS244_TriState
 Family : Cyclone II
 Device : EP2C70F896C6
 Timing Models : Final

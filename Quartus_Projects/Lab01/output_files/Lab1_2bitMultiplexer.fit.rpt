@@ -1,5 +1,5 @@
 Fitter report for Lab1_2bitMultiplexer
-Mon Aug 28 11:55:16 2023
+Mon Sep 25 10:51:20 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -59,7 +59,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Aug 28 11:55:16 2023           ;
+; Fitter Status                      ; Successful - Mon Sep 25 10:51:20 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Lab1_2bitMultiplexer                            ;
 ; Top-level Entity Name              ; Lab1_2bitMultiplexer                            ;
@@ -1498,8 +1498,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab01/output_files/Lab1_2bitMultiplexer.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4981 megabytes
-    Info: Processing ended: Mon Aug 28 11:55:16 2023
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Mon Sep 25 10:51:21 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:05
 
 

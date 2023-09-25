@@ -23,7 +23,7 @@ applicable agreement for further details.
 	(input)
 	(rect 120 144 288 160)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[0]" (rect 5 0 36 12)(font "Arial" ))
+	(text "SW[0]" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -39,7 +39,7 @@ applicable agreement for further details.
 	(input)
 	(rect 120 168 288 184)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[1]" (rect 5 0 36 12)(font "Arial" ))
+	(text "SW[1]" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect 120 192 288 208)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[2]" (rect 5 0 36 12)(font "Arial" ))
+	(text "SW[2]" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect 120 280 288 296)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[3]" (rect 5 0 36 12)(font "Arial" ))
+	(text "SW[3]" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect 120 304 288 320)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[4]" (rect 5 0 36 12)(font "Arial" ))
+	(text "SW[4]" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -103,7 +103,7 @@ applicable agreement for further details.
 	(input)
 	(rect 120 328 288 344)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "SW[5]" (rect 5 0 36 12)(font "Arial" ))
+	(text "SW[5]" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -424,15 +424,6 @@ applicable agreement for further details.
 	(pt 1000 296)
 )
 (connector
-	(pt 1056 344)
-	(pt 1000 344)
-)
-(connector
-	(text "o_display[8]" (rect 1010 352 1070 364)(font "Arial" ))
-	(pt 1056 368)
-	(pt 1000 368)
-)
-(connector
 	(pt 904 288)
 	(pt 904 272)
 	(bus)
@@ -458,6 +449,16 @@ applicable agreement for further details.
 	(text "o_display[5]" (rect 1006 304 1066 316)(font "Arial" ))
 	(pt 1056 320)
 	(pt 1000 320)
+)
+(connector
+	(text "o_display[6]" (rect 1010 328 1070 340)(font "Arial" ))
+	(pt 1056 344)
+	(pt 1000 344)
+)
+(connector
+	(text "o_display[7]" (rect 1010 352 1070 364)(font "Arial" ))
+	(pt 1056 368)
+	(pt 1000 368)
 )
 (junction (pt 1000 288))
 (junction (pt 1000 344))

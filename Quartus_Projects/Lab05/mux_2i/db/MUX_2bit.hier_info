@@ -1,0 +1,14 @@
+|Mux_2bit_schematic
+out <= Mux_2bit:inst.o_OUT
+A => Mux_2bit:inst.i_A
+d0 => Mux_2bit:inst.i_Data[0]
+d1 => Mux_2bit:inst.i_Data[1]
+
+
+|Mux_2bit_schematic|Mux_2bit:inst
+i_A => o_OUT.OUTPUTSELECT
+i_Data[0] => o_OUT.DATAB
+i_Data[1] => o_OUT.DATAA
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+

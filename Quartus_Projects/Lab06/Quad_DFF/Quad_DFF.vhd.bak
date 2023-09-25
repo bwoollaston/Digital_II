@@ -1,0 +1,9 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY DFF IS
+	PORT(
+		i_EN, i_D	:	IN	std_logic;
+		o_Q,o_Qbar	:	OUT std_logic
+	);
+END DFF;

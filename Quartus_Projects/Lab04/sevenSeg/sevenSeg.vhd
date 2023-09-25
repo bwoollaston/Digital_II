@@ -10,10 +10,10 @@ END sevenSeg;
 
 ARCHITECTURE arch OF sevenSeg IS
   --Constants for seven binary to seven seg conversion
-  CONSTANT seg_0  : std_logic_vector(7 DOWNTO 0) := "11111111";
+  CONSTANT seg_0  : std_logic_vector(7 DOWNTO 0) := "11000000";
   CONSTANT seg_1  : std_logic_vector(7 DOWNTO 0) := "11111001";
   CONSTANT seg_2  : std_logic_vector(7 DOWNTO 0) := "10100100";
-  CONSTANT seg_3  : std_logic_vector(7 DOWNTO 0) := "11010000";
+  CONSTANT seg_3  : std_logic_vector(7 DOWNTO 0) := "10110000";
   CONSTANT seg_4  : std_logic_vector(7 DOWNTO 0) := "10011001";
   CONSTANT seg_5  : std_logic_vector(7 DOWNTO 0) := "10010010";
   CONSTANT seg_6  : std_logic_vector(7 DOWNTO 0) := "10000010";
@@ -25,7 +25,7 @@ ARCHITECTURE arch OF sevenSeg IS
   CONSTANT seg_c  : std_logic_vector(7 DOWNTO 0) := "11000110";
   CONSTANT seg_d  : std_logic_vector(7 DOWNTO 0) := "10100001";
   CONSTANT seg_e  : std_logic_vector(7 DOWNTO 0) := "10000110";
-  CONSTANT seg_f  : std_logic_vector(7 DOWNTO 0) := "11000110";
+  CONSTANT seg_f  : std_logic_vector(7 DOWNTO 0) := "10001110";
   BEGIN
   PROCESS (i_inputs)
     BEGIN

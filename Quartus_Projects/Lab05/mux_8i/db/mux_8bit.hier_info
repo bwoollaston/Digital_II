@@ -1,0 +1,32 @@
+|mux_8bit_schematic
+o_out <= mux_8input:inst.o_OUT
+i_EN => mux_8input:inst.i_EN
+i_Data0 => mux_8input:inst.i_Data[0]
+i_Data1 => mux_8input:inst.i_Data[1]
+i_Data2 => mux_8input:inst.i_Data[2]
+i_Data3 => mux_8input:inst.i_Data[3]
+i_Data4 => mux_8input:inst.i_Data[4]
+i_Data5 => mux_8input:inst.i_Data[5]
+i_Data6 => mux_8input:inst.i_Data[6]
+i_Data7 => mux_8input:inst.i_Data[7]
+i_SEL0 => mux_8input:inst.i_SEL[0]
+i_SEL1 => mux_8input:inst.i_SEL[1]
+i_SEL2 => mux_8input:inst.i_SEL[2]
+
+
+|mux_8bit_schematic|mux_8input:inst
+i_EN => o_OUT.OUTPUTSELECT
+i_SEL[0] => Mux0.IN2
+i_SEL[1] => Mux0.IN1
+i_SEL[2] => Mux0.IN0
+i_Data[0] => Mux0.IN10
+i_Data[1] => Mux0.IN9
+i_Data[2] => Mux0.IN8
+i_Data[3] => Mux0.IN7
+i_Data[4] => Mux0.IN6
+i_Data[5] => Mux0.IN5
+i_Data[6] => Mux0.IN4
+i_Data[7] => Mux0.IN3
+o_OUT <= o_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+

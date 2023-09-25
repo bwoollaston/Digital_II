@@ -1,0 +1,8 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY nand_latch IS
+	PORT(
+	i_S, i_R	:		IN		std_logic;
+	o_Q, o_Qbar	:	OUT	std_logic
+	);

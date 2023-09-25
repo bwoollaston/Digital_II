@@ -1,18 +1,18 @@
 |sevenSeg_adder
-HEX7_DP <= o_display[8].DB_MAX_OUTPUT_PORT_TYPE
-HEX7_D[0] <= o_display[0].DB_MAX_OUTPUT_PORT_TYPE
-HEX7_D[1] <= o_display[1].DB_MAX_OUTPUT_PORT_TYPE
-HEX7_D[2] <= o_display[2].DB_MAX_OUTPUT_PORT_TYPE
-HEX7_D[3] <= o_display[3].DB_MAX_OUTPUT_PORT_TYPE
-HEX7_D[4] <= o_display[4].DB_MAX_OUTPUT_PORT_TYPE
-HEX7_D[5] <= o_display[5].DB_MAX_OUTPUT_PORT_TYPE
-HEX7_D[6] <= <GND>
+HEX7_DP <= o_display[7].DB_MAX_OUTPUT_PORT_TYPE
 SW[0] => nBit_to_sevenSeg:inst.i_A3[0]
 SW[1] => nBit_to_sevenSeg:inst.i_A3[1]
 SW[2] => nBit_to_sevenSeg:inst.i_A3[2]
 SW[3] => nBit_to_sevenSeg:inst.i_B3[0]
 SW[4] => nBit_to_sevenSeg:inst.i_B3[1]
 SW[5] => nBit_to_sevenSeg:inst.i_B3[2]
+HEX7_D[0] <= o_display[0].DB_MAX_OUTPUT_PORT_TYPE
+HEX7_D[1] <= o_display[1].DB_MAX_OUTPUT_PORT_TYPE
+HEX7_D[2] <= o_display[2].DB_MAX_OUTPUT_PORT_TYPE
+HEX7_D[3] <= o_display[3].DB_MAX_OUTPUT_PORT_TYPE
+HEX7_D[4] <= o_display[4].DB_MAX_OUTPUT_PORT_TYPE
+HEX7_D[5] <= o_display[5].DB_MAX_OUTPUT_PORT_TYPE
+HEX7_D[6] <= o_display[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |sevenSeg_adder|nBit_to_sevenSeg:inst

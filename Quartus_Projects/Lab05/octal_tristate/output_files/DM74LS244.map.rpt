@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DM74LS244
-Sat Sep 23 13:56:59 2023
+Mon Sep 25 15:17:17 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,10 +41,10 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Sep 23 13:56:59 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Sep 25 15:17:16 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DM74LS244                                       ;
-; Top-level Entity Name              ; DM74LS244                                       ;
+; Top-level Entity Name              ; DM74LS244_TriState                              ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 0                                               ;
 ;     Total combinational functions  ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C70F896C6       ;                    ;
-; Top-level entity name                                                      ; DM74LS244          ; DM74LS244          ;
+; Top-level entity name                                                      ; DM74LS244_TriState ; DM74LS244          ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -149,19 +149,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; tristate.vhd                     ; yes             ; User VHDL File  ; C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab05/octal_tristate/tristate.vhd  ;         ;
-; DM74LS244.vhd                    ; yes             ; User VHDL File  ; C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab05/octal_tristate/DM74LS244.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; DM74LS244_TriState.bdf           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab05/octal_tristate/DM74LS244_TriState.bdf ;         ;
+; tristate.vhd                     ; yes             ; User VHDL File                     ; C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab05/octal_tristate/tristate.vhd           ;         ;
+; DM74LS244.vhd                    ; yes             ; User VHDL File                     ; C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab05/octal_tristate/DM74LS244.vhd          ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -186,7 +187,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;       ;
 ; I/O pins                                    ; 18    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; i_LG1 ;
+; Maximum fan-out node                        ; 1G    ;
 ; Maximum fan-out                             ; 4     ;
 ; Total fan-out                               ; 16    ;
 ; Average fan-out                             ; 0.89  ;
@@ -198,7 +199,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |DM74LS244                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |DM74LS244          ; work         ;
+; |DM74LS244_TriState        ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |DM74LS244_TriState ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -233,26 +234,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Sep 23 13:56:57 2023
+    Info: Processing started: Mon Sep 25 15:17:15 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DM74LS244_TriState -c DM74LS244
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file dm74ls244_tristate.bdf
+    Info (12023): Found entity 1: DM74LS244_TriState
 Info (12021): Found 2 design units, including 1 entities, in source file tristate.vhd
     Info (12022): Found design unit 1: tristate-arch
     Info (12023): Found entity 1: tristate
 Info (12021): Found 2 design units, including 1 entities, in source file dm74ls244.vhd
     Info (12022): Found design unit 1: DM74LS244-arch
     Info (12023): Found entity 1: DM74LS244
-Info (12127): Elaborating entity "DM74LS244" for the top level hierarchy
-Info (12129): Elaborating entity "tristate" using architecture "A:arch" for hierarchy "tristate:\gen_tri1:0:comp_tri1"
+Info (12127): Elaborating entity "DM74LS244_TriState" for the top level hierarchy
+Info (12128): Elaborating entity "DM74LS244" for hierarchy "DM74LS244:inst"
+Info (12129): Elaborating entity "tristate" using architecture "A:arch" for hierarchy "DM74LS244:inst|tristate:\gen_tri1:0:comp_tri1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 8 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4649 megabytes
-    Info: Processing ended: Sat Sep 23 13:56:59 2023
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Mon Sep 25 15:17:17 2023
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
