@@ -1,0 +1,56 @@
+|DualDFF
+o_Q0 <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+i_CLK0 => n_DFF:inst.i_CLK[0]
+i_CLK1 => n_DFF:inst.i_CLK[1]
+i_D0 => n_DFF:inst.i_D[0]
+i_D1 => n_DFF:inst.i_D[1]
+i_LCLR0 => n_DFF:inst.i_LCLR[0]
+i_LCLR1 => n_DFF:inst.i_LCLR[1]
+i_LPR0 => n_DFF:inst.i_LPR[0]
+i_LPR1 => n_DFF:inst.i_LPR[1]
+o_Q1 <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar0 <= Qbar[0].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar1 <= Qbar[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DualDFF|n_DFF:inst
+i_D[0] => dff_clk:gen_dff:0:comp_DFF.i_D
+i_D[1] => dff_clk:gen_dff:1:comp_DFF.i_D
+i_LPR[0] => dff_clk:gen_dff:0:comp_DFF.i_LPR
+i_LPR[1] => dff_clk:gen_dff:1:comp_DFF.i_LPR
+i_LCLR[0] => dff_clk:gen_dff:0:comp_DFF.i_LCLR
+i_LCLR[1] => dff_clk:gen_dff:1:comp_DFF.i_LCLR
+i_CLK[0] => dff_clk:gen_dff:0:comp_DFF.i_CLK
+i_CLK[1] => dff_clk:gen_dff:1:comp_DFF.i_CLK
+o_Q[0] <= dff_clk:gen_dff:0:comp_DFF.o_Q
+o_Q[1] <= dff_clk:gen_dff:1:comp_DFF.o_Q
+o_Qbar[0] <= dff_clk:gen_dff:0:comp_DFF.o_Qbar
+o_Qbar[1] <= dff_clk:gen_dff:1:comp_DFF.o_Qbar
+
+
+|DualDFF|n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF
+i_LPR => process_0.IN0
+i_LPR => Qinternal[1].ADATA
+i_LCLR => process_0.IN1
+i_LCLR => Qinternal[0].ADATA
+i_CLK => Qinternal[0].CLK
+i_CLK => Qinternal[1].CLK
+i_D => Qinternal[1].DATAIN
+i_D => Qinternal[0].DATAIN
+o_Q <= Qinternal[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= Qinternal[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DualDFF|n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF
+i_LPR => process_0.IN0
+i_LPR => Qinternal[1].ADATA
+i_LCLR => process_0.IN1
+i_LCLR => Qinternal[0].ADATA
+i_CLK => Qinternal[0].CLK
+i_CLK => Qinternal[1].CLK
+i_D => Qinternal[1].DATAIN
+i_D => Qinternal[0].DATAIN
+o_Q <= Qinternal[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= Qinternal[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
