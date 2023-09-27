@@ -42,7 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY async_JKFF
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:05:25  SEPTEMBER 27, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name VHDL_FILE asyncJKFF.vhd
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -60,4 +59,8 @@ set_location_assignment PIN_AC26 -to i_LCLR
 set_location_assignment PIN_AJ5 -to o_Q
 set_location_assignment PIN_AJ4 -to o_Qbar
 
+set_global_assignment -name BDF_FILE async_JKFF.bdf
+set_global_assignment -name VHDL_FILE asyncJKFF.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

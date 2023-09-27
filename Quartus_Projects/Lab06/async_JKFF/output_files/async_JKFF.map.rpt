@@ -1,5 +1,5 @@
 Analysis & Synthesis report for async_JKFF
-Wed Sep 27 11:35:28 2023
+Wed Sep 27 15:03:51 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Sep 27 11:35:28 2023               ;
+; Analysis & Synthesis Status        ; Failed - Wed Sep 27 15:03:51 2023               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; async_JKFF                                      ;
 ; Top-level Entity Name              ; async_JKFF                                      ;
@@ -144,7 +144,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -155,21 +155,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Sep 27 11:35:28 2023
+    Info: Processing started: Wed Sep 27 15:03:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off async_JKFF -c async_JKFF
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file async_jkff.bdf
+    Info (12023): Found entity 1: async_JKFF
 Info (12021): Found 2 design units, including 1 entities, in source file asyncjkff.vhd
     Info (12022): Found design unit 1: asyncJKFF-arch
     Info (12023): Found entity 1: asyncJKFF
-Warning (12125): Using design file async_jkff.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: async_JKFF
 Info (12127): Elaborating entity "async_JKFF" for the top level hierarchy
 Info (12128): Elaborating entity "asyncJKFF" for hierarchy "asyncJKFF:inst"
-Error (10531): VHDL Variable Declaration error at asyncJKFF.vhd(12): variable declared outside subprogram or process must be a shared variable File: C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab06/async_JKFF/asyncJKFF.vhd Line: 12
+Warning (10492): VHDL Process Statement warning at asyncJKFF.vhd(33): signal "s_async" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at asyncJKFF.vhd(31): inferring latch(es) for signal or variable "Qinternal", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "Qinternal[0]" at asyncJKFF.vhd(31)
+Info (10041): Inferred latch for "Qinternal[1]" at asyncJKFF.vhd(31)
+Error (10028): Can't resolve multiple constant drivers for net "Qinternal[1]" at asyncJKFF.vhd(21) File: C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab06/async_JKFF/asyncJKFF.vhd Line: 21
+Error (10029): Constant driver at asyncJKFF.vhd(31) File: C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab06/async_JKFF/asyncJKFF.vhd Line: 31
+Error (10028): Can't resolve multiple constant drivers for net "Qinternal[0]" at asyncJKFF.vhd(21) File: C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab06/async_JKFF/asyncJKFF.vhd Line: 21
 Error (12152): Can't elaborate user hierarchy "asyncJKFF:inst"
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 4624 megabytes
-    Error: Processing ended: Wed Sep 27 11:35:28 2023
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 4 errors, 3 warnings
+    Error: Peak virtual memory: 4625 megabytes
+    Error: Processing ended: Wed Sep 27 15:03:51 2023
     Error: Elapsed time: 00:00:00
     Error: Total CPU time (on all processors): 00:00:01
 
