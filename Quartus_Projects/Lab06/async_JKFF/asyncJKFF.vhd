@@ -3,18 +3,18 @@ USE ieee.std_logic_1164.all;
 
 ENTITY asyncJKFF IS
   PORT(
-    i_J,i_K,i_LCLK,i_LPR,i_LCLR : IN  std_logic;
-    o_Q,o_Qbar  : OUT std_logic
+    i_J, i_K, i_LCLK, i_LPR, i_LCLR : IN  std_logic;
+    o_Q, o_Qbar  : OUT std_logic
   );
 END asyncJKFF;
 
 ARCHITECTURE arch OF asyncJKFF IS
-	SIGNAL Qinternal,s_JK : std_logic_vector(1 DOWNTO 0);
+	SIGNAL Qinternal, s_JK : std_logic_vector(1 DOWNTO 0);
 	BEGIN
 	s_JK <= i_J & i_K;
 	PROCESS(i_LCLK,i_LPR,i_LCLR)
 		BEGIN
-		IF(i_LPR AND i_LCLR = '0') THEN
+		IF(i_LPR='0' OR i_LCLR='0') THEN
 			Qinternal(1) <= not i_LPR;
 			Qinternal(0) <= not i_LCLR;
 		ELSIF(i_LCLK'EVENT AND i_LCLK='0') THEN

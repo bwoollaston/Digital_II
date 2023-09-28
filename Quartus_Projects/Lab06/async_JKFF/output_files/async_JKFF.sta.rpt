@@ -1,0 +1,865 @@
+TimeQuest Timing Analyzer report for async_JKFF
+Thu Sep 28 13:04:05 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'i_LCLK'
+ 12. Slow Model Setup: 'i_LCLR'
+ 13. Slow Model Hold: 'i_LCLR'
+ 14. Slow Model Hold: 'i_LCLK'
+ 15. Slow Model Recovery: 'i_LCLK'
+ 16. Slow Model Removal: 'i_LCLK'
+ 17. Slow Model Minimum Pulse Width: 'i_LCLK'
+ 18. Slow Model Minimum Pulse Width: 'i_LCLR'
+ 19. Setup Times
+ 20. Hold Times
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Propagation Delay
+ 24. Minimum Propagation Delay
+ 25. Fast Model Setup Summary
+ 26. Fast Model Hold Summary
+ 27. Fast Model Recovery Summary
+ 28. Fast Model Removal Summary
+ 29. Fast Model Minimum Pulse Width Summary
+ 30. Fast Model Setup: 'i_LCLK'
+ 31. Fast Model Setup: 'i_LCLR'
+ 32. Fast Model Hold: 'i_LCLR'
+ 33. Fast Model Hold: 'i_LCLK'
+ 34. Fast Model Recovery: 'i_LCLK'
+ 35. Fast Model Removal: 'i_LCLK'
+ 36. Fast Model Minimum Pulse Width: 'i_LCLK'
+ 37. Fast Model Minimum Pulse Width: 'i_LCLR'
+ 38. Setup Times
+ 39. Hold Times
+ 40. Clock to Output Times
+ 41. Minimum Clock to Output Times
+ 42. Propagation Delay
+ 43. Minimum Propagation Delay
+ 44. Multicorner Timing Analysis Summary
+ 45. Setup Times
+ 46. Hold Times
+ 47. Clock to Output Times
+ 48. Minimum Clock to Output Times
+ 49. Progagation Delay
+ 50. Minimum Progagation Delay
+ 51. Setup Transfers
+ 52. Hold Transfers
+ 53. Recovery Transfers
+ 54. Removal Transfers
+ 55. Report TCCS
+ 56. Report RSKM
+ 57. Unconstrained Paths
+ 58. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; async_JKFF                                                        ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C70F896C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; i_LCLK     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_LCLK } ;
+; i_LCLR     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_LCLR } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                     ;
++--------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax         ; Restricted Fmax ; Clock Name ; Note                                                          ;
++--------------+-----------------+------------+---------------------------------------------------------------+
+; 777.6 MHz    ; 450.05 MHz      ; i_LCLK     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 500000.0 MHz ; 450.05 MHz      ; i_LCLR     ; limit due to minimum period restriction (max I/O toggle rate) ;
++--------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; i_LCLK ; -3.340 ; -6.562        ;
+; i_LCLR ; 0.499  ; 0.000         ;
++--------+--------+---------------+
+
+
++---------------------------------+
+; Slow Model Hold Summary         ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; i_LCLR ; -0.830 ; -0.830        ;
+; i_LCLK ; 0.059  ; 0.000         ;
++--------+--------+---------------+
+
+
++---------------------------------+
+; Slow Model Recovery Summary     ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; i_LCLK ; -2.934 ; -5.868        ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Removal Summary     ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; i_LCLK ; 3.204 ; 0.000         ;
++--------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; i_LCLK ; -1.222 ; -3.222               ;
+; i_LCLR ; -1.222 ; -1.222               ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'i_LCLK'                                                                                                                                   ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.340 ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -2.983     ; 0.893      ;
+; -3.222 ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -2.862     ; 0.896      ;
+; -0.286 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 1.322      ;
+; -0.286 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 1.322      ;
+; 0.035  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 3.062      ;
+; 0.208  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 2.889      ;
+; 0.535  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 3.062      ;
+; 0.708  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 2.889      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'i_LCLR'                                                                                              ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.500        ; 5.423      ; 4.593      ;
+; 0.999 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 1.000        ; 5.423      ; 4.593      ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'i_LCLR'                                                                                                ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.830 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.000        ; 5.423      ; 4.593      ;
+; -0.330 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; -0.500       ; 5.423      ; 4.593      ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'i_LCLK'                                                                                                                                   ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.059 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 2.886      ;
+; 0.062 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 2.889      ;
+; 0.559 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 2.886      ;
+; 0.562 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 2.889      ;
+; 1.056 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 1.322      ;
+; 1.056 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 1.322      ;
+; 3.895 ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -2.862     ; 0.799      ;
+; 4.012 ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -2.983     ; 0.795      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'i_LCLK'                                                                                                    ;
++--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.934 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 6.031      ;
+; -2.934 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 6.031      ;
+; -2.434 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 6.031      ;
+; -2.434 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 6.031      ;
++--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'i_LCLK'                                                                                                    ;
++-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 3.204 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 6.031      ;
+; 3.204 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 6.031      ;
+; 3.704 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 6.031      ;
+; 3.704 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 6.031      ;
++-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'i_LCLK'                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_LCLK ; Rise       ; i_LCLK                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[0]~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[0]~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[1]~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[1]~_emulated ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLK ; Rise       ; i_LCLK|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLK ; Rise       ; i_LCLK|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLK ; Rise       ; inst|Qinternal[0]~_emulated|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLK ; Rise       ; inst|Qinternal[0]~_emulated|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLK ; Rise       ; inst|Qinternal[1]~_emulated|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLK ; Rise       ; inst|Qinternal[1]~_emulated|clk       ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'i_LCLR'                                                                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_LCLR ; Rise       ; i_LCLR                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; i_J       ; i_LCLK     ; 4.531 ; 4.531 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; 4.553 ; 4.553 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 0.465 ; 0.465 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; 4.812 ; 4.812 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLR     ; 0.001 ; 0.001 ; Rise       ; i_LCLR          ;
+; i_LPR     ; i_LCLR     ; 1.478 ; 1.478 ; Rise       ; i_LCLR          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; i_J       ; i_LCLK     ; -3.561 ; -3.561 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; -3.611 ; -3.611 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; -0.059 ; -0.059 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; -4.290 ; -4.290 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLR     ; 0.830  ; 0.830  ; Rise       ; i_LCLR          ;
+; i_LPR     ; i_LCLR     ; -0.801 ; -0.801 ; Rise       ; i_LCLR          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_Q       ; i_LCLK     ; 10.131 ; 10.131 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 9.025  ; 9.025  ; Fall       ; i_LCLK          ;
+; o_Q       ; i_LCLR     ; 12.685 ; 12.685 ; Rise       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 11.461 ; 11.461 ; Rise       ; i_LCLR          ;
+; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Fall       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 8.204  ; 8.204  ; Fall       ; i_LCLR          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_Q       ; i_LCLK     ; 10.131 ; 10.131 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 9.025  ; 9.025  ; Fall       ; i_LCLK          ;
+; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Rise       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 8.028  ; 8.028  ; Rise       ; i_LCLR          ;
+; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Fall       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 8.028  ; 8.028  ; Fall       ; i_LCLR          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; i_LPR      ; o_Q         ; 13.657 ; 13.657 ; 13.657 ; 13.657 ;
+; i_LPR      ; o_Qbar      ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; i_LPR      ; o_Q         ; 13.657 ; 13.365 ; 13.365 ; 13.657 ;
+; i_LPR      ; o_Qbar      ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; i_LCLK ; -1.538 ; -3.033        ;
+; i_LCLR ; 0.652  ; 0.000         ;
++--------+--------+---------------+
+
+
++---------------------------------+
+; Fast Model Hold Summary         ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; i_LCLR ; -0.498 ; -0.498        ;
+; i_LCLK ; -0.103 ; -0.203        ;
++--------+--------+---------------+
+
+
++---------------------------------+
+; Fast Model Recovery Summary     ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; i_LCLK ; -1.495 ; -2.990        ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Removal Summary     ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; i_LCLK ; 1.875 ; 0.000         ;
++--------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; i_LCLK ; -1.222 ; -3.222               ;
+; i_LCLR ; -1.222 ; -1.222               ;
++--------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'i_LCLK'                                                                                                                                   ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.538 ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -1.692     ; 0.378      ;
+; -1.495 ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -1.646     ; 0.381      ;
+; 0.416  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 1.481      ;
+; 0.423  ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 0.609      ;
+; 0.424  ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 0.608      ;
+; 0.480  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 1.417      ;
+; 0.916  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 1.481      ;
+; 0.980  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 1.417      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'i_LCLR'                                                                                              ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.652 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.500        ; 3.011      ; 2.513      ;
+; 1.152 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 1.000        ; 3.011      ; 2.513      ;
++-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'i_LCLR'                                                                                                ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.498 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.000        ; 3.011      ; 2.513      ;
+; 0.002  ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; -0.500       ; 3.011      ; 2.513      ;
++--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'i_LCLK'                                                                                                                                    ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.103 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 1.414      ;
+; -0.100 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 1.417      ;
+; 0.397  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 1.414      ;
+; 0.400  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 1.417      ;
+; 0.456  ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 0.608      ;
+; 0.457  ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 0.609      ;
+; 2.331  ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -1.646     ; 0.337      ;
+; 2.376  ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -1.692     ; 0.336      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'i_LCLK'                                                                                                    ;
++--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.495 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 3.392      ;
+; -1.495 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 3.392      ;
+; -0.995 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 3.392      ;
+; -0.995 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 3.392      ;
++--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'i_LCLK'                                                                                                    ;
++-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.875 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 3.392      ;
+; 1.875 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 3.392      ;
+; 2.375 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 3.392      ;
+; 2.375 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 3.392      ;
++-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'i_LCLK'                                                                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_LCLK ; Rise       ; i_LCLK                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[0]~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[0]~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[1]~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_LCLK ; Fall       ; asyncJKFF:inst|Qinternal[1]~_emulated ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLK ; Rise       ; i_LCLK|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLK ; Rise       ; i_LCLK|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLK ; Rise       ; inst|Qinternal[0]~_emulated|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLK ; Rise       ; inst|Qinternal[0]~_emulated|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLK ; Rise       ; inst|Qinternal[1]~_emulated|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLK ; Rise       ; inst|Qinternal[1]~_emulated|clk       ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'i_LCLR'                                                                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_LCLR ; Rise       ; i_LCLR                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
++--------+--------------+----------------+------------------+--------+------------+----------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; i_J       ; i_LCLK     ; 2.658  ; 2.658  ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; 2.676  ; 2.676  ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 0.084  ; 0.084  ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; 2.699  ; 2.699  ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLR     ; -0.152 ; -0.152 ; Rise       ; i_LCLR          ;
+; i_LPR     ; i_LCLR     ; 0.878  ; 0.878  ; Rise       ; i_LCLR          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; i_J       ; i_LCLK     ; -2.122 ; -2.122 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; -2.157 ; -2.157 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 0.103  ; 0.103  ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; -2.459 ; -2.459 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLR     ; 0.498  ; 0.498  ; Rise       ; i_LCLR          ;
+; i_LPR     ; i_LCLR     ; -0.605 ; -0.605 ; Rise       ; i_LCLR          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_Q       ; i_LCLK     ; 5.221 ; 5.221 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 4.777 ; 4.777 ; Fall       ; i_LCLK          ;
+; o_Q       ; i_LCLR     ; 6.683 ; 6.683 ; Rise       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 6.195 ; 6.195 ; Rise       ; i_LCLR          ;
+; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Fall       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 4.284 ; 4.284 ; Fall       ; i_LCLR          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_Q       ; i_LCLK     ; 5.221 ; 5.221 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 4.777 ; 4.777 ; Fall       ; i_LCLK          ;
+; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Rise       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Rise       ; i_LCLR          ;
+; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Fall       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Fall       ; i_LCLR          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; i_LPR      ; o_Q         ; 7.344 ; 7.344 ; 7.344 ; 7.344 ;
+; i_LPR      ; o_Qbar      ; 6.896 ; 6.896 ; 6.896 ; 6.896 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; i_LPR      ; o_Q         ; 7.344 ; 7.224 ; 7.224 ; 7.344 ;
+; i_LPR      ; o_Qbar      ; 6.896 ; 6.896 ; 6.896 ; 6.896 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+--------+--------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -3.340 ; -0.830 ; -2.934   ; 1.875   ; -1.222              ;
+;  i_LCLK          ; -3.340 ; -0.103 ; -2.934   ; 1.875   ; -1.222              ;
+;  i_LCLR          ; 0.499  ; -0.830 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -6.562 ; -0.83  ; -5.868   ; 0.0     ; -4.444              ;
+;  i_LCLK          ; -6.562 ; -0.203 ; -5.868   ; 0.000   ; -3.222              ;
+;  i_LCLR          ; 0.000  ; -0.830 ; N/A      ; N/A     ; -1.222              ;
++------------------+--------+--------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; i_J       ; i_LCLK     ; 4.531 ; 4.531 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; 4.553 ; 4.553 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 0.465 ; 0.465 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; 4.812 ; 4.812 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLR     ; 0.001 ; 0.001 ; Rise       ; i_LCLR          ;
+; i_LPR     ; i_LCLR     ; 1.478 ; 1.478 ; Rise       ; i_LCLR          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; i_J       ; i_LCLK     ; -2.122 ; -2.122 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; -2.157 ; -2.157 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 0.103  ; 0.103  ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; -2.459 ; -2.459 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLR     ; 0.830  ; 0.830  ; Rise       ; i_LCLR          ;
+; i_LPR     ; i_LCLR     ; -0.605 ; -0.605 ; Rise       ; i_LCLR          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_Q       ; i_LCLK     ; 10.131 ; 10.131 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 9.025  ; 9.025  ; Fall       ; i_LCLK          ;
+; o_Q       ; i_LCLR     ; 12.685 ; 12.685 ; Rise       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 11.461 ; 11.461 ; Rise       ; i_LCLR          ;
+; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Fall       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 8.204  ; 8.204  ; Fall       ; i_LCLR          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_Q       ; i_LCLK     ; 5.221 ; 5.221 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 4.777 ; 4.777 ; Fall       ; i_LCLK          ;
+; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Rise       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Rise       ; i_LCLR          ;
+; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Fall       ; i_LCLR          ;
+; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Fall       ; i_LCLR          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; i_LPR      ; o_Q         ; 13.657 ; 13.657 ; 13.657 ; 13.657 ;
+; i_LPR      ; o_Qbar      ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; i_LPR      ; o_Q         ; 7.344 ; 7.224 ; 7.224 ; 7.344 ;
+; i_LPR      ; o_Qbar      ; 6.896 ; 6.896 ; 6.896 ; 6.896 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; i_LCLK     ; i_LCLK   ; 0        ; 0        ; 0        ; 2        ;
+; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 7        ; 3        ;
+; i_LCLR     ; i_LCLR   ; 1        ; 1        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; i_LCLK     ; i_LCLK   ; 0        ; 0        ; 0        ; 2        ;
+; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 7        ; 3        ;
+; i_LCLR     ; i_LCLR   ; 1        ; 1        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 2        ; 2        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 2        ; 2        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 11    ; 11   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Sep 28 13:04:04 2023
+Info: Command: quartus_sta async_JKFF -c async_JKFF
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 2 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'async_JKFF.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name i_LCLK i_LCLK
+    Info (332105): create_clock -period 1.000 -name i_LCLR i_LCLR
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.340
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.340        -6.562 i_LCLK 
+    Info (332119):     0.499         0.000 i_LCLR 
+Info (332146): Worst-case hold slack is -0.830
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.830        -0.830 i_LCLR 
+    Info (332119):     0.059         0.000 i_LCLK 
+Info (332146): Worst-case recovery slack is -2.934
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.934        -5.868 i_LCLK 
+Info (332146): Worst-case removal slack is 3.204
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     3.204         0.000 i_LCLK 
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -3.222 i_LCLK 
+    Info (332119):    -1.222        -1.222 i_LCLR 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.538
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.538        -3.033 i_LCLK 
+    Info (332119):     0.652         0.000 i_LCLR 
+Info (332146): Worst-case hold slack is -0.498
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.498        -0.498 i_LCLR 
+    Info (332119):    -0.103        -0.203 i_LCLK 
+Info (332146): Worst-case recovery slack is -1.495
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.495        -2.990 i_LCLK 
+Info (332146): Worst-case removal slack is 1.875
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.875         0.000 i_LCLK 
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -3.222 i_LCLK 
+    Info (332119):    -1.222        -1.222 i_LCLR 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4546 megabytes
+    Info: Processing ended: Thu Sep 28 13:04:05 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

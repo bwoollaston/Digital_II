@@ -1,0 +1,25 @@
+|async_JKFF
+o_Q <= asyncJKFF:inst.o_Q
+i_J => asyncJKFF:inst.i_J
+i_K => asyncJKFF:inst.i_K
+i_LCLK => asyncJKFF:inst.i_LCLK
+i_LPR => asyncJKFF:inst.i_LPR
+i_LCLR => asyncJKFF:inst.i_LCLR
+o_Qbar <= asyncJKFF:inst.o_Qbar
+
+
+|async_JKFF|asyncJKFF:inst
+i_J => Mux0.IN4
+i_J => Mux1.IN4
+i_K => Mux0.IN5
+i_K => Mux1.IN5
+i_LCLK => Qinternal[0].CLK
+i_LCLK => Qinternal[1].CLK
+i_LPR => process_0.IN0
+i_LPR => Qinternal[1].ADATA
+i_LCLR => process_0.IN1
+i_LCLR => Qinternal[0].ADATA
+o_Q <= Qinternal[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= Qinternal[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
