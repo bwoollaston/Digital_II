@@ -16,9 +16,11 @@ i_K => Mux1.IN5
 i_LCLK => Qinternal[0].CLK
 i_LCLK => Qinternal[1].CLK
 i_LPR => process_0.IN0
-i_LPR => Qinternal[1].ADATA
+i_LPR => process_0.IN0
+i_LPR => process_0.IN0
 i_LCLR => process_0.IN1
-i_LCLR => Qinternal[0].ADATA
+i_LCLR => process_0.IN1
+i_LCLR => process_0.IN1
 o_Q <= Qinternal[1].DB_MAX_OUTPUT_PORT_TYPE
 o_Qbar <= Qinternal[0].DB_MAX_OUTPUT_PORT_TYPE
 

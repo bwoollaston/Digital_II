@@ -9,14 +9,17 @@ ENTITY asyncJKFF IS
 END asyncJKFF;
 
 ARCHITECTURE arch OF asyncJKFF IS
-	SIGNAL Qinternal, s_JK : std_logic_vector(1 DOWNTO 0);
+	SIGNAL Qinternal : std_logic_vector(1 DOWNTO 0) := "10"; 	--internal ff signal <Q,Qb> preset to start
+	SIGNAL s_JK : std_logic_vector(1 DOWNTO 0);						--internal jk signal <J,K> for case statement
 	BEGIN
-	s_JK <= i_J & i_K;
 	PROCESS(i_LCLK,i_LPR,i_LCLR)
 		BEGIN
-		IF(i_LPR='0' OR i_LCLR='0') THEN
-			Qinternal(1) <= not i_LPR;
-			Qinternal(0) <= not i_LCLR;
+		IF(i_LPR='0' AND i_LCLR='0') THEN
+			Qinternal <= "11";
+		ELSIF(i_LPR='1' AND i_LCLR='0') THEN
+			Qinternal <= "01";
+		ELSIF(i_LPR='0' AND i_LCLR='1') THEN
+			Qinternal <= "10";
 		ELSIF(i_LCLK'EVENT AND i_LCLK='0') THEN
 			CASE s_JK IS
 				WHEN "00"=>null;
@@ -25,8 +28,10 @@ ARCHITECTURE arch OF asyncJKFF IS
 				WHEN "11"=>Qinternal<=not Qinternal;
 				WHEN OTHERS=> Qinternal<=(OTHERS=>'1');
 			END CASE;
+		ELSE null;
 		END IF;
 	END PROCESS;
+	s_JK <= i_J & i_K;
 	o_Q <= Qinternal(1);
 	o_Qbar <= Qinternal(0);
 END arch;

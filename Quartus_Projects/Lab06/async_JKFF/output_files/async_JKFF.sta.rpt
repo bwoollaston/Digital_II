@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for async_JKFF
-Thu Sep 28 13:04:05 2023
+Fri Sep 29 11:14:53 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,53 +17,41 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
  11. Slow Model Setup: 'i_LCLK'
- 12. Slow Model Setup: 'i_LCLR'
- 13. Slow Model Hold: 'i_LCLR'
- 14. Slow Model Hold: 'i_LCLK'
- 15. Slow Model Recovery: 'i_LCLK'
- 16. Slow Model Removal: 'i_LCLK'
- 17. Slow Model Minimum Pulse Width: 'i_LCLK'
- 18. Slow Model Minimum Pulse Width: 'i_LCLR'
- 19. Setup Times
- 20. Hold Times
- 21. Clock to Output Times
- 22. Minimum Clock to Output Times
- 23. Propagation Delay
- 24. Minimum Propagation Delay
- 25. Fast Model Setup Summary
- 26. Fast Model Hold Summary
- 27. Fast Model Recovery Summary
- 28. Fast Model Removal Summary
- 29. Fast Model Minimum Pulse Width Summary
- 30. Fast Model Setup: 'i_LCLK'
- 31. Fast Model Setup: 'i_LCLR'
- 32. Fast Model Hold: 'i_LCLR'
- 33. Fast Model Hold: 'i_LCLK'
- 34. Fast Model Recovery: 'i_LCLK'
- 35. Fast Model Removal: 'i_LCLK'
- 36. Fast Model Minimum Pulse Width: 'i_LCLK'
- 37. Fast Model Minimum Pulse Width: 'i_LCLR'
- 38. Setup Times
- 39. Hold Times
- 40. Clock to Output Times
- 41. Minimum Clock to Output Times
- 42. Propagation Delay
- 43. Minimum Propagation Delay
- 44. Multicorner Timing Analysis Summary
- 45. Setup Times
- 46. Hold Times
- 47. Clock to Output Times
- 48. Minimum Clock to Output Times
- 49. Progagation Delay
- 50. Minimum Progagation Delay
- 51. Setup Transfers
- 52. Hold Transfers
- 53. Recovery Transfers
- 54. Removal Transfers
- 55. Report TCCS
- 56. Report RSKM
- 57. Unconstrained Paths
- 58. TimeQuest Timing Analyzer Messages
+ 12. Slow Model Hold: 'i_LCLK'
+ 13. Slow Model Minimum Pulse Width: 'i_LCLK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'i_LCLK'
+ 26. Fast Model Hold: 'i_LCLK'
+ 27. Fast Model Minimum Pulse Width: 'i_LCLK'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
 
 
 
@@ -105,7 +93,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -116,18 +104,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 ; i_LCLK     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_LCLK } ;
-; i_LCLR     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_LCLR } ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Slow Model Fmax Summary                                                                                     ;
-+--------------+-----------------+------------+---------------------------------------------------------------+
-; Fmax         ; Restricted Fmax ; Clock Name ; Note                                                          ;
-+--------------+-----------------+------------+---------------------------------------------------------------+
-; 777.6 MHz    ; 450.05 MHz      ; i_LCLK     ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 500000.0 MHz ; 450.05 MHz      ; i_LCLR     ; limit due to minimum period restriction (max I/O toggle rate) ;
-+--------------+-----------------+------------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 862.07 MHz ; 450.05 MHz      ; i_LCLK     ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -136,37 +122,29 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+---------------+
 ; Clock  ; Slack  ; End Point TNS ;
 +--------+--------+---------------+
-; i_LCLK ; -3.340 ; -6.562        ;
-; i_LCLR ; 0.499  ; 0.000         ;
-+--------+--------+---------------+
-
-
-+---------------------------------+
-; Slow Model Hold Summary         ;
-+--------+--------+---------------+
-; Clock  ; Slack  ; End Point TNS ;
-+--------+--------+---------------+
-; i_LCLR ; -0.830 ; -0.830        ;
-; i_LCLK ; 0.059  ; 0.000         ;
-+--------+--------+---------------+
-
-
-+---------------------------------+
-; Slow Model Recovery Summary     ;
-+--------+--------+---------------+
-; Clock  ; Slack  ; End Point TNS ;
-+--------+--------+---------------+
-; i_LCLK ; -2.934 ; -5.868        ;
+; i_LCLK ; -0.160 ; -0.310        ;
 +--------+--------+---------------+
 
 
 +--------------------------------+
-; Slow Model Removal Summary     ;
+; Slow Model Hold Summary        ;
 +--------+-------+---------------+
 ; Clock  ; Slack ; End Point TNS ;
 +--------+-------+---------------+
-; i_LCLK ; 3.204 ; 0.000         ;
+; i_LCLK ; 0.920 ; 0.000         ;
 +--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
 
 
 +----------------------------------------+
@@ -175,7 +153,6 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock  ; Slack  ; End Point TNS        ;
 +--------+--------+----------------------+
 ; i_LCLK ; -1.222 ; -3.222               ;
-; i_LCLR ; -1.222 ; -1.222               ;
 +--------+--------+----------------------+
 
 
@@ -184,35 +161,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -3.340 ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -2.983     ; 0.893      ;
-; -3.222 ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -2.862     ; 0.896      ;
-; -0.286 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 1.322      ;
-; -0.286 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 1.322      ;
-; 0.035  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 3.062      ;
-; 0.208  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 2.889      ;
-; 0.535  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 3.062      ;
-; 0.708  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 2.889      ;
+; -0.160 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 1.196      ;
+; -0.150 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 1.186      ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'i_LCLR'                                                                                              ;
-+-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.499 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.500        ; 5.423      ; 4.593      ;
-; 0.999 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 1.000        ; 5.423      ; 4.593      ;
-+-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Hold: 'i_LCLR'                                                                                                ;
-+--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.830 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.000        ; 5.423      ; 4.593      ;
-; -0.330 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; -0.500       ; 5.423      ; 4.593      ;
-+--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -220,39 +171,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.059 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 2.886      ;
-; 0.062 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 2.889      ;
-; 0.559 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 2.886      ;
-; 0.562 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 2.889      ;
-; 1.056 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 1.322      ;
-; 1.056 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 1.322      ;
-; 3.895 ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -2.862     ; 0.799      ;
-; 4.012 ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -2.983     ; 0.795      ;
+; 0.920 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 1.186      ;
+; 0.930 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 1.196      ;
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Recovery: 'i_LCLK'                                                                                                    ;
-+--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -2.934 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 6.031      ;
-; -2.934 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 2.561      ; 6.031      ;
-; -2.434 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 6.031      ;
-; -2.434 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 2.561      ; 6.031      ;
-+--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Removal: 'i_LCLK'                                                                                                    ;
-+-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; 3.204 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 6.031      ;
-; 3.204 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 2.561      ; 6.031      ;
-; 3.704 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 6.031      ;
-; 3.704 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 2.561      ; 6.031      ;
-+-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -274,44 +195,15 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'i_LCLR'                                                                           ;
-+--------+--------------+----------------+------------------+--------+------------+----------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                           ;
-+--------+--------------+----------------+------------------+--------+------------+----------------------------------+
-; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_LCLR ; Rise       ; i_LCLR                           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
-+--------+--------------+----------------+------------------+--------+------------+----------------------------------+
-
-
 +-----------------------------------------------------------------------+
 ; Setup Times                                                           ;
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_J       ; i_LCLK     ; 4.531 ; 4.531 ; Fall       ; i_LCLK          ;
-; i_K       ; i_LCLK     ; 4.553 ; 4.553 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLK     ; 0.465 ; 0.465 ; Fall       ; i_LCLK          ;
-; i_LPR     ; i_LCLK     ; 4.812 ; 4.812 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLR     ; 0.001 ; 0.001 ; Rise       ; i_LCLR          ;
-; i_LPR     ; i_LCLR     ; 1.478 ; 1.478 ; Rise       ; i_LCLR          ;
+; i_J       ; i_LCLK     ; 4.346 ; 4.346 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; 4.554 ; 4.554 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 4.994 ; 4.994 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; 4.873 ; 4.873 ; Fall       ; i_LCLK          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -320,12 +212,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_J       ; i_LCLK     ; -3.561 ; -3.561 ; Fall       ; i_LCLK          ;
-; i_K       ; i_LCLK     ; -3.611 ; -3.611 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLK     ; -0.059 ; -0.059 ; Fall       ; i_LCLK          ;
-; i_LPR     ; i_LCLK     ; -4.290 ; -4.290 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLR     ; 0.830  ; 0.830  ; Rise       ; i_LCLR          ;
-; i_LPR     ; i_LCLR     ; -0.801 ; -0.801 ; Rise       ; i_LCLR          ;
+; i_J       ; i_LCLK     ; -3.339 ; -3.339 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; -3.785 ; -3.785 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; -4.085 ; -4.085 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; -4.271 ; -4.271 ; Fall       ; i_LCLK          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -334,12 +224,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; o_Q       ; i_LCLK     ; 10.131 ; 10.131 ; Fall       ; i_LCLK          ;
-; o_Qbar    ; i_LCLK     ; 9.025  ; 9.025  ; Fall       ; i_LCLK          ;
-; o_Q       ; i_LCLR     ; 12.685 ; 12.685 ; Rise       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 11.461 ; 11.461 ; Rise       ; i_LCLR          ;
-; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Fall       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 8.204  ; 8.204  ; Fall       ; i_LCLR          ;
+; o_Q       ; i_LCLK     ; 11.225 ; 11.225 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 8.914  ; 8.914  ; Fall       ; i_LCLK          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -348,12 +234,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; o_Q       ; i_LCLK     ; 10.131 ; 10.131 ; Fall       ; i_LCLK          ;
-; o_Qbar    ; i_LCLK     ; 9.025  ; 9.025  ; Fall       ; i_LCLK          ;
-; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Rise       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 8.028  ; 8.028  ; Rise       ; i_LCLR          ;
-; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Fall       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 8.028  ; 8.028  ; Fall       ; i_LCLR          ;
+; o_Q       ; i_LCLK     ; 11.225 ; 11.225 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 8.914  ; 8.914  ; Fall       ; i_LCLK          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -362,8 +244,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+--------+--------+--------+--------+
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
-; i_LPR      ; o_Q         ; 13.657 ; 13.657 ; 13.657 ; 13.657 ;
-; i_LPR      ; o_Qbar      ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
+; i_LCLR     ; o_Q         ; 14.926 ;        ;        ; 14.926 ;
+; i_LCLR     ; o_Qbar      ;        ; 12.758 ; 12.758 ;        ;
+; i_LPR      ; o_Q         ;        ; 14.800 ; 14.800 ;        ;
+; i_LPR      ; o_Qbar      ; 12.637 ;        ;        ; 12.637 ;
 +------------+-------------+--------+--------+--------+--------+
 
 
@@ -372,47 +256,41 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+--------+--------+--------+--------+
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
-; i_LPR      ; o_Q         ; 13.657 ; 13.365 ; 13.365 ; 13.657 ;
-; i_LPR      ; o_Qbar      ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
+; i_LCLR     ; o_Q         ; 14.926 ;        ;        ; 14.926 ;
+; i_LCLR     ; o_Qbar      ;        ; 12.079 ; 12.079 ;        ;
+; i_LPR      ; o_Q         ;        ; 14.566 ; 14.566 ;        ;
+; i_LPR      ; o_Qbar      ; 12.637 ;        ;        ; 12.637 ;
 +------------+-------------+--------+--------+--------+--------+
 
 
-+---------------------------------+
-; Fast Model Setup Summary        ;
-+--------+--------+---------------+
-; Clock  ; Slack  ; End Point TNS ;
-+--------+--------+---------------+
-; i_LCLK ; -1.538 ; -3.033        ;
-; i_LCLR ; 0.652  ; 0.000         ;
-+--------+--------+---------------+
-
-
-+---------------------------------+
-; Fast Model Hold Summary         ;
-+--------+--------+---------------+
-; Clock  ; Slack  ; End Point TNS ;
-+--------+--------+---------------+
-; i_LCLR ; -0.498 ; -0.498        ;
-; i_LCLK ; -0.103 ; -0.203        ;
-+--------+--------+---------------+
-
-
-+---------------------------------+
-; Fast Model Recovery Summary     ;
-+--------+--------+---------------+
-; Clock  ; Slack  ; End Point TNS ;
-+--------+--------+---------------+
-; i_LCLK ; -1.495 ; -2.990        ;
-+--------+--------+---------------+
-
-
 +--------------------------------+
-; Fast Model Removal Summary     ;
+; Fast Model Setup Summary       ;
 +--------+-------+---------------+
 ; Clock  ; Slack ; End Point TNS ;
 +--------+-------+---------------+
-; i_LCLK ; 1.875 ; 0.000         ;
+; i_LCLK ; 0.468 ; 0.000         ;
 +--------+-------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; i_LCLK ; 0.404 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
 
 
 +----------------------------------------+
@@ -421,84 +299,27 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock  ; Slack  ; End Point TNS        ;
 +--------+--------+----------------------+
 ; i_LCLK ; -1.222 ; -3.222               ;
-; i_LCLR ; -1.222 ; -1.222               ;
 +--------+--------+----------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'i_LCLK'                                                                                                                                   ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.538 ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -1.692     ; 0.378      ;
-; -1.495 ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; -1.646     ; 0.381      ;
-; 0.416  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 1.481      ;
-; 0.423  ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 0.609      ;
-; 0.424  ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 0.608      ;
-; 0.480  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 1.417      ;
-; 0.916  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 1.481      ;
-; 0.980  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 1.417      ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'i_LCLK'                                                                                                                                  ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.468 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 0.564      ;
+; 0.476 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 1.000        ; 0.000      ; 0.556      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'i_LCLR'                                                                                              ;
-+-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.652 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.500        ; 3.011      ; 2.513      ;
-; 1.152 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 1.000        ; 3.011      ; 2.513      ;
-+-------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'i_LCLR'                                                                                                ;
-+--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node ; To Node                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.498 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; 0.000        ; 3.011      ; 2.513      ;
-; 0.002  ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~5 ; i_LCLR       ; i_LCLR      ; -0.500       ; 3.011      ; 2.513      ;
-+--------+-----------+-------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Hold: 'i_LCLK'                                                                                                                                    ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.103 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 1.414      ;
-; -0.100 ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 1.417      ;
-; 0.397  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 1.414      ;
-; 0.400  ; i_LCLR                                ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 1.417      ;
-; 0.456  ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 0.608      ;
-; 0.457  ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 0.609      ;
-; 2.331  ; asyncJKFF:inst|Qinternal[0]~5         ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -1.646     ; 0.337      ;
-; 2.376  ; asyncJKFF:inst|Qinternal[1]~1         ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; -1.692     ; 0.336      ;
-+--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Recovery: 'i_LCLK'                                                                                                    ;
-+--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.495 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 3.392      ;
-; -1.495 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.500        ; 1.365      ; 3.392      ;
-; -0.995 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 3.392      ;
-; -0.995 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 1.000        ; 1.365      ; 3.392      ;
-+--------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Removal: 'i_LCLK'                                                                                                    ;
-+-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.875 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 3.392      ;
-; 1.875 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; 0.000        ; 1.365      ; 3.392      ;
-; 2.375 ; i_LCLR    ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 3.392      ;
-; 2.375 ; i_LCLR    ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLR       ; i_LCLK      ; -0.500       ; 1.365      ; 3.392      ;
-+-------+-----------+---------------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'i_LCLK'                                                                                                                                   ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.404 ; asyncJKFF:inst|Qinternal[0]~_emulated ; asyncJKFF:inst|Qinternal[0]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 0.556      ;
+; 0.412 ; asyncJKFF:inst|Qinternal[1]~_emulated ; asyncJKFF:inst|Qinternal[1]~_emulated ; i_LCLK       ; i_LCLK      ; 0.000        ; 0.000      ; 0.564      ;
++-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -520,45 +341,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------------+----------------+------------------+--------+------------+---------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'i_LCLR'                                                                           ;
-+--------+--------------+----------------+------------------+--------+------------+----------------------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                           ;
-+--------+--------------+----------------+------------------+--------+------------+----------------------------------+
-; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_LCLR ; Rise       ; i_LCLR                           ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[0]~5    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; asyncJKFF:inst|Qinternal[1]~1    ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; i_LCLR|combout                   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[0]~5|datad        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|Qinternal[1]~1|datac        ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|inclk[0] ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0clkctrl|outclk   ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Fall       ; inst|process_0~0|combout         ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_LCLR ; Rise       ; inst|process_0~0|datad           ;
-+--------+--------------+----------------+------------------+--------+------------+----------------------------------+
-
-
-+-------------------------------------------------------------------------+
-; Setup Times                                                             ;
-+-----------+------------+--------+--------+------------+-----------------+
-; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
-+-----------+------------+--------+--------+------------+-----------------+
-; i_J       ; i_LCLK     ; 2.658  ; 2.658  ; Fall       ; i_LCLK          ;
-; i_K       ; i_LCLK     ; 2.676  ; 2.676  ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLK     ; 0.084  ; 0.084  ; Fall       ; i_LCLK          ;
-; i_LPR     ; i_LCLK     ; 2.699  ; 2.699  ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLR     ; -0.152 ; -0.152 ; Rise       ; i_LCLR          ;
-; i_LPR     ; i_LCLR     ; 0.878  ; 0.878  ; Rise       ; i_LCLR          ;
-+-----------+------------+--------+--------+------------+-----------------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; i_J       ; i_LCLK     ; 2.578 ; 2.578 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; 2.671 ; 2.671 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 2.816 ; 2.816 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; 2.752 ; 2.752 ; Fall       ; i_LCLK          ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +-------------------------------------------------------------------------+
@@ -566,12 +358,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_J       ; i_LCLK     ; -2.122 ; -2.122 ; Fall       ; i_LCLK          ;
-; i_K       ; i_LCLK     ; -2.157 ; -2.157 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLK     ; 0.103  ; 0.103  ; Fall       ; i_LCLK          ;
-; i_LPR     ; i_LCLK     ; -2.459 ; -2.459 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLR     ; 0.498  ; 0.498  ; Rise       ; i_LCLR          ;
-; i_LPR     ; i_LCLR     ; -0.605 ; -0.605 ; Rise       ; i_LCLR          ;
+; i_J       ; i_LCLK     ; -2.023 ; -2.023 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; -2.232 ; -2.232 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; -2.361 ; -2.361 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; -2.457 ; -2.457 ; Fall       ; i_LCLK          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -580,12 +370,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_Q       ; i_LCLK     ; 5.221 ; 5.221 ; Fall       ; i_LCLK          ;
-; o_Qbar    ; i_LCLK     ; 4.777 ; 4.777 ; Fall       ; i_LCLK          ;
-; o_Q       ; i_LCLR     ; 6.683 ; 6.683 ; Rise       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 6.195 ; 6.195 ; Rise       ; i_LCLR          ;
-; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Fall       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 4.284 ; 4.284 ; Fall       ; i_LCLR          ;
+; o_Q       ; i_LCLK     ; 5.626 ; 5.626 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 4.725 ; 4.725 ; Fall       ; i_LCLK          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -594,12 +380,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_Q       ; i_LCLK     ; 5.221 ; 5.221 ; Fall       ; i_LCLK          ;
-; o_Qbar    ; i_LCLK     ; 4.777 ; 4.777 ; Fall       ; i_LCLK          ;
-; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Rise       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Rise       ; i_LCLR          ;
-; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Fall       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Fall       ; i_LCLR          ;
+; o_Q       ; i_LCLK     ; 5.626 ; 5.626 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 4.725 ; 4.725 ; Fall       ; i_LCLK          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -608,8 +390,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; i_LPR      ; o_Q         ; 7.344 ; 7.344 ; 7.344 ; 7.344 ;
-; i_LPR      ; o_Qbar      ; 6.896 ; 6.896 ; 6.896 ; 6.896 ;
+; i_LCLR     ; o_Q         ; 7.802 ;       ;       ; 7.802 ;
+; i_LCLR     ; o_Qbar      ;       ; 7.017 ; 7.017 ;       ;
+; i_LPR      ; o_Q         ;       ; 7.761 ; 7.761 ;       ;
+; i_LPR      ; o_Qbar      ; 6.953 ;       ;       ; 6.953 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -618,23 +402,23 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; i_LPR      ; o_Q         ; 7.344 ; 7.224 ; 7.224 ; 7.344 ;
-; i_LPR      ; o_Qbar      ; 6.896 ; 6.896 ; 6.896 ; 6.896 ;
+; i_LCLR     ; o_Q         ; 7.802 ;       ;       ; 7.802 ;
+; i_LCLR     ; o_Qbar      ;       ; 6.682 ; 6.682 ;       ;
+; i_LPR      ; o_Q         ;       ; 7.671 ; 7.671 ;       ;
+; i_LPR      ; o_Qbar      ; 6.953 ;       ;       ; 6.953 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
-+-------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                           ;
-+------------------+--------+--------+----------+---------+---------------------+
-; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+--------+--------+----------+---------+---------------------+
-; Worst-case Slack ; -3.340 ; -0.830 ; -2.934   ; 1.875   ; -1.222              ;
-;  i_LCLK          ; -3.340 ; -0.103 ; -2.934   ; 1.875   ; -1.222              ;
-;  i_LCLR          ; 0.499  ; -0.830 ; N/A      ; N/A     ; -1.222              ;
-; Design-wide TNS  ; -6.562 ; -0.83  ; -5.868   ; 0.0     ; -4.444              ;
-;  i_LCLK          ; -6.562 ; -0.203 ; -5.868   ; 0.000   ; -3.222              ;
-;  i_LCLR          ; 0.000  ; -0.830 ; N/A      ; N/A     ; -1.222              ;
-+------------------+--------+--------+----------+---------+---------------------+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.160 ; 0.404 ; N/A      ; N/A     ; -1.222              ;
+;  i_LCLK          ; -0.160 ; 0.404 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -0.31  ; 0.0   ; 0.0      ; 0.0     ; -3.222              ;
+;  i_LCLK          ; -0.310 ; 0.000 ; N/A      ; N/A     ; -3.222              ;
++------------------+--------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -642,12 +426,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_J       ; i_LCLK     ; 4.531 ; 4.531 ; Fall       ; i_LCLK          ;
-; i_K       ; i_LCLK     ; 4.553 ; 4.553 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLK     ; 0.465 ; 0.465 ; Fall       ; i_LCLK          ;
-; i_LPR     ; i_LCLK     ; 4.812 ; 4.812 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLR     ; 0.001 ; 0.001 ; Rise       ; i_LCLR          ;
-; i_LPR     ; i_LCLR     ; 1.478 ; 1.478 ; Rise       ; i_LCLR          ;
+; i_J       ; i_LCLK     ; 4.346 ; 4.346 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; 4.554 ; 4.554 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; 4.994 ; 4.994 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; 4.873 ; 4.873 ; Fall       ; i_LCLK          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -656,12 +438,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_J       ; i_LCLK     ; -2.122 ; -2.122 ; Fall       ; i_LCLK          ;
-; i_K       ; i_LCLK     ; -2.157 ; -2.157 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLK     ; 0.103  ; 0.103  ; Fall       ; i_LCLK          ;
-; i_LPR     ; i_LCLK     ; -2.459 ; -2.459 ; Fall       ; i_LCLK          ;
-; i_LCLR    ; i_LCLR     ; 0.830  ; 0.830  ; Rise       ; i_LCLR          ;
-; i_LPR     ; i_LCLR     ; -0.605 ; -0.605 ; Rise       ; i_LCLR          ;
+; i_J       ; i_LCLK     ; -2.023 ; -2.023 ; Fall       ; i_LCLK          ;
+; i_K       ; i_LCLK     ; -2.232 ; -2.232 ; Fall       ; i_LCLK          ;
+; i_LCLR    ; i_LCLK     ; -2.361 ; -2.361 ; Fall       ; i_LCLK          ;
+; i_LPR     ; i_LCLK     ; -2.457 ; -2.457 ; Fall       ; i_LCLK          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -670,12 +450,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; o_Q       ; i_LCLK     ; 10.131 ; 10.131 ; Fall       ; i_LCLK          ;
-; o_Qbar    ; i_LCLK     ; 9.025  ; 9.025  ; Fall       ; i_LCLK          ;
-; o_Q       ; i_LCLR     ; 12.685 ; 12.685 ; Rise       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 11.461 ; 11.461 ; Rise       ; i_LCLR          ;
-; o_Q       ; i_LCLR     ; 9.137  ; 9.137  ; Fall       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 8.204  ; 8.204  ; Fall       ; i_LCLR          ;
+; o_Q       ; i_LCLK     ; 11.225 ; 11.225 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 8.914  ; 8.914  ; Fall       ; i_LCLK          ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -684,12 +460,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_Q       ; i_LCLK     ; 5.221 ; 5.221 ; Fall       ; i_LCLK          ;
-; o_Qbar    ; i_LCLK     ; 4.777 ; 4.777 ; Fall       ; i_LCLK          ;
-; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Rise       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Rise       ; i_LCLR          ;
-; o_Q       ; i_LCLR     ; 4.665 ; 4.665 ; Fall       ; i_LCLR          ;
-; o_Qbar    ; i_LCLR     ; 4.217 ; 4.217 ; Fall       ; i_LCLR          ;
+; o_Q       ; i_LCLK     ; 5.626 ; 5.626 ; Fall       ; i_LCLK          ;
+; o_Qbar    ; i_LCLK     ; 4.725 ; 4.725 ; Fall       ; i_LCLK          ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -698,8 +470,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+--------+--------+--------+--------+
 ; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
 +------------+-------------+--------+--------+--------+--------+
-; i_LPR      ; o_Q         ; 13.657 ; 13.657 ; 13.657 ; 13.657 ;
-; i_LPR      ; o_Qbar      ; 12.548 ; 12.548 ; 12.548 ; 12.548 ;
+; i_LCLR     ; o_Q         ; 14.926 ;        ;        ; 14.926 ;
+; i_LCLR     ; o_Qbar      ;        ; 12.758 ; 12.758 ;        ;
+; i_LPR      ; o_Q         ;        ; 14.800 ; 14.800 ;        ;
+; i_LPR      ; o_Qbar      ; 12.637 ;        ;        ; 12.637 ;
 +------------+-------------+--------+--------+--------+--------+
 
 
@@ -708,8 +482,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------+-------------+-------+-------+-------+-------+
 ; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
 +------------+-------------+-------+-------+-------+-------+
-; i_LPR      ; o_Q         ; 7.344 ; 7.224 ; 7.224 ; 7.344 ;
-; i_LPR      ; o_Qbar      ; 6.896 ; 6.896 ; 6.896 ; 6.896 ;
+; i_LCLR     ; o_Q         ; 7.802 ;       ;       ; 7.802 ;
+; i_LCLR     ; o_Qbar      ;       ; 6.682 ; 6.682 ;       ;
+; i_LPR      ; o_Q         ;       ; 7.671 ; 7.671 ;       ;
+; i_LPR      ; o_Qbar      ; 6.953 ;       ;       ; 6.953 ;
 +------------+-------------+-------+-------+-------+-------+
 
 
@@ -719,8 +495,6 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
 ; i_LCLK     ; i_LCLK   ; 0        ; 0        ; 0        ; 2        ;
-; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 7        ; 3        ;
-; i_LCLR     ; i_LCLR   ; 1        ; 1        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -731,28 +505,6 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
 ; i_LCLK     ; i_LCLK   ; 0        ; 0        ; 0        ; 2        ;
-; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 7        ; 3        ;
-; i_LCLR     ; i_LCLR   ; 1        ; 1        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------+
-; Recovery Transfers                                                ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 2        ; 2        ;
-+------------+----------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------+
-; Removal Transfers                                                 ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; i_LCLR     ; i_LCLK   ; 0        ; 0        ; 2        ; 2        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -777,7 +529,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 11    ; 11   ;
+; Unconstrained Input Port Paths  ; 16    ; 16   ;
 ; Unconstrained Output Ports      ; 2     ; 2    ;
 ; Unconstrained Output Port Paths ; 8     ; 8    ;
 +---------------------------------+-------+------+
@@ -789,7 +541,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Sep 28 13:04:04 2023
+    Info: Processing started: Fri Sep 29 11:14:52 2023
 Info: Command: quartus_sta async_JKFF -c async_JKFF
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -800,65 +552,46 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'asy
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name i_LCLK i_LCLK
-    Info (332105): create_clock -period 1.000 -name i_LCLR i_LCLR
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.340
+Info (332146): Worst-case setup slack is -0.160
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -3.340        -6.562 i_LCLK 
-    Info (332119):     0.499         0.000 i_LCLR 
-Info (332146): Worst-case hold slack is -0.830
+    Info (332119):    -0.160        -0.310 i_LCLK 
+Info (332146): Worst-case hold slack is 0.920
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.830        -0.830 i_LCLR 
-    Info (332119):     0.059         0.000 i_LCLK 
-Info (332146): Worst-case recovery slack is -2.934
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -2.934        -5.868 i_LCLK 
-Info (332146): Worst-case removal slack is 3.204
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):     3.204         0.000 i_LCLK 
+    Info (332119):     0.920         0.000 i_LCLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.222
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):    -1.222        -3.222 i_LCLK 
-    Info (332119):    -1.222        -1.222 i_LCLR 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.468
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.468         0.000 i_LCLK 
+Info (332146): Worst-case hold slack is 0.404
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.404         0.000 i_LCLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.538
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -1.538        -3.033 i_LCLK 
-    Info (332119):     0.652         0.000 i_LCLR 
-Info (332146): Worst-case hold slack is -0.498
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -0.498        -0.498 i_LCLR 
-    Info (332119):    -0.103        -0.203 i_LCLK 
-Info (332146): Worst-case recovery slack is -1.495
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):    -1.495        -2.990 i_LCLK 
-Info (332146): Worst-case removal slack is 1.875
-    Info (332119):     Slack End Point TNS Clock 
-    Info (332119): ========= ============= =====================
-    Info (332119):     1.875         0.000 i_LCLK 
 Info (332146): Worst-case minimum pulse width slack is -1.222
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):    -1.222        -3.222 i_LCLK 
-    Info (332119):    -1.222        -1.222 i_LCLR 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4546 megabytes
-    Info: Processing ended: Thu Sep 28 13:04:05 2023
+    Info: Processing ended: Fri Sep 29 11:14:53 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -56,11 +56,15 @@ set_location_assignment PIN_AB25 -to i_LCLK
 set_location_assignment PIN_AC27 -to i_LPR
 set_location_assignment PIN_AC26 -to i_LCLR
 
-set_location_assignment PIN_AJ5 -to o_Q
-set_location_assignment PIN_AJ4 -to o_Qbar
+set_location_assignment PIN_AJ6 -to o_Q
+set_location_assignment PIN_AK5 -to o_Qbar
 
 set_global_assignment -name BDF_FILE async_JKFF.bdf
 set_global_assignment -name VHDL_FILE asyncJKFF.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "USE AS REGULAR IO"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
