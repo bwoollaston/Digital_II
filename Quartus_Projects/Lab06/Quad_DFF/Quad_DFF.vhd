@@ -15,7 +15,7 @@ ARCHITECTURE arch OF Quad_DFF IS
 	 s_ENvec <= i_EN12 & i_EN34;
 	 gen_d12:
 	 FOR i IN 0 TO 1 GENERATE
-		comp_D12	: ENTITY work.DFF(arch) PORT MAP(i_EN=>i_EN12, i_D=>i_D4(i), o_Q=>o_Q4(i), o_Qbar=>o_Qbar4(i));
-		comp_D34	: ENTITY work.DFF(arch) PORT MAP(i_EN=>i_EN34, i_D=>i_D4(i+2), o_Q=>o_Q4(i+2), o_Qbar=>o_Qbar4(i+2));
+		comp_D12	: ENTITY work.DFF_noCLK(arch) PORT MAP(i_EN=>i_EN12, i_D=>i_D4(i), o_Q=>o_Q4(i), o_Qbar=>o_Qbar4(i));
+		comp_D34	: ENTITY work.DFF_noCLK(arch) PORT MAP(i_EN=>i_EN34, i_D=>i_D4(i+2), o_Q=>o_Q4(i+2), o_Qbar=>o_Qbar4(i+2));
 	END GENERATE gen_d12;
 END arch;

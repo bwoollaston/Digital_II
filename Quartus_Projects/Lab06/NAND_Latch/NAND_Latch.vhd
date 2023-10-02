@@ -11,6 +11,6 @@ END nand_latch;
 
 ARCHITECTURE arch OF nand_latch IS
 	BEGIN
-		o_Q <= i_S OR (not i_R AND o_Q);
-		o_Qbar <= (not o_Q AND not i_S) OR (i_R AND not i_S);
+		o_Q <= i_S NAND o_Qbar;
+		o_Qbar <= i_R NAND o_Q;
 END arch;

@@ -1,20 +1,64 @@
 |DFF_schematic
-o_Q <= Quad_DFF:inst.o_Q
-i_EN => Quad_DFF:inst.i_EN
-i_D => Quad_DFF:inst.i_D
-o_Qbar <= Quad_DFF:inst.o_Qbar
+o_Q0 <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+i_EN12 => Quad_DFF:inst.i_EN12
+i_EN34 => Quad_DFF:inst.i_EN34
+i_D0 => Quad_DFF:inst.i_D4[0]
+i_D1 => Quad_DFF:inst.i_D4[1]
+i_D2 => Quad_DFF:inst.i_D4[2]
+i_D3 => Quad_DFF:inst.i_D4[3]
+o_Q1 <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Q2 <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+o_Q3 <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar0 <= Qbar[0].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar1 <= Qbar[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar2 <= Qbar[2].DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar3 <= Qbar[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |DFF_schematic|Quad_DFF:inst
-i_EN => Mux0.IN5
-i_EN => Mux1.IN5
-i_D => Mux0.IN2
-i_D => Mux0.IN3
-i_D => Mux0.IN4
-i_D => Mux1.IN4
-i_D => Mux1.IN2
-i_D => Mux1.IN3
-o_Q <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-o_Qbar <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+i_EN12 => dff_noclk:gen_d12:0:comp_D12.i_EN
+i_EN12 => dff_noclk:gen_d12:1:comp_D12.i_EN
+i_EN34 => dff_noclk:gen_d12:0:comp_D34.i_EN
+i_EN34 => dff_noclk:gen_d12:1:comp_D34.i_EN
+i_D4[0] => dff_noclk:gen_d12:0:comp_D12.i_D
+i_D4[1] => dff_noclk:gen_d12:1:comp_D12.i_D
+i_D4[2] => dff_noclk:gen_d12:0:comp_D34.i_D
+i_D4[3] => dff_noclk:gen_d12:1:comp_D34.i_D
+o_Q4[0] <= dff_noclk:gen_d12:0:comp_D12.o_Q
+o_Q4[1] <= dff_noclk:gen_d12:1:comp_D12.o_Q
+o_Q4[2] <= dff_noclk:gen_d12:0:comp_D34.o_Q
+o_Q4[3] <= dff_noclk:gen_d12:1:comp_D34.o_Q
+o_Qbar4[0] <= dff_noclk:gen_d12:0:comp_D12.o_Qbar
+o_Qbar4[1] <= dff_noclk:gen_d12:1:comp_D12.o_Qbar
+o_Qbar4[2] <= dff_noclk:gen_d12:0:comp_D34.o_Qbar
+o_Qbar4[3] <= dff_noclk:gen_d12:1:comp_D34.o_Qbar
+
+
+|DFF_schematic|Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D12
+i_EN => s_out.LATCH_ENABLE
+i_D => s_out.DATAIN
+o_Q <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DFF_schematic|Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D34
+i_EN => s_out.LATCH_ENABLE
+i_D => s_out.DATAIN
+o_Q <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DFF_schematic|Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D12
+i_EN => s_out.LATCH_ENABLE
+i_D => s_out.DATAIN
+o_Q <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DFF_schematic|Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D34
+i_EN => s_out.LATCH_ENABLE
+i_D => s_out.DATAIN
+o_Q <= s_out.DB_MAX_OUTPUT_PORT_TYPE
+o_Qbar <= s_out.DB_MAX_OUTPUT_PORT_TYPE
 
 

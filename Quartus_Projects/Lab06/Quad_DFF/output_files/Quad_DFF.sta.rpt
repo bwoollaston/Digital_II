@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Quad_DFF
-Mon Sep 25 14:25:02 2023
+Mon Oct 02 14:26:47 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,23 +16,33 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Propagation Delay
- 12. Minimum Propagation Delay
- 13. Fast Model Setup Summary
- 14. Fast Model Hold Summary
- 15. Fast Model Recovery Summary
- 16. Fast Model Removal Summary
- 17. Fast Model Minimum Pulse Width Summary
- 18. Propagation Delay
- 19. Minimum Propagation Delay
- 20. Multicorner Timing Analysis Summary
- 21. Progagation Delay
- 22. Minimum Progagation Delay
- 23. Clock Transfers
- 24. Report TCCS
- 25. Report RSKM
- 26. Unconstrained Paths
- 27. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Minimum Pulse Width: 'i_EN12'
+ 12. Slow Model Minimum Pulse Width: 'i_EN34'
+ 13. Setup Times
+ 14. Hold Times
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Fast Model Setup Summary
+ 18. Fast Model Hold Summary
+ 19. Fast Model Recovery Summary
+ 20. Fast Model Removal Summary
+ 21. Fast Model Minimum Pulse Width Summary
+ 22. Fast Model Minimum Pulse Width: 'i_EN12'
+ 23. Fast Model Minimum Pulse Width: 'i_EN34'
+ 24. Setup Times
+ 25. Hold Times
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Multicorner Timing Analysis Summary
+ 29. Setup Times
+ 30. Hold Times
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Clock Transfers
+ 34. Report TCCS
+ 35. Report RSKM
+ 36. Unconstrained Paths
+ 37. TimeQuest Timing Analyzer Messages
 
 
 
@@ -79,10 +89,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; i_EN12     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_EN12 } ;
+; i_EN34     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { i_EN34 } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 
 
 ---------------------------
@@ -115,30 +129,108 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Slow Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; i_EN12 ; -1.222 ; -1.222               ;
+; i_EN34 ; -1.222 ; -1.222               ;
++--------+--------+----------------------+
 
 
-+--------------------------------------------------------------+
-; Propagation Delay                                            ;
-+------------+-------------+--------+--------+--------+--------+
-; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+------------+-------------+--------+--------+--------+--------+
-; i_D        ; o_Q         ; 10.497 ;        ;        ; 10.497 ;
-; i_D        ; o_Qbar      ;        ; 10.499 ; 10.499 ;        ;
-+------------+-------------+--------+--------+--------+--------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'i_EN12'                                                                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_EN12 ; Rise       ; i_EN12                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Rise       ; i_EN12|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Rise       ; i_EN12|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Rise       ; inst|\gen_d12:0:comp_D12|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Rise       ; inst|\gen_d12:0:comp_D12|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Rise       ; inst|\gen_d12:1:comp_D12|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Rise       ; inst|\gen_d12:1:comp_D12|s_out|datad              ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
 
 
-+--------------------------------------------------------------+
-; Minimum Propagation Delay                                    ;
-+------------+-------------+--------+--------+--------+--------+
-; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+------------+-------------+--------+--------+--------+--------+
-; i_D        ; o_Q         ; 10.497 ;        ;        ; 10.497 ;
-; i_D        ; o_Qbar      ;        ; 10.499 ; 10.499 ;        ;
-+------------+-------------+--------+--------+--------+--------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'i_EN34'                                                                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_EN34 ; Rise       ; i_EN34                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Rise       ; i_EN34|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Rise       ; i_EN34|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Rise       ; inst|\gen_d12:0:comp_D34|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Rise       ; inst|\gen_d12:0:comp_D34|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Rise       ; inst|\gen_d12:1:comp_D34|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Rise       ; inst|\gen_d12:1:comp_D34|s_out|datad              ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; i_D0      ; i_EN12     ; 4.722 ; 4.722 ; Fall       ; i_EN12          ;
+; i_D1      ; i_EN12     ; 5.047 ; 5.047 ; Fall       ; i_EN12          ;
+; i_D2      ; i_EN34     ; 4.847 ; 4.847 ; Fall       ; i_EN34          ;
+; i_D3      ; i_EN34     ; 4.666 ; 4.666 ; Fall       ; i_EN34          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; i_D0      ; i_EN12     ; -3.904 ; -3.904 ; Fall       ; i_EN12          ;
+; i_D1      ; i_EN12     ; -4.229 ; -4.229 ; Fall       ; i_EN12          ;
+; i_D2      ; i_EN34     ; -4.029 ; -4.029 ; Fall       ; i_EN34          ;
+; i_D3      ; i_EN34     ; -3.848 ; -3.848 ; Fall       ; i_EN34          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_Q0      ; i_EN12     ; 7.600  ; 7.600  ; Fall       ; i_EN12          ;
+; o_Q1      ; i_EN12     ; 10.835 ; 10.835 ; Fall       ; i_EN12          ;
+; o_Qbar0   ; i_EN12     ; 7.613  ; 7.613  ; Fall       ; i_EN12          ;
+; o_Qbar1   ; i_EN12     ; 10.838 ; 10.838 ; Fall       ; i_EN12          ;
+; o_Q2      ; i_EN34     ; 11.079 ; 11.079 ; Fall       ; i_EN34          ;
+; o_Q3      ; i_EN34     ; 11.129 ; 11.129 ; Fall       ; i_EN34          ;
+; o_Qbar2   ; i_EN34     ; 10.847 ; 10.847 ; Fall       ; i_EN34          ;
+; o_Qbar3   ; i_EN34     ; 11.143 ; 11.143 ; Fall       ; i_EN34          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_Q0      ; i_EN12     ; 7.600  ; 7.600  ; Fall       ; i_EN12          ;
+; o_Q1      ; i_EN12     ; 10.835 ; 10.835 ; Fall       ; i_EN12          ;
+; o_Qbar0   ; i_EN12     ; 7.613  ; 7.613  ; Fall       ; i_EN12          ;
+; o_Qbar1   ; i_EN12     ; 10.838 ; 10.838 ; Fall       ; i_EN12          ;
+; o_Q2      ; i_EN34     ; 11.079 ; 11.079 ; Fall       ; i_EN34          ;
+; o_Q3      ; i_EN34     ; 11.129 ; 11.129 ; Fall       ; i_EN34          ;
+; o_Qbar2   ; i_EN34     ; 10.847 ; 10.847 ; Fall       ; i_EN34          ;
+; o_Qbar3   ; i_EN34     ; 11.143 ; 11.143 ; Fall       ; i_EN34          ;
++-----------+------------+--------+--------+------------+-----------------+
 
 
 ----------------------------
@@ -165,30 +257,108 @@ No paths to report.
 No paths to report.
 
 
-------------------------------------------
++----------------------------------------+
 ; Fast Model Minimum Pulse Width Summary ;
-------------------------------------------
-No paths to report.
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; i_EN12 ; -1.222 ; -1.222               ;
+; i_EN34 ; -1.222 ; -1.222               ;
++--------+--------+----------------------+
 
 
-+----------------------------------------------------------+
-; Propagation Delay                                        ;
-+------------+-------------+-------+-------+-------+-------+
-; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+------------+-------------+-------+-------+-------+-------+
-; i_D        ; o_Q         ; 5.980 ;       ;       ; 5.980 ;
-; i_D        ; o_Qbar      ;       ; 5.983 ; 5.983 ;       ;
-+------------+-------------+-------+-------+-------+-------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'i_EN12'                                                                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_EN12 ; Rise       ; i_EN12                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D12|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Rise       ; i_EN12|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Rise       ; i_EN12|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Rise       ; inst|\gen_d12:0:comp_D12|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Rise       ; inst|\gen_d12:0:comp_D12|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN12 ; Rise       ; inst|\gen_d12:1:comp_D12|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN12 ; Rise       ; inst|\gen_d12:1:comp_D12|s_out|datad              ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
 
 
-+----------------------------------------------------------+
-; Minimum Propagation Delay                                ;
-+------------+-------------+-------+-------+-------+-------+
-; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+------------+-------------+-------+-------+-------+-------+
-; i_D        ; o_Q         ; 5.980 ;       ;       ; 5.980 ;
-; i_D        ; o_Qbar      ;       ; 5.983 ; 5.983 ;       ;
-+------------+-------------+-------+-------+-------+-------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'i_EN34'                                                                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                                            ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_EN34 ; Rise       ; i_EN34                                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:0:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Fall       ; Quad_DFF:inst|DFF_noCLK:\gen_d12:1:comp_D34|s_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Rise       ; i_EN34|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Rise       ; i_EN34|combout                                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Rise       ; inst|\gen_d12:0:comp_D34|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Rise       ; inst|\gen_d12:0:comp_D34|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_EN34 ; Rise       ; inst|\gen_d12:1:comp_D34|s_out|datad              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_EN34 ; Rise       ; inst|\gen_d12:1:comp_D34|s_out|datad              ;
++--------+--------------+----------------+------------------+--------+------------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; i_D0      ; i_EN12     ; 2.745 ; 2.745 ; Fall       ; i_EN12          ;
+; i_D1      ; i_EN12     ; 2.911 ; 2.911 ; Fall       ; i_EN12          ;
+; i_D2      ; i_EN34     ; 2.788 ; 2.788 ; Fall       ; i_EN34          ;
+; i_D3      ; i_EN34     ; 2.701 ; 2.701 ; Fall       ; i_EN34          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; i_D0      ; i_EN12     ; -2.407 ; -2.407 ; Fall       ; i_EN12          ;
+; i_D1      ; i_EN12     ; -2.573 ; -2.573 ; Fall       ; i_EN12          ;
+; i_D2      ; i_EN34     ; -2.447 ; -2.447 ; Fall       ; i_EN34          ;
+; i_D3      ; i_EN34     ; -2.361 ; -2.361 ; Fall       ; i_EN34          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_Q0      ; i_EN12     ; 4.010 ; 4.010 ; Fall       ; i_EN12          ;
+; o_Q1      ; i_EN12     ; 5.361 ; 5.361 ; Fall       ; i_EN12          ;
+; o_Qbar0   ; i_EN12     ; 4.020 ; 4.020 ; Fall       ; i_EN12          ;
+; o_Qbar1   ; i_EN12     ; 5.364 ; 5.364 ; Fall       ; i_EN12          ;
+; o_Q2      ; i_EN34     ; 5.434 ; 5.434 ; Fall       ; i_EN34          ;
+; o_Q3      ; i_EN34     ; 5.462 ; 5.462 ; Fall       ; i_EN34          ;
+; o_Qbar2   ; i_EN34     ; 5.327 ; 5.327 ; Fall       ; i_EN34          ;
+; o_Qbar3   ; i_EN34     ; 5.476 ; 5.476 ; Fall       ; i_EN34          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_Q0      ; i_EN12     ; 4.010 ; 4.010 ; Fall       ; i_EN12          ;
+; o_Q1      ; i_EN12     ; 5.361 ; 5.361 ; Fall       ; i_EN12          ;
+; o_Qbar0   ; i_EN12     ; 4.020 ; 4.020 ; Fall       ; i_EN12          ;
+; o_Qbar1   ; i_EN12     ; 5.364 ; 5.364 ; Fall       ; i_EN12          ;
+; o_Q2      ; i_EN34     ; 5.434 ; 5.434 ; Fall       ; i_EN34          ;
+; o_Q3      ; i_EN34     ; 5.462 ; 5.462 ; Fall       ; i_EN34          ;
+; o_Qbar2   ; i_EN34     ; 5.327 ; 5.327 ; Fall       ; i_EN34          ;
+; o_Qbar3   ; i_EN34     ; 5.476 ; 5.476 ; Fall       ; i_EN34          ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +----------------------------------------------------------------------------+
@@ -196,29 +366,69 @@ No paths to report.
 +------------------+-------+------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.222              ;
+;  i_EN12          ; N/A   ; N/A  ; N/A      ; N/A     ; -1.222              ;
+;  i_EN34          ; N/A   ; N/A  ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -2.444              ;
+;  i_EN12          ; N/A   ; N/A  ; N/A      ; N/A     ; -1.222              ;
+;  i_EN34          ; N/A   ; N/A  ; N/A      ; N/A     ; -1.222              ;
 +------------------+-------+------+----------+---------+---------------------+
 
 
-+--------------------------------------------------------------+
-; Progagation Delay                                            ;
-+------------+-------------+--------+--------+--------+--------+
-; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
-+------------+-------------+--------+--------+--------+--------+
-; i_D        ; o_Q         ; 10.497 ;        ;        ; 10.497 ;
-; i_D        ; o_Qbar      ;        ; 10.499 ; 10.499 ;        ;
-+------------+-------------+--------+--------+--------+--------+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; i_D0      ; i_EN12     ; 4.722 ; 4.722 ; Fall       ; i_EN12          ;
+; i_D1      ; i_EN12     ; 5.047 ; 5.047 ; Fall       ; i_EN12          ;
+; i_D2      ; i_EN34     ; 4.847 ; 4.847 ; Fall       ; i_EN34          ;
+; i_D3      ; i_EN34     ; 4.666 ; 4.666 ; Fall       ; i_EN34          ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
-+----------------------------------------------------------+
-; Minimum Progagation Delay                                ;
-+------------+-------------+-------+-------+-------+-------+
-; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
-+------------+-------------+-------+-------+-------+-------+
-; i_D        ; o_Q         ; 5.980 ;       ;       ; 5.980 ;
-; i_D        ; o_Qbar      ;       ; 5.983 ; 5.983 ;       ;
-+------------+-------------+-------+-------+-------+-------+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; i_D0      ; i_EN12     ; -2.407 ; -2.407 ; Fall       ; i_EN12          ;
+; i_D1      ; i_EN12     ; -2.573 ; -2.573 ; Fall       ; i_EN12          ;
+; i_D2      ; i_EN34     ; -2.447 ; -2.447 ; Fall       ; i_EN34          ;
+; i_D3      ; i_EN34     ; -2.361 ; -2.361 ; Fall       ; i_EN34          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_Q0      ; i_EN12     ; 7.600  ; 7.600  ; Fall       ; i_EN12          ;
+; o_Q1      ; i_EN12     ; 10.835 ; 10.835 ; Fall       ; i_EN12          ;
+; o_Qbar0   ; i_EN12     ; 7.613  ; 7.613  ; Fall       ; i_EN12          ;
+; o_Qbar1   ; i_EN12     ; 10.838 ; 10.838 ; Fall       ; i_EN12          ;
+; o_Q2      ; i_EN34     ; 11.079 ; 11.079 ; Fall       ; i_EN34          ;
+; o_Q3      ; i_EN34     ; 11.129 ; 11.129 ; Fall       ; i_EN34          ;
+; o_Qbar2   ; i_EN34     ; 10.847 ; 10.847 ; Fall       ; i_EN34          ;
+; o_Qbar3   ; i_EN34     ; 11.143 ; 11.143 ; Fall       ; i_EN34          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; o_Q0      ; i_EN12     ; 4.010 ; 4.010 ; Fall       ; i_EN12          ;
+; o_Q1      ; i_EN12     ; 5.361 ; 5.361 ; Fall       ; i_EN12          ;
+; o_Qbar0   ; i_EN12     ; 4.020 ; 4.020 ; Fall       ; i_EN12          ;
+; o_Qbar1   ; i_EN12     ; 5.364 ; 5.364 ; Fall       ; i_EN12          ;
+; o_Q2      ; i_EN34     ; 5.434 ; 5.434 ; Fall       ; i_EN34          ;
+; o_Q3      ; i_EN34     ; 5.462 ; 5.462 ; Fall       ; i_EN34          ;
+; o_Qbar2   ; i_EN34     ; 5.327 ; 5.327 ; Fall       ; i_EN34          ;
+; o_Qbar3   ; i_EN34     ; 5.476 ; 5.476 ; Fall       ; i_EN34          ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 -------------------
@@ -246,10 +456,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 2     ; 2    ;
-; Unconstrained Output Ports      ; 2     ; 2    ;
-; Unconstrained Output Port Paths ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 4     ; 4    ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
 +---------------------------------+-------+------+
 
 
@@ -259,42 +469,50 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Sep 25 14:25:01 2023
+    Info: Processing started: Mon Oct 02 14:26:46 2023
 Info: Command: quartus_sta Quad_DFF -c Quad_DFF
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops as latches.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'Quad_DFF.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name i_EN12 i_EN12
+    Info (332105): create_clock -period 1.000 -name i_EN34 i_EN34
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow Model
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 i_EN12 
+    Info (332119):    -1.222        -1.222 i_EN34 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222        -1.222 i_EN12 
+    Info (332119):    -1.222        -1.222 i_EN34 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4546 megabytes
-    Info: Processing ended: Mon Sep 25 14:25:01 2023
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Mon Oct 02 14:26:47 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

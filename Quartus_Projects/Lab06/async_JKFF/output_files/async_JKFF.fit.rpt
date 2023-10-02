@@ -1,5 +1,5 @@
 Fitter report for async_JKFF
-Fri Sep 29 11:14:49 2023
+Mon Oct 02 14:37:10 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -61,7 +61,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Sep 29 11:14:49 2023           ;
+; Fitter Status                      ; Successful - Mon Oct 02 14:37:10 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; async_JKFF                                      ;
 ; Top-level Entity Name              ; async_JKFF                                      ;
@@ -1521,7 +1521,7 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1544,8 +1544,8 @@ Info (306005): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab06/async_JKFF/output_files/async_JKFF.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4974 megabytes
-    Info: Processing ended: Fri Sep 29 11:14:49 2023
+    Info: Peak virtual memory: 4970 megabytes
+    Info: Processing ended: Mon Oct 02 14:37:10 2023
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 

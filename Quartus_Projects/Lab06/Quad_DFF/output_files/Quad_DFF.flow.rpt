@@ -1,5 +1,5 @@
 Flow report for Quad_DFF
-Mon Sep 25 14:25:01 2023
+Mon Oct 02 14:26:47 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Sep 25 14:24:59 2023           ;
+; Flow Status                        ; Successful - Mon Oct 02 14:26:46 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Quad_DFF                                        ;
 ; Top-level Entity Name              ; DFF_schematic                                   ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C70F896C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 0 / 68,416 ( 0 % )                              ;
-;     Total combinational functions  ; 0 / 68,416 ( 0 % )                              ;
+; Total logic elements               ; 4 / 68,416 ( < 1 % )                            ;
+;     Total combinational functions  ; 4 / 68,416 ( < 1 % )                            ;
 ;     Dedicated logic registers      ; 0 / 68,416 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 4 / 622 ( < 1 % )                               ;
+; Total pins                         ; 14 / 622 ( 2 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 1,152,000 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 300 ( 0 % )                                 ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/25/2023 14:24:47 ;
+; Start date & time ; 10/02/2023 14:26:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Quad_DFF            ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+---------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name   ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID               ; 817177284611.169566628710012          ; --            ; --            ; --         ;
+; COMPILER_SIGNATURE_ID               ; 817177284611.169627119513456          ; --            ; --            ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --            ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --            ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; DFF_schematic ; Top        ;
@@ -93,11 +93,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4650 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 4974 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4582 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4546 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4648 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 4974 MB             ; 00:00:05                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4582 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4546 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:09                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

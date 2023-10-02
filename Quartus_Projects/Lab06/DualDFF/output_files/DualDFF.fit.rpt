@@ -1,5 +1,5 @@
 Fitter report for DualDFF
-Wed Sep 27 10:29:50 2023
+Mon Oct 02 14:20:20 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -25,20 +25,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  17. Delay Chain Summary
  18. Pad To Core Delay Chain Fanout
  19. Control Signals
- 20. Global & Other Fast Signals
- 21. Non-Global High Fan-Out Signals
- 22. Other Routing Usage Summary
- 23. LAB Logic Elements
- 24. LAB-wide Signals
- 25. LAB Signals Sourced
- 26. LAB Signals Sourced Out
- 27. LAB Distinct Inputs
- 28. Fitter Device Options
- 29. Operating Settings and Conditions
- 30. Estimated Delay Added for Hold Timing Summary
- 31. Estimated Delay Added for Hold Timing Details
- 32. Fitter Messages
- 33. Fitter Suppressed Messages
+ 20. Non-Global High Fan-Out Signals
+ 21. Other Routing Usage Summary
+ 22. LAB Logic Elements
+ 23. LAB-wide Signals
+ 24. LAB Signals Sourced
+ 25. LAB Signals Sourced Out
+ 26. LAB Distinct Inputs
+ 27. Fitter Device Options
+ 28. Operating Settings and Conditions
+ 29. Fitter Messages
+ 30. Fitter Suppressed Messages
 
 
 
@@ -64,15 +61,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Sep 27 10:29:50 2023           ;
+; Fitter Status                      ; Successful - Mon Oct 02 14:20:20 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DualDFF                                         ;
 ; Top-level Entity Name              ; DualDFF                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C70F896C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 14 / 68,416 ( < 1 % )                           ;
-;     Total combinational functions  ; 14 / 68,416 ( < 1 % )                           ;
+; Total logic elements               ; 20 / 68,416 ( < 1 % )                           ;
+;     Total combinational functions  ; 20 / 68,416 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 4 / 68,416 ( < 1 % )                            ;
 ; Total registers                    ; 4                                               ;
 ; Total pins                         ; 12 / 622 ( 2 % )                                ;
@@ -139,7 +136,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -150,8 +147,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 35 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 35 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 39 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 39 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -174,7 +171,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 33      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 37      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 2       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -182,7 +179,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab06/DualDFF/output_files/DualDFF.pin.
+The pin-out file can be found in C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab06/DualDFF/output_files/DualDFF.pin.
 
 
 +---------------------------------------------------------------------+
@@ -190,46 +187,46 @@ The pin-out file can be found in C:/Users/cwool/OneDrive/Documents/EngineeringPh
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 14 / 68,416 ( < 1 % ) ;
-;     -- Combinational with no register       ; 10                    ;
+; Total logic elements                        ; 20 / 68,416 ( < 1 % ) ;
+;     -- Combinational with no register       ; 16                    ;
 ;     -- Register only                        ; 0                     ;
 ;     -- Combinational with a register        ; 4                     ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
 ;     -- 4 input functions                    ; 4                     ;
 ;     -- 3 input functions                    ; 4                     ;
-;     -- <=2 input functions                  ; 6                     ;
+;     -- <=2 input functions                  ; 12                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 14                    ;
+;     -- normal mode                          ; 20                    ;
 ;     -- arithmetic mode                      ; 0                     ;
 ;                                             ;                       ;
 ; Total registers*                            ; 4 / 70,234 ( < 1 % )  ;
 ;     -- Dedicated logic registers            ; 4 / 68,416 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 1,818 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 3 / 4,276 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 2 / 4,276 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 12 / 622 ( 2 % )      ;
 ;     -- Clock pins                           ; 0 / 8 ( 0 % )         ;
 ;                                             ;                       ;
-; Global signals                              ; 2                     ;
+; Global signals                              ; 0                     ;
 ; M4Ks                                        ; 0 / 250 ( 0 % )       ;
 ; Total block memory bits                     ; 0 / 1,152,000 ( 0 % ) ;
 ; Total block memory implementation bits      ; 0 / 1,152,000 ( 0 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 300 ( 0 % )       ;
 ; PLLs                                        ; 0 / 4 ( 0 % )         ;
-; Global clocks                               ; 2 / 16 ( 13 % )       ;
+; Global clocks                               ; 0 / 16 ( 0 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 4                     ;
-; Highest non-global fan-out                  ; 3                     ;
-; Total fan-out                               ; 58                    ;
-; Average fan-out                             ; 1.71                  ;
+; Maximum fan-out                             ; 5                     ;
+; Highest non-global fan-out                  ; 5                     ;
+; Total fan-out                               ; 68                    ;
+; Average fan-out                             ; 1.79                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -242,32 +239,31 @@ The pin-out file can be found in C:/Users/cwool/OneDrive/Documents/EngineeringPh
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 14 / 68416 ( < 1 % ) ; 0 / 68416 ( 0 % )              ;
-;     -- Combinational with no register       ; 10                   ; 0                              ;
+; Total logic elements                        ; 20 / 68416 ( < 1 % ) ; 0 / 68416 ( 0 % )              ;
+;     -- Combinational with no register       ; 16                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;     -- Combinational with a register        ; 4                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
 ;     -- 4 input functions                    ; 4                    ; 0                              ;
 ;     -- 3 input functions                    ; 4                    ; 0                              ;
-;     -- <=2 input functions                  ; 6                    ; 0                              ;
+;     -- <=2 input functions                  ; 12                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 14                   ; 0                              ;
+;     -- normal mode                          ; 20                   ; 0                              ;
 ;     -- arithmetic mode                      ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 4                    ; 0                              ;
 ;     -- Dedicated logic registers            ; 4 / 68416 ( < 1 % )  ; 0 / 68416 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 3 / 4276 ( < 1 % )   ; 0 / 4276 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 2 / 4276 ( < 1 % )   ; 0 / 4276 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
 ; I/O pins                                    ; 12                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 300 ( 0 % )      ; 0 / 300 ( 0 % )                ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
-; Clock control block                         ; 2 / 20 ( 10 % )      ; 0 / 20 ( 0 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
 ;     -- Input Connections                    ; 0                    ; 0                              ;
@@ -276,7 +272,7 @@ The pin-out file can be found in C:/Users/cwool/OneDrive/Documents/EngineeringPh
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 58                   ; 0                              ;
+;     -- Total Connections                    ; 68                   ; 0                              ;
 ;     -- Registered Connections               ; 4                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -313,10 +309,10 @@ The pin-out file can be found in C:/Users/cwool/OneDrive/Documents/EngineeringPh
 ; i_CLK1  ; AB26  ; 6        ; 95           ; 9            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; i_D0    ; AB25  ; 6        ; 95           ; 8            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; i_D1    ; AC27  ; 6        ; 95           ; 11           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; i_LCLR0 ; AC26  ; 6        ; 95           ; 4            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; i_LCLR1 ; AC24  ; 6        ; 95           ; 3            ; 3           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; i_LPR0  ; AC23  ; 6        ; 95           ; 2            ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; i_LPR1  ; AD25  ; 6        ; 95           ; 2            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; i_LCLR0 ; AC26  ; 6        ; 95           ; 4            ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; i_LCLR1 ; AC24  ; 6        ; 95           ; 3            ; 3           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; i_LPR0  ; AC23  ; 6        ; 95           ; 2            ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; i_LPR1  ; AD25  ; 6        ; 95           ; 2            ; 1           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -1295,10 +1291,10 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                             ; Library Name ;
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+--------------+
-; |DualDFF                            ; 14 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 12   ; 0            ; 10 (0)       ; 0 (0)             ; 4 (0)            ; |DualDFF                                        ; work         ;
-;    |n_DFF:inst|                     ; 14 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 4 (0)            ; |DualDFF|n_DFF:inst                             ; work         ;
-;       |DFF_clk:\gen_dff:0:comp_DFF| ; 7 (7)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; |DualDFF|n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF ; work         ;
-;       |DFF_clk:\gen_dff:1:comp_DFF| ; 7 (7)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 2 (2)            ; |DualDFF|n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF ; work         ;
+; |DualDFF                            ; 20 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 12   ; 0            ; 16 (0)       ; 0 (0)             ; 4 (0)            ; |DualDFF                                        ; work         ;
+;    |n_DFF:inst|                     ; 20 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 4 (0)            ; |DualDFF|n_DFF:inst                             ; work         ;
+;       |DFF_clk:\gen_dff:0:comp_DFF| ; 10 (10)     ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 2 (2)            ; |DualDFF|n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF ; work         ;
+;       |DFF_clk:\gen_dff:1:comp_DFF| ; 10 (10)     ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 2 (2)            ; |DualDFF|n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF ; work         ;
 +-------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1314,8 +1310,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; o_Qbar1 ; Output   ; --            ; --            ; --                    ; --  ;
 ; i_LPR0  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; i_LPR1  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; i_LCLR0 ; Input    ; (3) 1403 ps   ; (0) 171 ps    ; --                    ; --  ;
-; i_LCLR1 ; Input    ; (0) 171 ps    ; (6) 2523 ps   ; --                    ; --  ;
+; i_LCLR0 ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; i_LCLR1 ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; i_D0    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; i_CLK0  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; i_D1    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
@@ -1323,96 +1319,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------------+---------------+-----------------------+-----+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                                     ;
-+----------------------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                                  ; Pad To Core Index ; Setting ;
-+----------------------------------------------------------------------+-------------------+---------+
-; i_LPR0                                                               ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~2         ; 0                 ; 6       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0            ; 0                 ; 6       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~1         ; 0                 ; 6       ;
-; i_LPR1                                                               ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~2         ; 0                 ; 6       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0            ; 0                 ; 6       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~1         ; 0                 ; 6       ;
-; i_LCLR0                                                              ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~6         ; 0                 ; 3       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0            ; 1                 ; 0       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~5         ; 0                 ; 3       ;
-; i_LCLR1                                                              ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~6         ; 1                 ; 6       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0            ; 0                 ; 0       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~5         ; 0                 ; 0       ;
-; i_D0                                                                 ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~3         ; 0                 ; 6       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~7         ; 0                 ; 6       ;
-; i_CLK0                                                               ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~_emulated ; 1                 ; 0       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~_emulated ; 1                 ; 0       ;
-; i_D1                                                                 ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~3         ; 1                 ; 6       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~7         ; 1                 ; 6       ;
-; i_CLK1                                                               ;                   ;         ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~_emulated ; 1                 ; 0       ;
-;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~_emulated ; 1                 ; 0       ;
-+----------------------------------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                               ;
++----------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                            ; Pad To Core Index ; Setting ;
++----------------------------------------------------------------+-------------------+---------+
+; i_LPR0                                                         ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~2            ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~0            ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0      ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~1      ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~1            ; 0                 ; 6       ;
+; i_LPR1                                                         ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~2            ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~0            ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0      ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~1      ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~1            ; 0                 ; 6       ;
+; i_LCLR0                                                        ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~2         ; 1                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0      ; 1                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~0         ; 1                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~1      ; 1                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~1         ; 1                 ; 6       ;
+; i_LCLR1                                                        ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~2         ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0      ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~0         ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~1      ; 0                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~1         ; 0                 ; 6       ;
+; i_D0                                                           ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~3            ; 1                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~3         ; 1                 ; 6       ;
+; i_CLK0                                                         ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~_emulated ; 1                 ; 0       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~_emulated    ; 1                 ; 0       ;
+; i_D1                                                           ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~3            ; 1                 ; 6       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~3         ; 1                 ; 6       ;
+; i_CLK1                                                         ;                   ;         ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~_emulated ; 1                 ; 0       ;
+;      - n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~_emulated    ; 1                 ; 0       ;
++----------------------------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                               ;
-+----------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                               ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; i_CLK0                                             ; PIN_AA23           ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; i_CLK1                                             ; PIN_AB26           ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0 ; LCCOMB_X94_Y4_N2   ; 4       ; Async. clear, Latch enable ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0 ; LCCOMB_X94_Y22_N14 ; 4       ; Async. clear, Latch enable ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-+----------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                             ;
++-------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                            ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; i_CLK0                                          ; PIN_AA23          ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; i_CLK1                                          ; PIN_AB26          ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~0 ; LCCOMB_X94_Y8_N4  ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~0    ; LCCOMB_X94_Y8_N24 ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~0 ; LCCOMB_X94_Y9_N12 ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~0    ; LCCOMB_X94_Y9_N24 ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
++-------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                             ;
-+----------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; Name                                               ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0 ; LCCOMB_X94_Y4_N2   ; 4       ; Global Clock         ; GCLK5            ; --                        ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0 ; LCCOMB_X94_Y22_N14 ; 4       ; Global Clock         ; GCLK6            ; --                        ;
-+----------------------------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
-
-
-+-------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                         ;
-+---------------------------------------------------------------+---------+
-; Name                                                          ; Fan-Out ;
-+---------------------------------------------------------------+---------+
-; i_LCLR1                                                       ; 3       ;
-; i_LCLR0                                                       ; 3       ;
-; i_LPR1                                                        ; 3       ;
-; i_LPR0                                                        ; 3       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~5         ; 3       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~5         ; 3       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~1         ; 3       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~1         ; 3       ;
-; i_CLK1                                                        ; 2       ;
-; i_D1                                                          ; 2       ;
-; i_CLK0                                                        ; 2       ;
-; i_D0                                                          ; 2       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0            ; 2       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0            ; 2       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~7         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~7         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~3         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~3         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~6         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~_emulated ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~6         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~_emulated ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~2         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~_emulated ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~2         ; 1       ;
-; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~_emulated ; 1       ;
-+---------------------------------------------------------------+---------+
++-------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                   ;
++---------------------------------------------------------+---------+
+; Name                                                    ; Fan-Out ;
++---------------------------------------------------------+---------+
+; i_LCLR1                                                 ; 5       ;
+; i_LCLR0                                                 ; 5       ;
+; i_LPR1                                                  ; 5       ;
+; i_LPR0                                                  ; 5       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~1         ; 3       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~1         ; 3       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~1            ; 3       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~1            ; 3       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~1      ; 3       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~1      ; 3       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0      ; 3       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0      ; 3       ;
+; i_CLK1                                                  ; 2       ;
+; i_D1                                                    ; 2       ;
+; i_CLK0                                                  ; 2       ;
+; i_D0                                                    ; 2       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~0         ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~3         ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~0         ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~3         ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~0            ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~3            ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~0            ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~3            ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~2         ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Qbar~_emulated ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~2         ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Qbar~_emulated ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~2            ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|o_Q~_emulated    ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~2            ; 1       ;
+; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|o_Q~_emulated    ; 1       ;
++---------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -1420,93 +1422,92 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 28 / 197,592 ( < 1 % ) ;
-; C16 interconnects           ; 8 / 6,270 ( < 1 % )    ;
-; C4 interconnects            ; 29 / 123,120 ( < 1 % ) ;
-; Direct links                ; 3 / 197,592 ( < 1 % )  ;
-; Global clocks               ; 2 / 16 ( 13 % )        ;
-; Local interconnects         ; 8 / 68,416 ( < 1 % )   ;
-; R24 interconnects           ; 15 / 5,926 ( < 1 % )   ;
-; R4 interconnects            ; 46 / 167,484 ( < 1 % ) ;
+; Block interconnects         ; 14 / 197,592 ( < 1 % ) ;
+; C16 interconnects           ; 1 / 6,270 ( < 1 % )    ;
+; C4 interconnects            ; 16 / 123,120 ( < 1 % ) ;
+; Direct links                ; 2 / 197,592 ( < 1 % )  ;
+; Global clocks               ; 0 / 16 ( 0 % )         ;
+; Local interconnects         ; 16 / 68,416 ( < 1 % )  ;
+; R24 interconnects           ; 14 / 5,926 ( < 1 % )   ;
+; R4 interconnects            ; 17 / 167,484 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 4.67) ; Number of LABs  (Total = 3) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
-; 2                                          ; 0                           ;
-; 3                                          ; 0                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 0                           ;
-; 6                                          ; 1                           ;
-; 7                                          ; 1                           ;
-; 8                                          ; 0                           ;
-; 9                                          ; 0                           ;
-; 10                                         ; 0                           ;
-; 11                                         ; 0                           ;
-; 12                                         ; 0                           ;
-; 13                                         ; 0                           ;
-; 14                                         ; 0                           ;
-; 15                                         ; 0                           ;
-; 16                                         ; 0                           ;
-+--------------------------------------------+-----------------------------+
-
-
-+------------------------------------------------------------------+
-; LAB-wide Signals                                                 ;
-+------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 3) ;
-+------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 1                           ;
-; 1 Clock                            ; 2                           ;
-+------------------------------------+-----------------------------+
-
-
 +---------------------------------------------------------------------------+
-; LAB Signals Sourced                                                       ;
+; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 6.00) ; Number of LABs  (Total = 3) ;
+; Number of Logic Elements  (Average = 10.00) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
+; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 1                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 2                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 0                           ;
+; 16                                          ; 0                           ;
 +---------------------------------------------+-----------------------------+
+
+
++------------------------------------------------------------------+
+; LAB-wide Signals                                                 ;
++------------------------------------+-----------------------------+
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 2) ;
++------------------------------------+-----------------------------+
+; 1 Clock                            ; 2                           ;
++------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++----------------------------------------------+-----------------------------+
+; Number of Signals Sourced  (Average = 12.00) ; Number of LABs  (Total = 2) ;
++----------------------------------------------+-----------------------------+
+; 0                                            ; 0                           ;
+; 1                                            ; 0                           ;
+; 2                                            ; 0                           ;
+; 3                                            ; 0                           ;
+; 4                                            ; 0                           ;
+; 5                                            ; 0                           ;
+; 6                                            ; 0                           ;
+; 7                                            ; 0                           ;
+; 8                                            ; 0                           ;
+; 9                                            ; 0                           ;
+; 10                                           ; 0                           ;
+; 11                                           ; 0                           ;
+; 12                                           ; 2                           ;
++----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 2.00) ; Number of LABs  (Total = 3) ;
+; Number of Signals Sourced Out  (Average = 2.00) ; Number of LABs  (Total = 2) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
-; 2                                               ; 1                           ;
-; 3                                               ; 1                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 2                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 4.33) ; Number of LABs  (Total = 3) ;
+; Number of Distinct Inputs  (Average = 4.00) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
+; 2                                           ; 0                           ;
 ; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 1                           ;
+; 4                                           ; 2                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1539,29 +1540,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; I/O             ; i_LCLR0              ; 2.9               ;
-; I/O             ; i_LCLR1              ; 2.6               ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
-
-
-+---------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                               ;
-+-----------------+-------------------------------------------------------+-------------------+
-; Source Register ; Destination Register                                  ; Delay Added in ns ;
-+-----------------+-------------------------------------------------------+-------------------+
-; i_LCLR0         ; n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~5 ; 2.927             ;
-; i_LCLR1         ; o_Qbar1                                               ; 2.609             ;
-+-----------------+-------------------------------------------------------+-------------------+
-Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1579,16 +1557,6 @@ Warning (335093): TimeQuest Timing Analyzer is analyzing 4 combinational loops a
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'DualDFF.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|process_0~0 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[1]~2
-        Info (176357): Destination node n_DFF:inst|DFF_clk:\gen_dff:0:comp_DFF|Qinternal[0]~6
-Info (176353): Automatically promoted node n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|process_0~0 
-    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[1]~2
-        Info (176357): Destination node n_DFF:inst|DFF_clk:\gen_dff:1:comp_DFF|Qinternal[0]~6
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1601,10 +1569,11 @@ Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X84_Y0 to location X95_Y12
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 4 output pins without output pin load capacitance assignment
     Info (306007): Pin "o_Q0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1614,18 +1583,18 @@ Warning (306006): Found 4 output pins without output pin load capacitance assign
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab06/DualDFF/output_files/DualDFF.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (144001): Generated suppressed messages file C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab06/DualDFF/output_files/DualDFF.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4981 megabytes
-    Info: Processing ended: Wed Sep 27 10:29:50 2023
+    Info: Peak virtual memory: 4978 megabytes
+    Info: Processing ended: Mon Oct 02 14:20:20 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab06/DualDFF/output_files/DualDFF.fit.smsg.
+The suppressed messages can be found in C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab06/DualDFF/output_files/DualDFF.fit.smsg.
 
 
