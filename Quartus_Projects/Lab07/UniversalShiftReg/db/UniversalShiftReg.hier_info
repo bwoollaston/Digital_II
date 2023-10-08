@@ -1,0 +1,44 @@
+|UniversalShiftReg
+o_Q0 <= shift_reg:inst.o_Q[0]
+i_CLK => shift_reg:inst.i_CLK
+i_aRST => shift_reg:inst.i_aRST
+i_CTRL1 => shift_reg:inst.i_CTRL[1]
+i_CTRL0 => shift_reg:inst.i_CTRL[0]
+i_LD3 => shift_reg:inst.i_LD[3]
+i_LD2 => shift_reg:inst.i_LD[2]
+i_LD1 => shift_reg:inst.i_LD[1]
+i_LD0 => shift_reg:inst.i_LD[0]
+o_Q1 <= shift_reg:inst.o_Q[1]
+o_Q2 <= shift_reg:inst.o_Q[2]
+o_Q3 <= shift_reg:inst.o_Q[3]
+
+
+|UniversalShiftReg|shift_reg:inst
+i_CTRL[0] => Mux0.IN1
+i_CTRL[0] => Mux1.IN1
+i_CTRL[0] => Mux2.IN1
+i_CTRL[0] => Mux3.IN1
+i_CTRL[1] => Mux0.IN0
+i_CTRL[1] => Mux1.IN0
+i_CTRL[1] => Mux2.IN0
+i_CTRL[1] => Mux3.IN0
+i_LD[0] => Mux3.IN2
+i_LD[0] => Mux3.IN3
+i_LD[1] => Mux2.IN2
+i_LD[2] => Mux1.IN2
+i_LD[3] => Mux0.IN2
+i_LD[3] => Mux0.IN3
+i_CLK => r_reg[0].CLK
+i_CLK => r_reg[1].CLK
+i_CLK => r_reg[2].CLK
+i_CLK => r_reg[3].CLK
+i_aRST => r_reg[0].ACLR
+i_aRST => r_reg[1].ACLR
+i_aRST => r_reg[2].ACLR
+i_aRST => r_reg[3].ACLR
+o_Q[0] <= r_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[1] <= r_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[2] <= r_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[3] <= r_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

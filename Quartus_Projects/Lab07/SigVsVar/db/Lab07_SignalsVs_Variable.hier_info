@@ -1,0 +1,14 @@
+|Lab07_SignalsVs_Variable
+o_OUT <= SigVsVar1:inst.o_OUT
+i_A => SigVsVar1:inst.i_A
+i_B => SigVsVar1:inst.i_B
+i_clk => SigVsVar1:inst.i_clk
+
+
+|Lab07_SignalsVs_Variable|SigVsVar1:inst
+i_A => v_AB.IN0
+i_B => v_AB.IN1
+i_clk => s_AB.CLK
+o_OUT <= s_AB.DB_MAX_OUTPUT_PORT_TYPE
+
+
