@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Lab07_SignalsVs_Variable
-Mon Oct 09 11:54:14 2023
+Mon Oct 09 13:25:54 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,31 +16,36 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. Slow Model Recovery Summary
   9. Slow Model Removal Summary
  10. Slow Model Minimum Pulse Width Summary
- 11. Slow Model Minimum Pulse Width: 'i_clk'
- 12. Setup Times
- 13. Hold Times
- 14. Clock to Output Times
- 15. Minimum Clock to Output Times
- 16. Fast Model Setup Summary
- 17. Fast Model Hold Summary
- 18. Fast Model Recovery Summary
- 19. Fast Model Removal Summary
- 20. Fast Model Minimum Pulse Width Summary
- 21. Fast Model Minimum Pulse Width: 'i_clk'
- 22. Setup Times
- 23. Hold Times
- 24. Clock to Output Times
- 25. Minimum Clock to Output Times
- 26. Multicorner Timing Analysis Summary
- 27. Setup Times
- 28. Hold Times
- 29. Clock to Output Times
- 30. Minimum Clock to Output Times
- 31. Clock Transfers
- 32. Report TCCS
- 33. Report RSKM
- 34. Unconstrained Paths
- 35. TimeQuest Timing Analyzer Messages
+ 11. Slow Model Setup: 'i_clk'
+ 12. Slow Model Hold: 'i_clk'
+ 13. Slow Model Minimum Pulse Width: 'i_clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'i_clk'
+ 24. Fast Model Hold: 'i_clk'
+ 25. Fast Model Minimum Pulse Width: 'i_clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
 
 
 
@@ -96,22 +101,32 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
----------------------------
-; Slow Model Fmax Summary ;
----------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                    ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+; 1347.71 MHz ; 450.05 MHz      ; i_clk      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-----------------------------
-; Slow Model Setup Summary ;
-----------------------------
-No paths to report.
++-------------------------------+
+; Slow Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; i_clk ; 0.258 ; 0.000         ;
++-------+-------+---------------+
 
 
----------------------------
-; Slow Model Hold Summary ;
----------------------------
-No paths to report.
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; i_clk ; 0.512 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -131,23 +146,45 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; i_clk ; -1.222 ; -2.222                ;
+; i_clk ; -1.222 ; -3.222                ;
 +-------+--------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Slow Model Minimum Pulse Width: 'i_clk'                                                              ;
-+--------+--------------+----------------+------------------+-------+------------+---------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target              ;
-+--------+--------------+----------------+------------------+-------+------------+---------------------+
-; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_clk ; Rise       ; i_clk               ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_clk ; Rise       ; SigVsVar1:inst|s_AB ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_clk ; Rise       ; SigVsVar1:inst|s_AB ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; i_clk|combout       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; i_clk|combout       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; inst|s_AB|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; inst|s_AB|clk       ;
-+--------+--------------+----------------+------------------+-------+------------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'i_clk'                                                                                                ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.258 ; SigVsVar1:inst|s_AB ; SigVsVar1:inst|o_OUT ; i_clk        ; i_clk       ; 1.000        ; 0.000      ; 0.778      ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'i_clk'                                                                                                 ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.512 ; SigVsVar1:inst|s_AB ; SigVsVar1:inst|o_OUT ; i_clk        ; i_clk       ; 0.000        ; 0.000      ; 0.778      ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'i_clk'                                                               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_clk ; Rise       ; i_clk                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_clk ; Rise       ; SigVsVar1:inst|o_OUT ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_clk ; Rise       ; SigVsVar1:inst|o_OUT ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_clk ; Rise       ; SigVsVar1:inst|s_AB  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_clk ; Rise       ; SigVsVar1:inst|s_AB  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; i_clk|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; i_clk|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; inst|o_OUT|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; inst|o_OUT|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; inst|s_AB|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; inst|s_AB|clk        ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -155,8 +192,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_A       ; i_clk      ; 4.182 ; 4.182 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; 4.055 ; 4.055 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; 5.761 ; 5.761 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; 5.369 ; 5.369 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -165,8 +202,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_A       ; i_clk      ; -3.952 ; -3.952 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; -3.825 ; -3.825 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; -5.531 ; -5.531 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; -5.139 ; -5.139 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -175,7 +212,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; o_OUT     ; i_clk      ; 12.028 ; 12.028 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 10.212 ; 10.212 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -184,20 +221,26 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; o_OUT     ; i_clk      ; 12.028 ; 12.028 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 10.212 ; 10.212 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
-----------------------------
-; Fast Model Setup Summary ;
-----------------------------
-No paths to report.
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; i_clk ; 0.645 ; 0.000         ;
++-------+-------+---------------+
 
 
----------------------------
-; Fast Model Hold Summary ;
----------------------------
-No paths to report.
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; i_clk ; 0.235 ; 0.000         ;
++-------+-------+---------------+
 
 
 -------------------------------
@@ -217,23 +260,45 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; i_clk ; -1.222 ; -2.222                ;
+; i_clk ; -1.222 ; -3.222                ;
 +-------+--------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Fast Model Minimum Pulse Width: 'i_clk'                                                              ;
-+--------+--------------+----------------+------------------+-------+------------+---------------------+
-; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target              ;
-+--------+--------------+----------------+------------------+-------+------------+---------------------+
-; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_clk ; Rise       ; i_clk               ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_clk ; Rise       ; SigVsVar1:inst|s_AB ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_clk ; Rise       ; SigVsVar1:inst|s_AB ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; i_clk|combout       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; i_clk|combout       ;
-; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; inst|s_AB|clk       ;
-; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; inst|s_AB|clk       ;
-+--------+--------------+----------------+------------------+-------+------------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'i_clk'                                                                                                ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.645 ; SigVsVar1:inst|s_AB ; SigVsVar1:inst|o_OUT ; i_clk        ; i_clk       ; 1.000        ; 0.000      ; 0.387      ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'i_clk'                                                                                                 ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node           ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.235 ; SigVsVar1:inst|s_AB ; SigVsVar1:inst|o_OUT ; i_clk        ; i_clk       ; 0.000        ; 0.000      ; 0.387      ;
++-------+---------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'i_clk'                                                               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; i_clk ; Rise       ; i_clk                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_clk ; Rise       ; SigVsVar1:inst|o_OUT ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_clk ; Rise       ; SigVsVar1:inst|o_OUT ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; i_clk ; Rise       ; SigVsVar1:inst|s_AB  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; i_clk ; Rise       ; SigVsVar1:inst|s_AB  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; i_clk|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; i_clk|combout        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; inst|o_OUT|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; inst|o_OUT|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; i_clk ; Rise       ; inst|s_AB|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; i_clk ; Rise       ; inst|s_AB|clk        ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -241,8 +306,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_A       ; i_clk      ; 2.460 ; 2.460 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; 2.387 ; 2.387 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; 3.187 ; 3.187 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; 3.001 ; 3.001 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -251,8 +316,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_A       ; i_clk      ; -2.340 ; -2.340 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; -2.267 ; -2.267 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; -3.067 ; -3.067 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; -2.881 ; -2.881 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -261,7 +326,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 6.051 ; 6.051 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 5.347 ; 5.347 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -270,20 +335,20 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 6.051 ; 6.051 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 5.347 ; 5.347 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -1.222              ;
-;  i_clk           ; N/A   ; N/A  ; N/A      ; N/A     ; -1.222              ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -2.222              ;
-;  i_clk           ; N/A   ; N/A  ; N/A      ; N/A     ; -2.222              ;
-+------------------+-------+------+----------+---------+---------------------+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 0.258 ; 0.235 ; N/A      ; N/A     ; -1.222              ;
+;  i_clk           ; 0.258 ; 0.235 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; -3.222              ;
+;  i_clk           ; 0.000 ; 0.000 ; N/A      ; N/A     ; -3.222              ;
++------------------+-------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -291,8 +356,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_A       ; i_clk      ; 4.182 ; 4.182 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; 4.055 ; 4.055 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; 5.761 ; 5.761 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; 5.369 ; 5.369 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -301,8 +366,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_A       ; i_clk      ; -2.340 ; -2.340 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; -2.267 ; -2.267 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; -3.067 ; -3.067 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; -2.881 ; -2.881 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -311,7 +376,7 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; o_OUT     ; i_clk      ; 12.028 ; 12.028 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 10.212 ; 10.212 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -320,14 +385,28 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 6.051 ; 6.051 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 5.347 ; 5.347 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; i_clk      ; i_clk    ; 1        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; i_clk      ; i_clk    ; 1        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -362,7 +441,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 09 11:54:13 2023
+    Info: Processing started: Mon Oct 09 13:25:53 2023
 Info: Command: quartus_sta Lab07_SignalsVs_Variable -c Lab07_SignalsVs_Variable
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -374,33 +453,44 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name i_clk i_clk
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332146): Worst-case setup slack is 0.258
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.258         0.000 i_clk 
+Info (332146): Worst-case hold slack is 0.512
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.512         0.000 i_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -1.222
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.222        -2.222 i_clk 
+    Info (332119):    -1.222        -3.222 i_clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Info (332146): Worst-case setup slack is 0.645
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.645         0.000 i_clk 
+Info (332146): Worst-case hold slack is 0.235
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.235         0.000 i_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -1.222
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.222        -2.222 i_clk 
+    Info (332119):    -1.222        -3.222 i_clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4546 megabytes
-    Info: Processing ended: Mon Oct 09 11:54:14 2023
+    Info: Processing ended: Mon Oct 09 13:25:54 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

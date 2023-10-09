@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab07_SignalsVs_Variable
-Mon Oct 09 11:54:03 2023
+Mon Oct 09 13:25:43 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,15 +41,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 09 11:54:03 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 09 13:25:43 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Lab07_SignalsVs_Variable                        ;
 ; Top-level Entity Name              ; Lab07_SignalsVs_Variable                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1                                               ;
+; Total logic elements               ; 2                                               ;
 ;     Total combinational functions  ; 1                                               ;
-;     Dedicated logic registers      ; 1                                               ;
-; Total registers                    ; 1                                               ;
+;     Dedicated logic registers      ; 2                                               ;
+; Total registers                    ; 2                                               ;
 ; Total pins                         ; 4                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -164,34 +164,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 1                   ;
-;                                             ;                     ;
-; Total combinational functions               ; 1                   ;
-; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 0                   ;
-;     -- 3 input functions                    ; 0                   ;
-;     -- <=2 input functions                  ; 1                   ;
-;                                             ;                     ;
-; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 1                   ;
-;     -- arithmetic mode                      ; 0                   ;
-;                                             ;                     ;
-; Total registers                             ; 1                   ;
-;     -- Dedicated logic registers            ; 1                   ;
-;     -- I/O registers                        ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 4                   ;
-; Embedded Multiplier 9-bit elements          ; 0                   ;
-; Maximum fan-out node                        ; SigVsVar1:inst|s_AB ;
-; Maximum fan-out                             ; 1                   ;
-; Total fan-out                               ; 5                   ;
-; Average fan-out                             ; 0.83                ;
-+---------------------------------------------+---------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 2     ;
+;                                             ;       ;
+; Total combinational functions               ; 1     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 2     ;
+;     -- Dedicated logic registers            ; 2     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 4     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; i_clk ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 7     ;
+; Average fan-out                             ; 1.00  ;
++---------------------------------------------+-------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -199,8 +199,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
-; |Lab07_SignalsVs_Variable  ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |Lab07_SignalsVs_Variable                ; work         ;
-;    |SigVsVar1:inst|        ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab07_SignalsVs_Variable|SigVsVar1:inst ; work         ;
+; |Lab07_SignalsVs_Variable  ; 1 (0)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |Lab07_SignalsVs_Variable                ; work         ;
+;    |SigVsVar1:inst|        ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab07_SignalsVs_Variable|SigVsVar1:inst ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -210,7 +210,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
+; Total registers                              ; 2     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -235,7 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 09 11:54:02 2023
+    Info: Processing started: Mon Oct 09 13:25:42 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab07_SignalsVs_Variable -c Lab07_SignalsVs_Variable
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file sigvsvar1.vhd
@@ -247,13 +247,13 @@ Info (12127): Elaborating entity "Lab07_SignalsVs_Variable" for the top level hi
 Info (12128): Elaborating entity "SigVsVar1" for hierarchy "SigVsVar1:inst"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
+    Info (21061): Implemented 2 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4657 megabytes
-    Info: Processing ended: Mon Oct 09 11:54:03 2023
+    Info: Processing ended: Mon Oct 09 13:25:43 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
