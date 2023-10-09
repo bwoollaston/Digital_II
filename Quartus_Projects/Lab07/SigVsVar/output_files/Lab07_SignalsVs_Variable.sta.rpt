@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Lab07_SignalsVs_Variable
-Sun Oct 08 13:05:18 2023
+Mon Oct 09 11:54:14 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -82,7 +82,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -155,8 +155,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_A       ; i_clk      ; 3.758 ; 3.758 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; 3.869 ; 3.869 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; 4.182 ; 4.182 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; 4.055 ; 4.055 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -165,27 +165,27 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_A       ; i_clk      ; -3.528 ; -3.528 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; -3.639 ; -3.639 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; -3.952 ; -3.952 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; -3.825 ; -3.825 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
-+-----------------------------------------------------------------------+
-; Clock to Output Times                                                 ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 8.536 ; 8.536 ; Rise       ; i_clk           ;
-+-----------+------------+-------+-------+------------+-----------------+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_OUT     ; i_clk      ; 12.028 ; 12.028 ; Rise       ; i_clk           ;
++-----------+------------+--------+--------+------------+-----------------+
 
 
-+-----------------------------------------------------------------------+
-; Minimum Clock to Output Times                                         ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 8.536 ; 8.536 ; Rise       ; i_clk           ;
-+-----------+------------+-------+-------+------------+-----------------+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_OUT     ; i_clk      ; 12.028 ; 12.028 ; Rise       ; i_clk           ;
++-----------+------------+--------+--------+------------+-----------------+
 
 
 ----------------------------
@@ -241,8 +241,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_A       ; i_clk      ; 2.234 ; 2.234 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; 2.305 ; 2.305 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; 2.460 ; 2.460 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; 2.387 ; 2.387 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -251,8 +251,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_A       ; i_clk      ; -2.114 ; -2.114 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; -2.185 ; -2.185 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; -2.340 ; -2.340 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; -2.267 ; -2.267 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -261,7 +261,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 4.549 ; 4.549 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 6.051 ; 6.051 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -270,7 +270,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 4.549 ; 4.549 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 6.051 ; 6.051 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -291,8 +291,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; i_A       ; i_clk      ; 3.758 ; 3.758 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; 3.869 ; 3.869 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; 4.182 ; 4.182 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; 4.055 ; 4.055 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -301,18 +301,18 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; i_A       ; i_clk      ; -2.114 ; -2.114 ; Rise       ; i_clk           ;
-; i_B       ; i_clk      ; -2.185 ; -2.185 ; Rise       ; i_clk           ;
+; i_A       ; i_clk      ; -2.340 ; -2.340 ; Rise       ; i_clk           ;
+; i_B       ; i_clk      ; -2.267 ; -2.267 ; Rise       ; i_clk           ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
-+-----------------------------------------------------------------------+
-; Clock to Output Times                                                 ;
-+-----------+------------+-------+-------+------------+-----------------+
-; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
-+-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 8.536 ; 8.536 ; Rise       ; i_clk           ;
-+-----------+------------+-------+-------+------------+-----------------+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; o_OUT     ; i_clk      ; 12.028 ; 12.028 ; Rise       ; i_clk           ;
++-----------+------------+--------+--------+------------+-----------------+
 
 
 +-----------------------------------------------------------------------+
@@ -320,7 +320,7 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; o_OUT     ; i_clk      ; 4.549 ; 4.549 ; Rise       ; i_clk           ;
+; o_OUT     ; i_clk      ; 6.051 ; 6.051 ; Rise       ; i_clk           ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -362,7 +362,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 08 13:05:16 2023
+    Info: Processing started: Mon Oct 09 11:54:13 2023
 Info: Command: quartus_sta Lab07_SignalsVs_Variable -c Lab07_SignalsVs_Variable
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -400,8 +400,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4546 megabytes
-    Info: Processing ended: Sun Oct 08 13:05:18 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Oct 09 11:54:14 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
