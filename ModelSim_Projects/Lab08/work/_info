@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+dC:\ModelSim\altera\13.0sp1
+Eucounter
+Z0 w1697950652
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\Lab08
+Z5 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd
+Z6 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd
+l0
+L5
+V`6Ke67j`][dH]j1On6enb0
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1697951279.880000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd|
+Z10 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+!s100 >IaUFgPY^He`:;^[VO[K^3
+!i10b 1
+Aarch
+R1
+R2
+R3
+Z13 DEx4 work 8 ucounter 0 22 `6Ke67j`][dH]j1On6enb0
+l28
+L24
+VYL:=QjlQd7U7iGYB_lW6F1
+!s100 356z^QA@5M<jX1HF@h3[F2
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!i10b 1
+Eucounter_tb
+Z14 w1697951181
+R2
+R3
+R4
+Z15 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter_tb.vhd
+Z16 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter_tb.vhd
+l0
+L4
+Vz3N?bP4Pd:WBl?o?bSDX43
+!s100 bc[`==B;O]oX=9ebULlF40
+R7
+32
+!i10b 1
+Z17 !s108 1697951279.943000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter_tb.vhd|
+Z19 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter_tb.vhd|
+R11
+R12
+Aarch
+R1
+R13
+R2
+R3
+Z20 DEx4 work 11 ucounter_tb 0 22 z3N?bP4Pd:WBl?o?bSDX43
+l15
+L7
+Z21 VmDaaoVOH<PQKd3IGgz]TF3
+Z22 !s100 D1PfPYQWGYaa>gA_JMme82
+R7
+32
+!i10b 1
+R17
+R18
+R19
+R11
+R12

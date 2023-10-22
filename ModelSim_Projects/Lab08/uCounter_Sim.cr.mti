@@ -1,0 +1,10 @@
+C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity uCounter
+-- Compiling architecture arch of uCounter
+
+} {} {}}
