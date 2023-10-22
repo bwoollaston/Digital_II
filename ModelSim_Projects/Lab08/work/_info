@@ -16,7 +16,7 @@ L5
 V`6Ke67j`][dH]j1On6enb0
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1697951279.880000
+Z8 !s108 1697952273.742000
 Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd|
 Z10 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter.vhd|
 Z11 o-work work -2002 -explicit -O0
@@ -41,7 +41,7 @@ R11
 R12
 !i10b 1
 Eucounter_tb
-Z14 w1697951181
+Z14 w1697951398
 R2
 R3
 R4
@@ -54,7 +54,7 @@ Vz3N?bP4Pd:WBl?o?bSDX43
 R7
 32
 !i10b 1
-Z17 !s108 1697951279.943000
+Z17 !s108 1697952273.839000
 Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter_tb.vhd|
 Z19 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/uCounter_tb.vhd|
 R11
@@ -67,8 +67,8 @@ R3
 Z20 DEx4 work 11 ucounter_tb 0 22 z3N?bP4Pd:WBl?o?bSDX43
 l15
 L7
-Z21 VmDaaoVOH<PQKd3IGgz]TF3
-Z22 !s100 D1PfPYQWGYaa>gA_JMme82
+V6UdXjVD15>`4`fj;RzI0?0
+!s100 3eXXXI^@H:]Rnm<hd9d:Q1
 R7
 32
 !i10b 1
