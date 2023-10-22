@@ -1,0 +1,10 @@
+set_location_assignment PIN_T29 -to i_CLK
+
+set_location_assignment PIN_AA23 -to i_CLR
+set_location_assignment PIN_AB26 -to i_LD
+set_location_assignment PIN_AB25 -to i_EN
+set_location_assignment PIN_AC27 -to i_UP
+set_location_assignment PIN_U9 -to i_D0
+set_location_assignment PIN_T9 -to i_D1
+set_location_assignment PIN_L5 -to i_D2
+set_location_assignment PIN_L4 -to i_D3
