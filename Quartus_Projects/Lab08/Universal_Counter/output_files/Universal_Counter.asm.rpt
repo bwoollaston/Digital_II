@@ -1,5 +1,5 @@
 Assembler report for Universal_Counter
-Sun Oct 22 12:54:47 2023
+Mon Oct 23 14:58:55 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.sof
-  6. Assembler Device Options: C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.pof
+  5. Assembler Device Options: C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.sof
+  6. Assembler Device Options: C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Oct 22 12:54:47 2023 ;
+; Assembler Status      ; Successful - Mon Oct 23 14:58:55 2023 ;
 ; Revision Name         ; Universal_Counter                     ;
 ; Top-level Entity Name ; uCounter                              ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                                   ;
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                                   ;
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.sof ;
-; C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.pof ;
-+---------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                    ;
++--------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                    ;
++--------------------------------------------------------------------------------------------------------------+
+; C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.sof ;
+; C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.pof ;
++--------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.sof ;
-+----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                              ;
-+----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP2C70F896C6                                                                                                                                         ;
-; JTAG usercode  ; 0x005EE322                                                                                                                                           ;
-; Checksum       ; 0x005EE322                                                                                                                                           ;
-+----------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                               ;
++----------------+-----------------------------------------------------------------------------------------------------------------------+
+; Device         ; EP2C70F896C6                                                                                                          ;
+; JTAG usercode  ; 0x005EE322                                                                                                            ;
+; Checksum       ; 0x005EE322                                                                                                            ;
++----------------+-----------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.pof ;
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                                                          ;
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                                                                                           ;
-; JTAG usercode      ; 0x00000000                                                                                                                                       ;
-; Checksum           ; 0x187EDFB8                                                                                                                                       ;
-; Compression Ratio  ; 3                                                                                                                                                ;
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/woollastoncb/Digital_II/Quartus_Projects/Lab08/Universal_Counter/output_files/Universal_Counter.pof ;
++--------------------+-------------------------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                                           ;
++--------------------+-------------------------------------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                                            ;
+; JTAG usercode      ; 0x00000000                                                                                                        ;
+; Checksum           ; 0x187EDFB8                                                                                                        ;
+; Compression Ratio  ; 3                                                                                                                 ;
++--------------------+-------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 22 12:54:44 2023
+    Info: Processing started: Mon Oct 23 14:58:52 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Universal_Counter -c Universal_Counter
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4582 megabytes
-    Info: Processing ended: Sun Oct 22 12:54:47 2023
+    Info: Processing ended: Mon Oct 23 14:58:55 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

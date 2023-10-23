@@ -1,0 +1,11 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;
+
+ENTITY MOD10_Count IS
+
+END MOD10_Count;
+
+ARCHITECTURE arch OF MOD10_Count IS
+
+END arch;

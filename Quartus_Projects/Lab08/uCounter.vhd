@@ -9,7 +9,7 @@ ENTITY uCounter IS
 		i_CLK										:	IN 	std_logic;
 
 		--asynchronous inputs
---		i_aRST									:	IN 	std_logic := '0';
+		i_aRST									:	IN 	std_logic;
 
 		--synchronous inputs
 		i_CLR,i_LD,i_EN,i_UP		:	IN 	std_logic;
@@ -22,8 +22,6 @@ ENTITY uCounter IS
 END uCounter;
 
 ARCHITECTURE arch OF uCounter IS
-	SIGNAL i_aRST 		:	std_logic := '0';
-	SIGNAL s_inputs	:	std_logic_vector(3 DOWNTO 0);		-- Inputs signals <>
 	SIGNAL r_reg		:	unsigned(N-1 DOWNTO 0);
 	SIGNAL r_next		:	unsigned(N-1 DOWNTO 0);
 	BEGIN
@@ -37,14 +35,22 @@ ARCHITECTURE arch OF uCounter IS
 		END PROCESS;
 
 	--NEXT STATE LOGIC
-	s_inputs <= i_CLR & i_LD & i_EN & i_UP;	--conctinate the inputs for with-select logic
-	WITH s_inputs SELECT
-		r_next <= (OTHERS=>'0') WHEN	"1000" | "1001" | "1010" | "1011"	|
-																	"1100" | "1101" | "1110" | "1111" ,
-							unsigned(i_D) WHEN	"0100" | "0101" | "0110" | "0111" ,
-							(r_reg + 1)		WHEN	"0011",
-							(r_reg - 1)		WHEN	"0010",
-							r_reg					WHEN	OTHERS;
+	PROCESS(i_CLR, i_LD, i_EN, i_UP)
+	BEGIN
+		IF(i_CLR='1') THEN
+			r_next <= (OTHERS=>'0');
+		ELSIF(i_LD='1') THEN
+			r_next <= unsigned(i_D);
+		ELSIF(i_EN='1')	THEN
+			IF	(i_UP='1') THEN
+				r_next <= (r_reg + 1);
+			ELSE	
+				r_next <= (r_reg - 1);
+			END IF;
+		ELSE
+			r_next <= r_reg;
+		END IF;
+	END PROCESS;
 
 	o_Q <= std_logic_vector(r_reg);
 	o_MAX_TICK <= '1' WHEN r_reg=(2**N-1) ELSE '0';

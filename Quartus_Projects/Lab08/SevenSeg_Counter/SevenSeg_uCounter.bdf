@@ -439,7 +439,7 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 184 128))
 	)
-	(annotation_block (parameter)(rect 368 232 550 260))
+	(annotation_block (parameter)(rect 560 240 742 268))
 )
 (connector
 	(pt 200 208)
@@ -506,11 +506,6 @@ applicable agreement for further details.
 	(pt 296 304)
 )
 (connector
-	(pt 568 336)
-	(pt 592 336)
-	(bus)
-)
-(connector
 	(pt 592 368)
 	(pt 592 336)
 	(bus)
@@ -560,14 +555,6 @@ applicable agreement for further details.
 	(pt 592 368)
 	(pt 616 368)
 	(bus)
-)
-(connector
-	(pt 568 304)
-	(pt 648 304)
-)
-(connector
-	(pt 568 320)
-	(pt 648 320)
 )
 (connector
 	(text "o_display[0]" (rect 912 304 972 316)(font "Arial" ))
@@ -655,6 +642,19 @@ applicable agreement for further details.
 	(pt 368 400)
 	(pt 368 384)
 	(bus)
+)
+(connector
+	(pt 568 336)
+	(pt 592 336)
+	(bus)
+)
+(connector
+	(pt 568 320)
+	(pt 648 320)
+)
+(connector
+	(pt 568 304)
+	(pt 648 304)
 )
 (junction (pt 280 448))
 (junction (pt 280 464))
