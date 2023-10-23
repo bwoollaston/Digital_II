@@ -9,7 +9,7 @@ ENTITY uCounter IS
 		i_CLK										:	IN 	std_logic;
 
 		--asynchronous inputs
---		i_aRST									:	IN 	std_logic := '0';
+		i_aRST									:	IN 	std_logic;
 
 		--synchronous inputs
 		i_CLR,i_LD,i_EN,i_UP		:	IN 	std_logic;
@@ -22,7 +22,6 @@ ENTITY uCounter IS
 END uCounter;
 
 ARCHITECTURE arch OF uCounter IS
-	SIGNAL i_aRST 		:	std_logic := '0';
 	SIGNAL s_inputs	:	std_logic_vector(3 DOWNTO 0);		-- Inputs signals <>
 	SIGNAL r_reg		:	unsigned(N-1 DOWNTO 0);
 	SIGNAL r_next		:	unsigned(N-1 DOWNTO 0);

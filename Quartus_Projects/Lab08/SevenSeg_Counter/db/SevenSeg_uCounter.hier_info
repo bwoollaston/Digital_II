@@ -1,16 +1,15 @@
 |SevenSeg_uCounter
-o_MIN_TICK <= uCounter:inst1.o_MIN_TICK
-i_CLK => uCounter:inst1.i_CLK
-i_aRST => uCounter:inst1.i_aRST
-i_CLR => uCounter:inst1.i_CLR
-i_LD => uCounter:inst1.i_LD
-i_EN => uCounter:inst1.i_EN
-i_UP => uCounter:inst1.i_UP
-i_D3 => uCounter:inst1.i_D[3]
-i_D2 => uCounter:inst1.i_D[2]
-i_D1 => uCounter:inst1.i_D[1]
-i_D0 => uCounter:inst1.i_D[0]
-o_MAX_TICK <= uCounter:inst1.o_MAX_TICK
+o_MIN_TICK <= uCounter:inst2.o_MIN_TICK
+i_CLK => uCounter:inst2.i_CLK
+i_CLR => uCounter:inst2.i_CLR
+i_LD => uCounter:inst2.i_LD
+i_EN => uCounter:inst2.i_EN
+i_UP => uCounter:inst2.i_UP
+i_D3 => uCounter:inst2.i_D[3]
+i_D2 => uCounter:inst2.i_D[2]
+i_D1 => uCounter:inst2.i_D[1]
+i_D0 => uCounter:inst2.i_D[0]
+o_MAX_TICK <= uCounter:inst2.o_MAX_TICK
 o_0 <= o_display[0].DB_MAX_OUTPUT_PORT_TYPE
 o_1 <= o_display[1].DB_MAX_OUTPUT_PORT_TYPE
 o_2 <= o_display[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -21,15 +20,11 @@ o_6 <= o_display[6].DB_MAX_OUTPUT_PORT_TYPE
 o_7 <= o_display[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|SevenSeg_uCounter|uCounter:inst1
+|SevenSeg_uCounter|uCounter:inst2
 i_CLK => r_reg[0].CLK
 i_CLK => r_reg[1].CLK
 i_CLK => r_reg[2].CLK
 i_CLK => r_reg[3].CLK
-i_aRST => r_reg[0].ACLR
-i_aRST => r_reg[1].ACLR
-i_aRST => r_reg[2].ACLR
-i_aRST => r_reg[3].ACLR
 i_CLR => Mux0.IN14
 i_CLR => Mux1.IN14
 i_CLR => Mux2.IN14
