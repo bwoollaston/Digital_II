@@ -1,5 +1,5 @@
 Assembler report for MOD10_Counter
-Mon Oct 30 12:12:49 2023
+Mon Oct 30 12:25:03 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Oct 30 12:12:49 2023 ;
+; Assembler Status      ; Successful - Mon Oct 30 12:25:03 2023 ;
 ; Revision Name         ; MOD10_Counter                         ;
 ; Top-level Entity Name ; MOD10_Counter                         ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                                  ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP2C70F896C6                                                                                                             ;
-; JTAG usercode  ; 0x005F3C3D                                                                                                               ;
-; Checksum       ; 0x005F3C3D                                                                                                               ;
+; JTAG usercode  ; 0x005F3696                                                                                                               ;
+; Checksum       ; 0x005F3696                                                                                                               ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------------------------------------------------------------------------+
 ; Device             ; EPCS16                                                                                                               ;
 ; JTAG usercode      ; 0x00000000                                                                                                           ;
-; Checksum           ; 0x187EAF48                                                                                                           ;
+; Checksum           ; 0x187EBE00                                                                                                           ;
 ; Compression Ratio  ; 3                                                                                                                    ;
 +--------------------+----------------------------------------------------------------------------------------------------------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 30 12:12:47 2023
+    Info: Processing started: Mon Oct 30 12:25:01 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off MOD10_Counter -c MOD10_Counter
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4560 megabytes
-    Info: Processing ended: Mon Oct 30 12:12:49 2023
+    Info: Peak virtual memory: 4564 megabytes
+    Info: Processing ended: Mon Oct 30 12:25:03 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

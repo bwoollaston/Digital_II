@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MOD10_Counter
-Mon Oct 30 12:12:39 2023
+Mon Oct 30 12:24:50 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,13 +44,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 30 12:12:39 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 30 12:24:50 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MOD10_Counter                                   ;
 ; Top-level Entity Name              ; MOD10_Counter                                   ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 63                                              ;
-;     Total combinational functions  ; 55                                              ;
+; Total logic elements               ; 64                                              ;
+;     Total combinational functions  ; 56                                              ;
 ;     Dedicated logic registers      ; 44                                              ;
 ; Total registers                    ; 44                                              ;
 ; Total pins                         ; 17                                              ;
@@ -174,16 +174,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 63        ;
+; Estimated Total logic elements              ; 64        ;
 ;                                             ;           ;
-; Total combinational functions               ; 55        ;
+; Total combinational functions               ; 56        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 27        ;
 ;     -- 3 input functions                    ; 14        ;
-;     -- <=2 input functions                  ; 14        ;
+;     -- <=2 input functions                  ; 15        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 49        ;
+;     -- normal mode                          ; 50        ;
 ;     -- arithmetic mode                      ; 6         ;
 ;                                             ;           ;
 ; Total registers                             ; 44        ;
@@ -194,7 +194,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; CLK_50MHz ;
 ; Maximum fan-out                             ; 16        ;
-; Total fan-out                               ; 288       ;
+; Total fan-out                               ; 290       ;
 ; Average fan-out                             ; 2.48      ;
 +---------------------------------------------+-----------+
 
@@ -204,8 +204,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
-; |MOD10_Counter                 ; 55 (0)            ; 44 (0)       ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |MOD10_Counter                                         ; work         ;
-;    |MOD10_Count:inst|          ; 48 (13)           ; 44 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MOD10_Counter|MOD10_Count:inst                        ; work         ;
+; |MOD10_Counter                 ; 56 (0)            ; 44 (0)       ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |MOD10_Counter                                         ; work         ;
+;    |MOD10_Count:inst|          ; 49 (14)           ; 44 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MOD10_Counter|MOD10_Count:inst                        ; work         ;
 ;       |freq_div:freq_div_inst| ; 35 (35)           ; 40 (40)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MOD10_Counter|MOD10_Count:inst|freq_div:freq_div_inst ; work         ;
 ;    |sevenSeg:inst5|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MOD10_Counter|sevenSeg:inst5                          ; work         ;
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
@@ -275,7 +275,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 30 12:12:38 2023
+    Info: Processing started: Mon Oct 30 12:24:49 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MOD10_Counter -c MOD10_Counter
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file freq_div.vhd
@@ -294,11 +294,11 @@ Warning (275080): Converted elements in bus name "i_D" using legacy naming rules
     Warning (275081): Converted element name(s) from "i_D[2]" to "i_D2"
     Warning (275081): Converted element name(s) from "i_D[3]" to "i_D3"
 Info (12128): Elaborating entity "MOD10_Count" for hierarchy "MOD10_Count:inst"
-Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(43): signal "i_D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(46): signal "i_D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(42): signal "i_D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(45): signal "i_D" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(48): signal "r_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(49): signal "r_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(50): signal "r_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(55): signal "r_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at MOD10_Count.vhd(54): signal "r_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12129): Elaborating entity "freq_div" using architecture "A:a" for hierarchy "MOD10_Count:inst|freq_div:freq_div_inst"
 Warning (12125): Using design file sevenseg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: sevenSeg-arch
@@ -308,13 +308,13 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "o_7" is stuck at VCC
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 80 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 63 logic cells
+    Info (21061): Implemented 64 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4638 megabytes
-    Info: Processing ended: Mon Oct 30 12:12:39 2023
+    Info: Peak virtual memory: 4630 megabytes
+    Info: Processing ended: Mon Oct 30 12:24:50 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

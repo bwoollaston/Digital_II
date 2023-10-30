@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'freq_div:clk_div|clock_10Hz'
+Slack : -1.239
+TNS   : -5.962
+
+Type  : Slow Model Setup 'CLK_50MHz'
+Slack : -1.085
+TNS   : -8.058
+
+Type  : Slow Model Setup 'freq_div:clk_div|clock_100Khz_reg'
+Slack : -0.263
+TNS   : -0.313
+
+Type  : Slow Model Setup 'freq_div:clk_div|clock_100hz_reg'
+Slack : -0.231
+TNS   : -0.274
+
+Type  : Slow Model Setup 'freq_div:clk_div|clock_1Mhz_reg'
+Slack : -0.072
+TNS   : -0.180
+
+Type  : Slow Model Setup 'freq_div:clk_div|clock_1Khz_reg'
+Slack : -0.072
+TNS   : -0.149
+
+Type  : Slow Model Setup 'freq_div:clk_div|clock_10Khz_reg'
+Slack : -0.062
+TNS   : -0.131
+
+Type  : Slow Model Hold 'CLK_50MHz'
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Slow Model Hold 'freq_div:clk_div|clock_100Khz_reg'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'freq_div:clk_div|clock_100hz_reg'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'freq_div:clk_div|clock_10Hz'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'freq_div:clk_div|clock_10Khz_reg'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'freq_div:clk_div|clock_1Khz_reg'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'freq_div:clk_div|clock_1Mhz_reg'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLK_50MHz'
+Slack : -1.380
+TNS   : -16.380
+
+Type  : Slow Model Minimum Pulse Width 'freq_div:clk_div|clock_10Hz'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Slow Model Minimum Pulse Width 'freq_div:clk_div|clock_100Khz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'freq_div:clk_div|clock_100hz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'freq_div:clk_div|clock_10Khz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'freq_div:clk_div|clock_1Khz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'freq_div:clk_div|clock_1Mhz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Setup 'freq_div:clk_div|clock_10Hz'
+Slack : -0.084
+TNS   : -0.336
+
+Type  : Fast Model Setup 'CLK_50MHz'
+Slack : -0.017
+TNS   : -0.119
+
+Type  : Fast Model Setup 'freq_div:clk_div|clock_100Khz_reg'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Fast Model Setup 'freq_div:clk_div|clock_100hz_reg'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Fast Model Setup 'freq_div:clk_div|clock_1Khz_reg'
+Slack : 0.504
+TNS   : 0.000
+
+Type  : Fast Model Setup 'freq_div:clk_div|clock_1Mhz_reg'
+Slack : 0.504
+TNS   : 0.000
+
+Type  : Fast Model Setup 'freq_div:clk_div|clock_10Khz_reg'
+Slack : 0.510
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLK_50MHz'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast Model Hold 'freq_div:clk_div|clock_100Khz_reg'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'freq_div:clk_div|clock_100hz_reg'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'freq_div:clk_div|clock_10Hz'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'freq_div:clk_div|clock_10Khz_reg'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'freq_div:clk_div|clock_1Khz_reg'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'freq_div:clk_div|clock_1Mhz_reg'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLK_50MHz'
+Slack : -1.380
+TNS   : -16.380
+
+Type  : Fast Model Minimum Pulse Width 'freq_div:clk_div|clock_10Hz'
+Slack : -0.500
+TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width 'freq_div:clk_div|clock_100Khz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'freq_div:clk_div|clock_100hz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'freq_div:clk_div|clock_10Khz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'freq_div:clk_div|clock_1Khz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'freq_div:clk_div|clock_1Mhz_reg'
+Slack : -0.500
+TNS   : -4.000
+
+------------------------------------------------------------
