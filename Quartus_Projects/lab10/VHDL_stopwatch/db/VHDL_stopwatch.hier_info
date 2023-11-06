@@ -1,0 +1,224 @@
+|vhdl_stopwatch_sch
+o_CO <= vhdl_stopwatch:inst.o_CO
+Clear => vhdl_stopwatch:inst.i_CLR
+Start_Stop => vhdl_stopwatch:inst.i_Start_Stop
+CLK_50MHz => vhdl_stopwatch:inst.i_CLK_50MHz
+o_display2_0 <= o_display2[0].DB_MAX_OUTPUT_PORT_TYPE
+o_display2_1 <= o_display2[1].DB_MAX_OUTPUT_PORT_TYPE
+o_display2_2 <= o_display2[2].DB_MAX_OUTPUT_PORT_TYPE
+o_display2_3 <= o_display2[3].DB_MAX_OUTPUT_PORT_TYPE
+o_display2_4 <= o_display2[4].DB_MAX_OUTPUT_PORT_TYPE
+o_display2_5 <= o_display2[5].DB_MAX_OUTPUT_PORT_TYPE
+o_display2_6 <= o_display2[6].DB_MAX_OUTPUT_PORT_TYPE
+o_display2_7 <= <GND>
+o_display1_0 <= o_display1[0].DB_MAX_OUTPUT_PORT_TYPE
+o_display1_1 <= o_display1[1].DB_MAX_OUTPUT_PORT_TYPE
+o_display1_2 <= o_display1[2].DB_MAX_OUTPUT_PORT_TYPE
+o_display1_3 <= o_display1[3].DB_MAX_OUTPUT_PORT_TYPE
+o_display1_4 <= o_display1[4].DB_MAX_OUTPUT_PORT_TYPE
+o_display1_5 <= o_display1[5].DB_MAX_OUTPUT_PORT_TYPE
+o_display1_6 <= o_display1[6].DB_MAX_OUTPUT_PORT_TYPE
+o_display1_7 <= <VCC>
+
+
+|vhdl_stopwatch_sch|vhdl_stopwatch:inst
+i_CLR => comp_jkff.ACLR
+i_CLR => mod10_count:comp_100ms_counter.i_aRST
+i_CLR => mod10_count:comp_1s_counter.i_aRST
+i_Start_Stop => comp_jkff.CLK
+i_CLK_50MHz => freq_div:comp_freq_div.clock_50Mhz
+o_CO <= mod10_count:comp_1s_counter.o_CO
+o_sDSP[0] <= sevenseg:comp_1s_dsp.o_display[0]
+o_sDSP[1] <= sevenseg:comp_1s_dsp.o_display[1]
+o_sDSP[2] <= sevenseg:comp_1s_dsp.o_display[2]
+o_sDSP[3] <= sevenseg:comp_1s_dsp.o_display[3]
+o_sDSP[4] <= sevenseg:comp_1s_dsp.o_display[4]
+o_sDSP[5] <= sevenseg:comp_1s_dsp.o_display[5]
+o_sDSP[6] <= sevenseg:comp_1s_dsp.o_display[6]
+o_sDSP[7] <= sevenseg:comp_1s_dsp.o_display[7]
+o_100msDSP[0] <= sevenseg:comp_100ms_dsp.o_display[0]
+o_100msDSP[1] <= sevenseg:comp_100ms_dsp.o_display[1]
+o_100msDSP[2] <= sevenseg:comp_100ms_dsp.o_display[2]
+o_100msDSP[3] <= sevenseg:comp_100ms_dsp.o_display[3]
+o_100msDSP[4] <= sevenseg:comp_100ms_dsp.o_display[4]
+o_100msDSP[5] <= sevenseg:comp_100ms_dsp.o_display[5]
+o_100msDSP[6] <= sevenseg:comp_100ms_dsp.o_display[6]
+o_100msDSP[7] <= sevenseg:comp_100ms_dsp.o_display[7]
+
+
+|vhdl_stopwatch_sch|vhdl_stopwatch:inst|freq_div:comp_freq_div
+clock_50Mhz => clock_1Hz_reg.CLK
+clock_50Mhz => clock_10Hz_reg.CLK
+clock_50Mhz => clock_100hz_reg.CLK
+clock_50Mhz => clock_1Khz_reg.CLK
+clock_50Mhz => clock_10Khz_reg.CLK
+clock_50Mhz => clock_100Khz_reg.CLK
+clock_50Mhz => clock_1Mhz_reg.CLK
+clock_50Mhz => clock_1Mhz_int.CLK
+clock_50Mhz => count_1Mhz[0].CLK
+clock_50Mhz => count_1Mhz[1].CLK
+clock_50Mhz => count_1Mhz[2].CLK
+clock_50Mhz => count_1Mhz[3].CLK
+clock_50Mhz => count_1Mhz[4].CLK
+clock_50Mhz => count_1Mhz[5].CLK
+clock_50Mhz => count_1Mhz[6].CLK
+clock_50Mhz => clock_1Hz~reg0.CLK
+clock_50Mhz => clock_10Hz~reg0.CLK
+clock_50Mhz => clock_100Hz~reg0.CLK
+clock_50Mhz => clock_1KHz~reg0.CLK
+clock_50Mhz => clock_10KHz~reg0.CLK
+clock_50Mhz => clock_100KHz~reg0.CLK
+clock_50Mhz => clock_1MHz~reg0.CLK
+clock_1MHz <= clock_1MHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_100KHz <= clock_100KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_10KHz <= clock_10KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_1KHz <= clock_1KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_100Hz <= clock_100Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_10Hz <= clock_10Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_1Hz <= clock_1Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vhdl_stopwatch_sch|vhdl_stopwatch:inst|MOD10_Count:comp_100ms_counter
+i_CLK => r_reg[0].CLK
+i_CLK => r_reg[1].CLK
+i_CLK => r_reg[2].CLK
+i_CLK => r_reg[3].CLK
+i_aRST => r_reg[0].ACLR
+i_aRST => r_reg[1].ACLR
+i_aRST => r_reg[2].ACLR
+i_aRST => r_reg[3].ACLR
+i_EN => r_next.OUTPUTSELECT
+i_EN => r_next.OUTPUTSELECT
+i_EN => r_next.OUTPUTSELECT
+i_EN => r_next.OUTPUTSELECT
+i_EN => o_CO.IN1
+i_LD => r_next[3].OUTPUTSELECT
+i_LD => r_next[2].OUTPUTSELECT
+i_LD => r_next[1].OUTPUTSELECT
+i_LD => r_next[0].OUTPUTSELECT
+i_D[0] => LessThan0.IN8
+i_D[0] => r_next.DATAA
+i_D[1] => LessThan0.IN7
+i_D[1] => r_next.DATAA
+i_D[2] => LessThan0.IN6
+i_D[2] => r_next.DATAA
+i_D[3] => LessThan0.IN5
+i_D[3] => r_next.DATAA
+o_CO <= o_CO.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[0] <= r_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[1] <= r_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[2] <= r_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[3] <= r_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vhdl_stopwatch_sch|vhdl_stopwatch:inst|MOD10_Count:comp_1s_counter
+i_CLK => r_reg[0].CLK
+i_CLK => r_reg[1].CLK
+i_CLK => r_reg[2].CLK
+i_CLK => r_reg[3].CLK
+i_aRST => r_reg[0].ACLR
+i_aRST => r_reg[1].ACLR
+i_aRST => r_reg[2].ACLR
+i_aRST => r_reg[3].ACLR
+i_EN => r_next.OUTPUTSELECT
+i_EN => r_next.OUTPUTSELECT
+i_EN => r_next.OUTPUTSELECT
+i_EN => r_next.OUTPUTSELECT
+i_EN => o_CO.IN1
+i_LD => r_next[3].OUTPUTSELECT
+i_LD => r_next[2].OUTPUTSELECT
+i_LD => r_next[1].OUTPUTSELECT
+i_LD => r_next[0].OUTPUTSELECT
+i_D[0] => LessThan0.IN8
+i_D[0] => r_next.DATAA
+i_D[1] => LessThan0.IN7
+i_D[1] => r_next.DATAA
+i_D[2] => LessThan0.IN6
+i_D[2] => r_next.DATAA
+i_D[3] => LessThan0.IN5
+i_D[3] => r_next.DATAA
+o_CO <= o_CO.DB_MAX_OUTPUT_PORT_TYPE
+o_Q[0] <= r_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[1] <= r_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[2] <= r_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+o_Q[3] <= r_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vhdl_stopwatch_sch|vhdl_stopwatch:inst|sevenSeg:comp_100ms_dsp
+i_inputs[0] => Mux0.IN19
+i_inputs[0] => Mux1.IN19
+i_inputs[0] => Mux2.IN19
+i_inputs[0] => Mux3.IN19
+i_inputs[0] => Mux4.IN19
+i_inputs[0] => Mux5.IN19
+i_inputs[0] => Mux6.IN19
+i_inputs[1] => Mux0.IN18
+i_inputs[1] => Mux1.IN18
+i_inputs[1] => Mux2.IN18
+i_inputs[1] => Mux3.IN18
+i_inputs[1] => Mux4.IN18
+i_inputs[1] => Mux5.IN18
+i_inputs[1] => Mux6.IN18
+i_inputs[2] => Mux0.IN17
+i_inputs[2] => Mux1.IN17
+i_inputs[2] => Mux2.IN17
+i_inputs[2] => Mux3.IN17
+i_inputs[2] => Mux4.IN17
+i_inputs[2] => Mux5.IN17
+i_inputs[2] => Mux6.IN17
+i_inputs[3] => Mux0.IN16
+i_inputs[3] => Mux1.IN16
+i_inputs[3] => Mux2.IN16
+i_inputs[3] => Mux3.IN16
+i_inputs[3] => Mux4.IN16
+i_inputs[3] => Mux5.IN16
+i_inputs[3] => Mux6.IN16
+o_display[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+o_display[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+o_display[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+o_display[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+o_display[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+o_display[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+o_display[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+o_display[7] <= <VCC>
+
+
+|vhdl_stopwatch_sch|vhdl_stopwatch:inst|sevenSeg:comp_1s_dsp
+i_inputs[0] => Mux0.IN19
+i_inputs[0] => Mux1.IN19
+i_inputs[0] => Mux2.IN19
+i_inputs[0] => Mux3.IN19
+i_inputs[0] => Mux4.IN19
+i_inputs[0] => Mux5.IN19
+i_inputs[0] => Mux6.IN19
+i_inputs[1] => Mux0.IN18
+i_inputs[1] => Mux1.IN18
+i_inputs[1] => Mux2.IN18
+i_inputs[1] => Mux3.IN18
+i_inputs[1] => Mux4.IN18
+i_inputs[1] => Mux5.IN18
+i_inputs[1] => Mux6.IN18
+i_inputs[2] => Mux0.IN17
+i_inputs[2] => Mux1.IN17
+i_inputs[2] => Mux2.IN17
+i_inputs[2] => Mux3.IN17
+i_inputs[2] => Mux4.IN17
+i_inputs[2] => Mux5.IN17
+i_inputs[2] => Mux6.IN17
+i_inputs[3] => Mux0.IN16
+i_inputs[3] => Mux1.IN16
+i_inputs[3] => Mux2.IN16
+i_inputs[3] => Mux3.IN16
+i_inputs[3] => Mux4.IN16
+i_inputs[3] => Mux5.IN16
+i_inputs[3] => Mux6.IN16
+o_display[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+o_display[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+o_display[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+o_display[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+o_display[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+o_display[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+o_display[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+o_display[7] <= <VCC>
+
+

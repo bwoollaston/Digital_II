@@ -1,0 +1,9 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.all;
+
+ENTITY vhdl_stopwatch IS
+	PORT(
+	
+	);
+END vhdl_stopwatch;
+	
