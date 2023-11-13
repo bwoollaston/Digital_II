@@ -17,27 +17,27 @@ ARCHITECTURE arch OF FSM_TrafficLight IS
   SIGNAL state_reg, state_next : light_state_t := STATE_0;
 
   --Post frequency divider clock signal
-  SIGNAL s_CLK_1Hz : std_logic;
+  SIGNAL s_CLK_10Hz : std_logic;
 
   BEGIN
   --instantiate frequency divider set to 1Hz
   comp_freq_div : work.freq_div(a)
     PORT MAP(
       clock_50MHz   => i_CLK,
-      clock_10Hz     => open,
+      clock_10Hz     => s_CLK_10Hz,
       clock_1MHz	  => OPEN,
   		clock_100KHz  => OPEN,
   		clock_10KHz	  => OPEN,
   		clock_1KHz    => OPEN,
   		clock_100Hz	  => OPEN,
-  		clock_1Hz    => s_CLK_1Hz
+  		clock_1Hz    => OPEN
     );
 
-  PROCESS(s_CLK_1Hz)
+  PROCESS(s_CLK_10Hz)
   BEGIN
 	 IF(i_RST='1') THEN
 		state_reg <= STATE_0;
-    ELSIF(s_CLK_1Hz'EVENT AND s_CLK_1Hz='1') THEN
+    ELSIF(s_CLK_10Hz'EVENT AND s_CLK_10Hz='1') THEN
       state_reg <= state_next;
     END IF;
   END PROCESS;

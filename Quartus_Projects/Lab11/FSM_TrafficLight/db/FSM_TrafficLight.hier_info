@@ -1,0 +1,76 @@
+|FMS_TrafficLight_sch
+IHNSR <= FSM_TrafficLight:inst.o_IHNSR
+CLK => FSM_TrafficLight:inst.i_CLK
+RST => FSM_TrafficLight:inst.i_RST
+NEMER => FSM_TrafficLight:inst.i_NEMER
+YNITE => FSM_TrafficLight:inst.i_YNITE
+IHEWR <= FSM_TrafficLight:inst.o_IHEWR
+IHNSY <= FSM_TrafficLight:inst.o_IHNSY
+IHEWY <= FSM_TrafficLight:inst.o_IHEWY
+IHNSG <= FSM_TrafficLight:inst.o_IHNSG
+IHEWG <= FSM_TrafficLight:inst.o_IHEWG
+
+
+|FMS_TrafficLight_sch|FSM_TrafficLight:inst
+i_CLK => freq_div:comp_freq_div.clock_50Mhz
+i_RST => state_reg~3.DATAIN
+i_NEMER => Selector0.IN3
+i_NEMER => Selector1.IN3
+i_NEMER => Selector3.IN3
+i_NEMER => Selector6.IN3
+i_NEMER => o_IHEWG.DATAB
+i_NEMER => o_IHNSR.OUTPUTSELECT
+i_NEMER => o_IHNSY.OUTPUTSELECT
+i_NEMER => Selector1.IN1
+i_NEMER => o_IHEWR.OUTPUTSELECT
+i_NEMER => o_IHEWY.OUTPUTSELECT
+i_NEMER => Selector0.IN2
+i_NEMER => Selector4.IN1
+i_NEMER => Selector2.IN1
+i_NEMER => Selector5.IN2
+i_NEMER => Selector3.IN1
+i_NEMER => Selector5.IN3
+i_YNITE => o_IHEWY.DATAA
+i_YNITE => o_IHNSR.DATAA
+i_YNITE => o_IHNSY.DATAA
+i_YNITE => o_IHEWR.DATAA
+o_IHNSY <= o_IHNSY.DB_MAX_OUTPUT_PORT_TYPE
+o_IHEWY <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+o_IHNSG <= o_IHNSG.DB_MAX_OUTPUT_PORT_TYPE
+o_IHEWG <= o_IHEWG.DB_MAX_OUTPUT_PORT_TYPE
+o_IHNSR <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+o_IHEWR <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FMS_TrafficLight_sch|FSM_TrafficLight:inst|freq_div:comp_freq_div
+clock_50Mhz => clock_1Hz_reg.CLK
+clock_50Mhz => clock_10Hz_reg.CLK
+clock_50Mhz => clock_100hz_reg.CLK
+clock_50Mhz => clock_1Khz_reg.CLK
+clock_50Mhz => clock_10Khz_reg.CLK
+clock_50Mhz => clock_100Khz_reg.CLK
+clock_50Mhz => clock_1Mhz_reg.CLK
+clock_50Mhz => clock_1Mhz_int.CLK
+clock_50Mhz => count_1Mhz[0].CLK
+clock_50Mhz => count_1Mhz[1].CLK
+clock_50Mhz => count_1Mhz[2].CLK
+clock_50Mhz => count_1Mhz[3].CLK
+clock_50Mhz => count_1Mhz[4].CLK
+clock_50Mhz => count_1Mhz[5].CLK
+clock_50Mhz => count_1Mhz[6].CLK
+clock_50Mhz => clock_1Hz~reg0.CLK
+clock_50Mhz => clock_10Hz~reg0.CLK
+clock_50Mhz => clock_100Hz~reg0.CLK
+clock_50Mhz => clock_1KHz~reg0.CLK
+clock_50Mhz => clock_10KHz~reg0.CLK
+clock_50Mhz => clock_100KHz~reg0.CLK
+clock_50Mhz => clock_1MHz~reg0.CLK
+clock_1MHz <= clock_1MHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_100KHz <= clock_100KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_10KHz <= clock_10KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_1KHz <= clock_1KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_100Hz <= clock_100Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_10Hz <= clock_10Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clock_1Hz <= clock_1Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

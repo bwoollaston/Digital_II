@@ -1,0 +1,7 @@
+
+State Machine - |FMS_TrafficLight_sch|FSM_TrafficLight:inst|state_reg
+Name state_reg.STATE_3 state_reg.STATE_2 state_reg.STATE_1 state_reg.STATE_0 
+state_reg.STATE_0 0 0 0 0 
+state_reg.STATE_1 0 0 1 1 
+state_reg.STATE_2 0 1 0 1 
+state_reg.STATE_3 1 0 0 1 
