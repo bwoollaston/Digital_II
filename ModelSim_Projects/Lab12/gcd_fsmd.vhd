@@ -68,6 +68,8 @@ ARCHITECTURE arch OF gcd_fsmd IS
           ELSE
             state_next <= STATE_OP;
           END IF;
+        ELSE
+          o_ready <= '1';
         END IF;
 
       WHEN STATE_OP =>
