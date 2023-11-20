@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.0sp1
+Ebin2bcd
+Z0 w1700499370
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13
+Z5 8C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd
+Z6 FC:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd
+l0
+L5
+Vh6Z<FcPMV@m]9^JkHIlWb2
+!s100 R:d@21WI<g=e4FDI;0]PX2
+Z7 OV;C;10.1d;51
+32
+!i10b 1
+Z8 !s108 1700499380.860000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd|
+Z10 !s107 C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd|
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Aarch
+R1
+R2
+R3
+DEx4 work 7 bin2bcd 0 22 h6Z<FcPMV@m]9^JkHIlWb2
+l24
+L16
+VKaK6ZLTESK[@][RZV`X4L0
+!s100 jdWObPMQgXiFm]96kUIR<0
+R7
+32
+!i10b 1
+R8
+R9
+R10
+R11
+R12
