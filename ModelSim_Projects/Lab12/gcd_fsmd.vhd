@@ -63,8 +63,6 @@ ARCHITECTURE arch OF gcd_fsmd IS
           gcd_next  <= (OTHERS => '0');
           IF(i_x = zero_vector_c OR i_y = zero_vector_c) THEN
             state_next <= STATE_DONE;
-            x_next <= (OTHERS => '0');
-            y_next <= (OTHERS => '0');
           ELSE
             state_next <= STATE_OP;
           END IF;
@@ -75,7 +73,7 @@ ARCHITECTURE arch OF gcd_fsmd IS
       WHEN STATE_OP =>
         IF( x_reg = y_reg ) THEN
           state_next <= STATE_DONE;
-          gcd_next <= x_next;
+          gcd_next <= x_reg;
         ELSE
           state_next <= STATE_OP;
           IF(x_reg < y_reg) THEN

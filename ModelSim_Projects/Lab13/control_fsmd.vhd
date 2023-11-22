@@ -96,6 +96,7 @@ ARCHITECTURE arch OF control_fsmd IS
 
   END PROCESS
 
+  -- Combinatorial logic
   o_bin2bcd_start <= s_bin2bcd_start;
   o_gcd_start <= s_gcd_start;
   o_ready_tick <= s_gcd_ready AND s_bin2bcd_ready;
