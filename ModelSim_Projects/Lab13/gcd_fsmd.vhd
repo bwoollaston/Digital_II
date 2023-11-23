@@ -45,7 +45,7 @@ ARCHITECTURE arch OF gcd_fsmd IS
   END PROCESS;
 
   --Segment 2 (next state logic)
-  PROCESS(state_reg, i_start_tick, i_x, i_y, x_reg, x_next, y_reg, gcd_reg)
+  PROCESS(state_reg, i_start_tick, i_x, i_y, x_reg, y_reg, gcd_reg)
     BEGIN
     --inital assignments to prevent infered latching
     state_next  <= state_reg;
@@ -63,17 +63,17 @@ ARCHITECTURE arch OF gcd_fsmd IS
           gcd_next  <= (OTHERS => '0');
           IF(i_x = zero_vector_c OR i_y = zero_vector_c) THEN
             state_next <= STATE_DONE;
-            x_next <= (OTHERS => '0');
-            y_next <= (OTHERS => '0');
           ELSE
             state_next <= STATE_OP;
           END IF;
+        ELSE
+           o_ready <= '1';
         END IF;
 
       WHEN STATE_OP =>
         IF( x_reg = y_reg ) THEN
           state_next <= STATE_DONE;
-          gcd_next <= x_next;
+          gcd_next <= x_reg;
         ELSE
           state_next <= STATE_OP;
           IF(x_reg < y_reg) THEN

@@ -9,7 +9,7 @@ entity bcd_fsmd is
       start: in std_logic;
       bin: in std_logic_vector(12 downto 0);
       ready, done_tick: out std_logic;
-      bcd3,bcd2,bcd1,bcd0: out std_logic_vector(3 downto 0)
+      bcd3,bcd2,bcd1,bcd0: out std_logic_vector(3 downto 0) := (OTHERS => '0')
    );
 end bcd_fsmd ;
 
@@ -25,7 +25,7 @@ begin
    -- state and data registers
    process (clk,reset)
    begin
-      if reset='1' then 
+      if reset='1' then
          state_reg <= idle;
          p2s_reg <= (others=>'0');
          n_reg <= (others=>'0');
@@ -61,7 +61,7 @@ begin
       case state_reg is
          when idle =>
             ready <= '1';
-            if start='1' then   
+            if start='1' then
                state_next <= op;
                bcd3_next <= (others=>'0');
                bcd2_next <= (others=>'0');

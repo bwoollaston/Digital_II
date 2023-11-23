@@ -7,9 +7,9 @@ ENTITY control_fsmd IS
     i_CLK, i_RST : IN std_logic; --async inputs
     i_start_tick : IN std_logic;
     i_x, i_y     : IN std_logic_vector(N-1 DOWNTO 0);
-    o_done_tick, o_ready_tick : OUT std_logic;
-    o_gcd_start, o_bin2bcd_start : OUT std_logic
-    o_bcd0, o_bcd1, o_bcd2, o_bcd3 : OUT std_logic_vector(7 DOWNTO 0);
+    o_done_tick, o_ready_tick : OUT std_logic := '0';
+    o_gcd_start, o_bin2bcd_start : OUT std_logic := '0';
+    o_bcd0, o_bcd1, o_bcd2, o_bcd3 : OUT std_logic_vector(3 DOWNTO 0)
   );
 END control_fsmd;
 
@@ -19,11 +19,11 @@ ARCHITECTURE arch OF control_fsmd IS
 
   TYPE control_states_t IS(STATE_IDLE, STATE_GCD, STATE_BCD, STATE_DONE);
     ATTRIBUTE syn_encoding : string;
-    ATTRIBUTE syn_encoding OF gcd_states_t : type is "safe, one-hot";
+    ATTRIBUTE syn_encoding OF control_states_t : type is "safe, one-hot";
 
   SIGNAL state_reg, state_next : control_states_t := STATE_IDLE;
-  SIGNAL r_gcd : std_logic_vector(N-1 DOWNTO 0);
-  SIGNAL s_gcd_13b : std_logic_vector(12 DOWNTO 0);
+  SIGNAL r_gcd : std_logic_vector(N-1 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL s_gcd_13b : std_logic_vector(12 DOWNTO 0) := (OTHERS => '0');
   SIGNAL s_gcd_start, s_bin2bcd_start : std_logic := '0';
   SIGNAL s_gcd_ready, s_bin2bcd_ready : std_logic := '0';
   SIGNAL s_gcd_done, s_bin2bcd_done : std_logic := '0';
@@ -47,6 +47,7 @@ ARCHITECTURE arch OF control_fsmd IS
       reset => i_RST,
       start => s_bin2bcd_start,
       bin   => s_gcd_13b,
+      done_tick => s_bin2bcd_done,
       ready => s_bin2bcd_ready,
       bcd0  => o_bcd0,
       bcd1  => o_bcd1,
@@ -63,12 +64,12 @@ ARCHITECTURE arch OF control_fsmd IS
     END IF;
   END PROCESS;
 
-  PROCESS(state_reg, i_x, i_y, i_start_tick, s_gcd_done)
+  PROCESS(state_reg, i_x, i_y, i_start_tick, s_gcd_done, s_bin2bcd_done)
   BEGIN
   state_next <= state_reg;
+  o_done_tick <= '0';
   s_gcd_start <= '0';
   s_bin2bcd_start <= '0';
-  s_bin2bcd_done <= '0';
 
   CASE state_reg IS
     WHEN STATE_IDLE =>
@@ -84,22 +85,20 @@ ARCHITECTURE arch OF control_fsmd IS
 
       END IF;
     WHEN STATE_BCD =>
-      IF(s_bin2bcd_done) THEN
+      IF(s_bin2bcd_done = '1') THEN
         state_next <= STATE_DONE;
       END IF;
 
     WHEN STATE_DONE =>
       state_next <= STATE_IDLE;
-      s_bin2bcd_done <= '1';
+      o_done_tick <= '1';
 
   END CASE;
-
-  END PROCESS
+  END PROCESS;
 
   -- Combinatorial logic
   o_bin2bcd_start <= s_bin2bcd_start;
   o_gcd_start <= s_gcd_start;
   o_ready_tick <= s_gcd_ready AND s_bin2bcd_ready;
-  o_done_tick <= s_bin2bcd_done;
   s_gcd_13b <= c_leading_zeros & r_gcd; --add leading zeros to 8bit gcd output to match 13bit bin input
 END arch;
