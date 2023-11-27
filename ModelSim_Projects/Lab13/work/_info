@@ -4,30 +4,30 @@ K3
 cModel Technology
 dC:\altera\13.0sp1
 Ebcd_fsmd
-Z0 w1700677290
+Z0 w1701103844
 Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z4 dC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\ModelSim_Projects\Lab13
-Z5 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd
-Z6 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd
+Z4 dC:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13
+Z5 8C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd
+Z6 FC:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd
 l0
 L5
-Vk8>`:Lid6IZN=cjfzJV[E1
+VjCm[XCIc;O5AO<ABDGbO[3
 Z7 OV;C;10.1d;51
 32
-Z8 !s108 1700680784.229000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd|
-Z10 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd|
+Z8 !s108 1701103854.859000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd|
+Z10 !s107 C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd|
 Z11 o-work work -2002 -explicit -O0
 Z12 tExplicit 1
-!s100 3HZJWnN:R;EX]lWl`?CFV2
+!s100 =T;[U[_QOmk4WCEF:>^1k0
 !i10b 1
 Aarch
 R1
 R2
 R3
-Z13 DEx4 work 8 bcd_fsmd 0 22 k8>`:Lid6IZN=cjfzJV[E1
+Z13 DEx4 work 8 bcd_fsmd 0 22 jCm[XCIc;O5AO<ABDGbO[3
 l24
 L16
 VH5TG[Uf288d;ZhdI<;Y?i2
@@ -45,17 +45,17 @@ Z14 w1700499370
 R1
 R2
 R3
-Z15 dC:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13
-Z16 8C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd
-Z17 FC:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd
+R4
+Z15 8C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd
+Z16 FC:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd
 l0
 L5
 Vh6Z<FcPMV@m]9^JkHIlWb2
 R7
 32
-Z18 !s108 1700499380.860000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd|
-Z20 !s107 C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd|
+Z17 !s108 1700499380.860000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd|
+Z19 !s107 C:\Users\woollastoncb\digital_ii\Digital_II\ModelSim_Projects\Lab13\bcd_fsmd.vhd|
 R11
 R12
 !s100 R:d@21WI<g=e4FDI;0]PX2
@@ -70,28 +70,28 @@ L16
 VKaK6ZLTESK[@][RZV`X4L0
 R7
 32
+R17
 R18
 R19
-R20
 R11
 R12
 !s100 jdWObPMQgXiFm]96kUIR<0
 !i10b 1
 Econtrol_fsmd
-Z21 w1700677292
+Z20 w1701103761
 R2
 R3
 R4
-Z22 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd
-Z23 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd
+Z21 8C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd
+Z22 FC:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd
 l0
 L4
 VY<OQZfk61KUfUD2NlmUN;1
 R7
 32
-Z24 !s108 1700680784.086000
-Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd|
-Z26 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd|
+Z23 !s108 1701103854.937000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd|
+Z25 !s107 C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd|
 R11
 R12
 !s100 Djcfo5>2W]NH<74A1L0242
@@ -99,94 +99,94 @@ R12
 Aarch
 R13
 R1
-Z27 DEx4 work 8 gcd_fsmd 0 22 MO9Tg3BD`Y39WOFXWJLJ:1
+Z26 DEx4 work 8 gcd_fsmd 0 22 MO9Tg3BD`Y39WOFXWJLJ:1
 R2
 R3
-Z28 DEx4 work 12 control_fsmd 0 22 Y<OQZfk61KUfUD2NlmUN;1
-l31
+Z27 DEx4 work 12 control_fsmd 0 22 Y<OQZfk61KUfUD2NlmUN;1
+l33
 L16
-Vh>HGL:<1MNgTgemnM;?SA2
+Ved6[[AWYFc`K5`FISm2X=0
 R7
 32
+R23
 R24
 R25
-R26
 R11
 R12
-!s100 GcT[^oCj3mJT0I5gE<2CK3
+!s100 PTI9Z7o6SYn0QBGmh__cF0
 !i10b 1
 Econtrol_fsmd_tb
-Z29 w1700677005
+Z28 w1701103288
 R1
 R2
 R3
 R4
-Z30 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd
-Z31 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd
+Z29 8C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd
+Z30 FC:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd
 l0
 L5
 V`[]P4[<7]jSz@BJeSMNg60
-!s100 Y;PDMI2mV1_N0Aa@VUSLX1
 R7
 32
-!i10b 1
-Z32 !s108 1700680784.396000
-Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd|
-Z34 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd|
+Z31 !s108 1701103855.015000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd|
+Z33 !s107 C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd|
 R11
 R12
+!s100 Y;PDMI2mV1_N0Aa@VUSLX1
+!i10b 1
 Aarch
+R27
+R1
+R2
+R3
+DEx4 work 15 control_fsmd_tb 0 22 `[]P4[<7]jSz@BJeSMNg60
+l23
+L8
+V1o7D53gUXg8Pke0QJBSWC3
+!s100 n757;oeRXPVm[F:FO7h`31
+R7
+32
+R31
+R32
+R33
+R11
+R12
+!i10b 1
+Egcd_fsmd
 R28
 R1
 R2
 R3
-Z35 DEx4 work 15 control_fsmd_tb 0 22 `[]P4[<7]jSz@BJeSMNg60
-l23
-L8
-Z36 V1o7D53gUXg8Pke0QJBSWC3
-Z37 !s100 n757;oeRXPVm[F:FO7h`31
-R7
-32
-!i10b 1
-R32
-R33
-R34
-R11
-R12
-Egcd_fsmd
-Z38 w1700680768
-R1
-R2
-R3
 R4
-Z39 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd
-Z40 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd
+Z34 8C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd
+Z35 FC:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd
 l0
 L5
 VMO9Tg3BD`Y39WOFXWJLJ:1
+!s100 _]05h[1L8=]E8IG=:SO[Z3
 R7
 32
-Z41 !s108 1700680784.319000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd|
-Z43 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd|
+!i10b 1
+Z36 !s108 1701103855.090000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd|
+Z38 !s107 C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd|
 R11
 R12
-!s100 _]05h[1L8=]E8IG=:SO[Z3
-!i10b 1
 Aarch
 R1
 R2
 R3
-R27
+R26
 l30
 L16
-VS`C2nXTU^Z863YCc6cBzl1
+Z39 VS`C2nXTU^Z863YCc6cBzl1
+Z40 !s100 5gXPUeaMQX^J22k:?a>?i1
 R7
 32
-R41
-R42
-R43
+!i10b 1
+R36
+R37
+R38
 R11
 R12
-!s100 5gXPUeaMQX^J22k:?a>?i1
-!i10b 1

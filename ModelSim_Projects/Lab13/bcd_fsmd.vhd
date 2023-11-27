@@ -8,7 +8,7 @@ entity bcd_fsmd is
       reset: in std_logic;
       start: in std_logic;
       bin: in std_logic_vector(12 downto 0);
-      ready, done_tick: out std_logic;
+      ready, done_tick: out std_logic := '0';
       bcd3,bcd2,bcd1,bcd0: out std_logic_vector(3 downto 0) := (OTHERS => '0')
    );
 end bcd_fsmd ;

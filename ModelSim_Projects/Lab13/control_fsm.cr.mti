@@ -1,4 +1,4 @@
-C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd
+bcd_fsmd.vhd {1 {vcom -work work -2002 -explicit C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/bcd_fsmd.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -7,18 +7,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity bcd_fsmd
 -- Compiling architecture arch of bcd_fsmd
 
-} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd.vhd
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity control_fsmd
--- Compiling architecture arch of control_fsmd
--- Loading package NUMERIC_STD
--- Loading entity gcd_fsmd
--- Loading entity bcd_fsmd
-
-} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd
+} {} {}} gcd_fsmd.vhd {1 {vcom -work work -2002 -explicit C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/gcd_fsmd.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -27,7 +16,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity gcd_fsmd
 -- Compiling architecture arch of gcd_fsmd
 
-} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd {1 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd
+} {} {}} control_fsmd_tb.vhd {1 {vcom -work work -2002 -explicit C:/Users/woollastoncb/digital_ii/Digital_II/ModelSim_Projects/Lab13/control_fsmd_tb.vhd
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO

@@ -2,18 +2,18 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-entity bin2bcd is
+entity bcd_fsmd is
    port(
       clk: in std_logic;
       reset: in std_logic;
       start: in std_logic;
       bin: in std_logic_vector(12 downto 0);
       ready, done_tick: out std_logic;
-      bcd3,bcd2,bcd1,bcd0: out std_logic_vector(3 downto 0)
+      bcd3,bcd2,bcd1,bcd0: out std_logic_vector(3 downto 0) := (OTHERS => '0')
    );
-end bin2bcd ;
+end bcd_fsmd ;
 
-architecture arch of bin2bcd is
+architecture arch of bcd_fsmd is
    type state_type is (idle, op, done);
    signal state_reg, state_next: state_type;
    signal p2s_reg, p2s_next: std_logic_vector(12 downto 0);
@@ -25,7 +25,7 @@ begin
    -- state and data registers
    process (clk,reset)
    begin
-      if reset='1' then 
+      if reset='1' then
          state_reg <= idle;
          p2s_reg <= (others=>'0');
          n_reg <= (others=>'0');
@@ -61,7 +61,7 @@ begin
       case state_reg is
          when idle =>
             ready <= '1';
-            if start='1' then   
+            if start='1' then
                state_next <= op;
                bcd3_next <= (others=>'0');
                bcd2_next <= (others=>'0');

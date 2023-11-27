@@ -25,8 +25,8 @@ ARCHITECTURE arch OF control_fsmd IS
   SIGNAL r_gcd : std_logic_vector(N-1 DOWNTO 0) := (OTHERS => '0');
   SIGNAL s_gcd_13b : std_logic_vector(12 DOWNTO 0) := (OTHERS => '0');
   SIGNAL s_gcd_start, s_bin2bcd_start : std_logic := '0';
-  SIGNAL s_gcd_ready, s_bin2bcd_ready : std_logic := '0';
-  SIGNAL s_gcd_done, s_bin2bcd_done : std_logic := '0';
+  SIGNAL s_gcd_ready, s_bin2bcd_ready : std_logic;
+  SIGNAL s_gcd_done, s_bin2bcd_done : std_logic;
 
   BEGIN
   gcd_fsmd_inst : ENTITY work.gcd_fsmd(arch)
@@ -64,7 +64,7 @@ ARCHITECTURE arch OF control_fsmd IS
     END IF;
   END PROCESS;
 
-  PROCESS(state_reg, i_x, i_y, i_start_tick, s_gcd_done, s_bin2bcd_done)
+  PROCESS(state_reg, i_start_tick, s_gcd_done, s_bin2bcd_done)
   BEGIN
   state_next <= state_reg;
   o_done_tick <= '0';
