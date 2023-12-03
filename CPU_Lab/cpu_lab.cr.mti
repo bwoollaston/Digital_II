@@ -1,0 +1,27 @@
+C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab/cpu_2seg.vhd {1 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package altera_mf_components
+-- Compiling entity cpu_2seg
+-- Compiling architecture a of cpu_2seg
+
+} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab/cpu_2seg_tb.vhd {1 {vcom -work work -2002 -explicit {C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg_tb.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity cpu_2seg_tb
+-- Compiling architecture arch of cpu_2seg_tb
+-- Loading package altera_mf_components
+-- Loading entity cpu_2seg
+
+} {} {}} C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab/PROGRAM.MIF {0 {vcom -work work -2002 -explicit C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab/PROGRAM.MIF
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+** Error: C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab/PROGRAM.MIF(1): near "DEPTH": syntax error
+
+} {4.0 5.0} {}}

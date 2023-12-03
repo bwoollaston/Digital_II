@@ -1,0 +1,283 @@
+Design Assistant report for scomp
+Wed May 25 15:37:32 2005
+Version 5.0 Build 148 04/26/2005 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant Summary
+  3. Design Assistant Settings
+  4. Medium Violations
+  5. Information only Violations
+  6. Design Assistant Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2005 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic       
+functions, and any output files any of the foregoing           
+(including device programming or simulation files), and any    
+associated documentation or information are expressly subject  
+to the terms and conditions of the Altera Program License      
+Subscription Agreement, Altera MegaCore Function License       
+Agreement, or other applicable license agreement, including,   
+without limitation, that your use is for the sole purpose of   
+programming logic devices manufactured by Altera and sold by   
+Altera or its authorized distributors.  Please refer to the    
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------+
+; Design Assistant Summary                                                  ;
++-----------------------------------+---------------------------------------+
+; Design Assistant Status           ; Successful - Wed May 25 15:37:32 2005 ;
+; Revision Name                     ; scomp                                 ;
+; Top-level Entity Name             ; SCOMP                                 ;
+; Family                            ; Cyclone                               ;
+; Total Critical Violations         ; 0                                     ;
+; Total High Violations             ; 0                                     ;
+; Total Medium Violations           ; 1                                     ;
+; Total Information only Violations ; 52                                    ;
++-----------------------------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant Settings                                                                                                                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Option                                                                                                                                                                                                                                                                         ; Setting      ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Design Assistant mode                                                                                                                                                                                                                                                          ; Post-Fitting ;
+; Minimum number of node fan-out                                                                                                                                                                                                                                                 ; 30           ;
+; Maximum number of nodes to report                                                                                                                                                                                                                                              ; 50           ;
+; Gated clock should be implemented according to Altera standard scheme                                                                                                                                                                                                          ; On           ;
+; Logic cell should not be used to generate inverted clock                                                                                                                                                                                                                       ; On           ;
+; Input clock pin should fan out to only one set of clock gating logic                                                                                                                                                                                                           ; On           ;
+; Clock signal source should drive only input clock ports                                                                                                                                                                                                                        ; On           ;
+; Clock signal should be a global signal (This rule applies during post-fitting analysis. This rule applies during both post-fitting analysis and post-synthesis analysis if the design targets a MAX 3000 or MAX 7000 device. For more information, see the Help for the rule.) ; On           ;
+; Clock signal source should not drive registers that are triggered by different clock edges                                                                                                                                                                                     ; On           ;
+; Combinational logic used as reset signal should be synchronized                                                                                                                                                                                                                ; On           ;
+; External reset should be synchronized using two cascaded registers                                                                                                                                                                                                             ; On           ;
+; External reset should be correctly synchronized                                                                                                                                                                                                                                ; On           ;
+; Reset signal that is generated in one clock domain and used in other, asynchronous clock domains should be synchronized                                                                                                                                                        ; On           ;
+; Reset signal that is generated in one clock domain and used in other, asynchronous clock domains should be correctly synchronized                                                                                                                                              ; On           ;
+; Nodes with more than specified number of fan-outs                                                                                                                                                                                                                              ; On           ;
+; Top nodes with highest fan-out                                                                                                                                                                                                                                                 ; On           ;
+; Register output directly drives input of another register when both registers are triggered at same time                                                                                                                                                                       ; On           ;
+; Registers in direct data transfer between clock domains are triggered by clock edges at the same time                                                                                                                                                                          ; On           ;
+; Design should not contain combinational loops                                                                                                                                                                                                                                  ; On           ;
+; Register output should not drive its own control signal directly or through combinational logic                                                                                                                                                                                ; On           ;
+; Design should not contain delay chains                                                                                                                                                                                                                                         ; On           ;
+; Design should not contain ripple clock structures                                                                                                                                                                                                                              ; On           ;
+; Pulses should not be implemented asynchronously                                                                                                                                                                                                                                ; On           ;
+; Multiple pulses should not be generated in design                                                                                                                                                                                                                              ; On           ;
+; Design should not contain SR latches                                                                                                                                                                                                                                           ; On           ;
+; Design should not contain latches                                                                                                                                                                                                                                              ; On           ;
+; Combinational logic should not directly drive write enable signal of asynchronous RAM                                                                                                                                                                                          ; On           ;
+; Design should not contain asynchronous memory                                                                                                                                                                                                                                  ; On           ;
+; Output enable and input of same tri-state node should not be driven by same signal source                                                                                                                                                                                      ; On           ;
+; Synchronous port and reset port of same register should not be driven by same signal source                                                                                                                                                                                    ; On           ;
+; Data bits are not synchronized when transferred between asynchronous clock domains                                                                                                                                                                                             ; On           ;
+; Multiple data bits that are transferred across asynchronous clock domains are synchronized, but not all bits may be aligned in receiving clock domain                                                                                                                          ; On           ;
+; Data bits are not correctly synchronized when transferred between asynchronous clock domains                                                                                                                                                                                   ; On           ;
+; Only one VREF pin should be assigned to HardCopy test pin in an I/O bank (This rule does not apply to all HardCopy and HardCopy Stratix devices. This rule is used to analyze a design only when the rule applies to the design's target HardCopy or HardCopy Stratix device.) ; On           ;
+; PLL drives multiple clock network types (This rule does not apply to all HardCopy and HardCopy Stratix devices. This rule is used to analyze a design only when the rule applies to the design's target HardCopy or HardCopy Stratix device.)                                  ; On           ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+
+
++----------------------------------------------------------------------------+
+; Medium Violations                                                          ;
++--------------------------------------------------------------------+-------+
+; Rule name                                                          ; Name  ;
++--------------------------------------------------------------------+-------+
+; External reset should be synchronized using two cascaded registers ; reset ;
++--------------------------------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Information only Violations                                                                                                                                                                                        ;
++-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+
+; Rule name                                                                                                             ; Name                                                                             ; Fan-Out ;
++-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+
+; Nodes with more than specified number of fan-outs                                                                     ; clock                                                                            ; 51      ;
+; Top nodes with highest fan-out                                                                                        ; clock                                                                            ; 51      ;
+; Top nodes with highest fan-out                                                                                        ; state.execute_load                                                               ; 19      ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[15]~228                                                              ; 16      ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[0]~229                                                               ; 16      ;
+; Top nodes with highest fan-out                                                                                        ; instruction_register[0]~15                                                       ; 16      ;
+; Top nodes with highest fan-out                                                                                        ; reset                                                                            ; 13      ;
+; Top nodes with highest fan-out                                                                                        ; state.execute_jump                                                               ; 11      ;
+; Top nodes with highest fan-out                                                                                        ; program_counter[7]~124                                                           ; 8       ;
+; Top nodes with highest fan-out                                                                                        ; program_counter[0]~125                                                           ; 8       ;
+; Top nodes with highest fan-out                                                                                        ; reduce_or~7                                                                      ; 8       ;
+; Top nodes with highest fan-out                                                                                        ; reduce_or~33                                                                     ; 8       ;
+; Top nodes with highest fan-out                                                                                        ; state.fetch                                                                      ; 7       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[7]~193                                                               ; 5       ;
+; Top nodes with highest fan-out                                                                                        ; state.decode                                                                     ; 5       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[2]~173                                                               ; 5       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[1]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; state.execute_store                                                              ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[2]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[3]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[4]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[5]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[6]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[7]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[8]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[0]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[15]                         ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[14]                         ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[13]                         ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[12]                         ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[11]                         ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[10]                         ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[9]                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; instruction_register[9]                                                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; instruction_register[8]                                                          ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; reduce_nor~71                                                                    ; 4       ;
+; Top nodes with highest fan-out                                                                                        ; program_counter[0]                                                               ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[15]                                                                  ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[14]                                                                  ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[13]                                                                  ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; state.execute_add                                                                ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[12]                                                                  ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[11]                                                                  ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[10]                                                                  ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[9]                                                                   ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[8]                                                                   ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[7]                                                                   ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[6]                                                                   ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[5]                                                                   ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; register_AC[4]                                                                   ; 3       ;
+; Top nodes with highest fan-out                                                                                        ; state.execute_store2                                                             ; 3       ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; state.decode                                                                     ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[0]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_we_reg       ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; memory_write                                                                     ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg0  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg1  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[1]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg2  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[2]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg3  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[3]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg4  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[4]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg5  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[5]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg6  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[6]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg7  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[7]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg8  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[8]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg9  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[9]                                                                   ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg10 ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[10]                                                                  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg11 ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[11]                                                                  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg12 ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[12]                                                                  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg13 ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[13]                                                                  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg14 ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[14]                                                                  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg15 ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; register_AC[15]                                                                  ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; state.execute_store                                                              ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; state.execute_store2                                                             ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; state.execute_store3                                                             ; N/A     ;
+; Register output directly drives input of another register when both registers are triggered at same time - Structure1 ; state.fetch                                                                      ; N/A     ;
++-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+---------+
+
+
++---------------------------+
+; Design Assistant Messages ;
++---------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Design Assistant
+    Info: Version 5.0 Build 148 04/26/2005 SJ Web Edition
+    Info: Processing started: Wed May 25 15:37:31 2005
+Info: Command: quartus_drc --read_settings_files=off --write_settings_files=off scomp -c scomp
+Warning: Design Assistant warning: External reset should be synchronized using two cascaded registers. Found 1 node(s) related to this rule.
+    Warning: Node  "reset"
+Info: Design Assistant information: Nodes with more than specified number of fan-outs. Found 1 node(s) with highest fan-out.
+    Info: Node "clock" has 51 fan-out(s)
+Info: Design Assistant information: Top nodes with highest fan-out. Found 50 node(s) with highest fan-out.
+    Info: Node "clock" has 51 fan-out(s)
+    Info: Node "state.execute_load" has 19 fan-out(s)
+    Info: Node "register_AC[15]~228" has 16 fan-out(s)
+    Info: Node "register_AC[0]~229" has 16 fan-out(s)
+    Info: Node "instruction_register[0]~15" has 16 fan-out(s)
+    Info: Node "reset" has 13 fan-out(s)
+    Info: Node "state.execute_jump" has 11 fan-out(s)
+    Info: Node "program_counter[7]~124" has 8 fan-out(s)
+    Info: Node "program_counter[0]~125" has 8 fan-out(s)
+    Info: Node "reduce_or~7" has 8 fan-out(s)
+    Info: Node "reduce_or~33" has 8 fan-out(s)
+    Info: Node "state.fetch" has 7 fan-out(s)
+    Info: Node "register_AC[7]~193" has 5 fan-out(s)
+    Info: Node "state.decode" has 5 fan-out(s)
+    Info: Node "register_AC[2]~173" has 5 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[1]" has 4 fan-out(s)
+    Info: Node "state.execute_store" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[2]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[3]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[4]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[5]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[6]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[7]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[8]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[0]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[15]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[14]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[13]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[12]" has 4 fan-out(s)
+    Info: Node "altsyncram:memory|altsyncram_sdk2:auto_generated|q_a[11]" has 4 fan-out(s)
+    Info: Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
+Info: Design Assistant information: Register output directly drives input of another register when both registers are triggered at same time. Found 1 shift register structure(s) related to this rule.
+    Info: Structure 1 contains 39 node(s)
+        Info: Node  "state.decode"
+        Info: Node  "register_AC[0]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_we_reg"
+        Info: Node  "memory_write"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg0"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg1"
+        Info: Node  "register_AC[1]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg2"
+        Info: Node  "register_AC[2]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg3"
+        Info: Node  "register_AC[3]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg4"
+        Info: Node  "register_AC[4]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg5"
+        Info: Node  "register_AC[5]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg6"
+        Info: Node  "register_AC[6]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg7"
+        Info: Node  "register_AC[7]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg8"
+        Info: Node  "register_AC[8]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg9"
+        Info: Node  "register_AC[9]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg10"
+        Info: Node  "register_AC[10]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg11"
+        Info: Node  "register_AC[11]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg12"
+        Info: Node  "register_AC[12]"
+        Info: Node  "altsyncram:memory|altsyncram_sdk2:auto_generated|ram_block1a0~porta_datain_reg13"
+        Info: Truncated list of Design Assistant messages to 30 messages. Go to sections under Design Assistant section of Compilation Report for complete lists of Design Assistant messages generated.
+Info: Design Assistant information: finished post-fitting analysis of current design -- generated 52 information messages and 1 warning messages
+Info: Quartus II Design Assistant was successful. 0 errors, 2 warnings
+    Info: Processing ended: Wed May 25 15:37:32 2005
+    Info: Elapsed time: 00:00:02
+
+
