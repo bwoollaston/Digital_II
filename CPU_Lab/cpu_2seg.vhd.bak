@@ -100,7 +100,7 @@ ARCHITECTURE a OF cpu_2seg IS
           WHEN "00000011" =>
             state_next <= execute_jump;
           WHEN OTHERS =>
-            state_next <= fetch;
+            state_next <= state_reg;
         END CASE;
 
       WHEN execute_add =>

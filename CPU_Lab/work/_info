@@ -4,22 +4,22 @@ K3
 cModel Technology
 dC:\ModelSim\altera\13.0sp1
 Ecpu_2seg
-Z0 w1701665255
+Z0 w1701709381
 Z1 DPx9 altera_mf 20 altera_mf_components 0 22 dN>@>Mze:JEj3f_7zNO2S2
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab
-Z6 8C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg.vhd
-Z7 FC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg.vhd
+Z5 dC:\Users\woollastoncb\digital_ii\Digital_II\CPU_Lab
+Z6 8C:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg.vhd
+Z7 FC:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg.vhd
 l0
 L8
 V_V@HM2?^Y_GV9E<o;3UAF0
 Z8 OV;C;10.1d;51
 32
-Z9 !s108 1701665271.615000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg.vhd|
-Z11 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg.vhd|
+Z9 !s108 1701717086.911000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg.vhd|
+Z11 !s107 C:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg.vhd|
 Z12 o-work work -2002 -explicit -O0
 Z13 tExplicit 1
 !s100 XJM_YK`efVS[OD:G=n]bn0
@@ -33,6 +33,7 @@ Z14 DEx4 work 8 cpu_2seg 0 22 _V@HM2?^Y_GV9E<o;3UAF0
 l27
 L17
 VdclSWU^UM?j655Cz_ccH[0
+!s100 1@IP>M9GSd9RkF@T3YfJQ0
 R8
 32
 R9
@@ -40,16 +41,15 @@ R10
 R11
 R12
 R13
-!s100 1@IP>M9GSd9RkF@T3YfJQ0
 !i10b 1
 Ecpu_2seg_tb
-Z15 w1701589831
+Z15 w1701709381
 R2
 R3
 R4
 R5
-Z16 8C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg_tb.vhd
-Z17 FC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg_tb.vhd
+Z16 8C:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg_tb.vhd
+Z17 FC:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg_tb.vhd
 l0
 L5
 VN3^o5OC8aaPH2i=Nm>zGV3
@@ -57,9 +57,9 @@ VN3^o5OC8aaPH2i=Nm>zGV3
 R8
 32
 !i10b 1
-Z18 !s108 1701665271.762000
-Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg_tb.vhd|
-Z20 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg_tb.vhd|
+Z18 !s108 1701717087.005000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg_tb.vhd|
+Z20 !s107 C:/Users/woollastoncb/digital_ii/Digital_II/CPU_Lab/cpu_2seg_tb.vhd|
 R12
 R13
 Aarch
