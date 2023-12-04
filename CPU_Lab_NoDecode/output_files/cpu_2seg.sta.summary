@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'clock'
+Slack : -4.921
+TNS   : -194.153
+
+Type  : Slow Model Hold 'clock'
+Slack : 0.527
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clock'
+Slack : -2.000
+TNS   : -202.380
+
+Type  : Fast Model Setup 'clock'
+Slack : -2.308
+TNS   : -94.000
+
+Type  : Fast Model Hold 'clock'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clock'
+Slack : -2.000
+TNS   : -202.380
+
+------------------------------------------------------------

@@ -1,0 +1,1151 @@
+-- Copyright (C) 1991-2007 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--program_counter[0] is program_counter[0]
+program_counter[0] = DFFEAS(A1L159, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--program_counter[1] is program_counter[1]
+program_counter[1] = DFFEAS(A1L158, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--program_counter[2] is program_counter[2]
+program_counter[2] = DFFEAS(A1L157, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--program_counter[3] is program_counter[3]
+program_counter[3] = DFFEAS(A1L156, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--program_counter[4] is program_counter[4]
+program_counter[4] = DFFEAS(A1L155, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--program_counter[5] is program_counter[5]
+program_counter[5] = DFFEAS(A1L154, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--program_counter[6] is program_counter[6]
+program_counter[6] = DFFEAS(A1L153, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--program_counter[7] is program_counter[7]
+program_counter[7] = DFFEAS(A1L152, clock,  ,  , A1L99,  ,  ,  ,  );
+
+
+--register_AC[0] is register_AC[0]
+register_AC[0] = DFFEAS(A1L175, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[1] is register_AC[1]
+register_AC[1] = DFFEAS(A1L174, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[2] is register_AC[2]
+register_AC[2] = DFFEAS(A1L173, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[3] is register_AC[3]
+register_AC[3] = DFFEAS(A1L172, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[4] is register_AC[4]
+register_AC[4] = DFFEAS(A1L171, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[5] is register_AC[5]
+register_AC[5] = DFFEAS(A1L170, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[6] is register_AC[6]
+register_AC[6] = DFFEAS(A1L169, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[7] is register_AC[7]
+register_AC[7] = DFFEAS(A1L168, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[8] is register_AC[8]
+register_AC[8] = DFFEAS(A1L167, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[9] is register_AC[9]
+register_AC[9] = DFFEAS(A1L166, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[10] is register_AC[10]
+register_AC[10] = DFFEAS(A1L165, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[11] is register_AC[11]
+register_AC[11] = DFFEAS(A1L164, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[12] is register_AC[12]
+register_AC[12] = DFFEAS(A1L163, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[13] is register_AC[13]
+register_AC[13] = DFFEAS(A1L162, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[14] is register_AC[14]
+register_AC[14] = DFFEAS(A1L161, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--register_AC[15] is register_AC[15]
+register_AC[15] = DFFEAS(A1L160, clock,  ,  , A1L118,  ,  ,  ,  );
+
+
+--C1_q_a[0] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[0]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[0]_PORT_A_data_in = register_AC[0];
+C1_q_a[0]_PORT_A_data_in_reg = DFFE(C1_q_a[0]_PORT_A_data_in, C1_q_a[0]_clock_0, , , );
+C1_q_a[0]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[0]_PORT_A_address_reg = DFFE(C1_q_a[0]_PORT_A_address, C1_q_a[0]_clock_0, , , );
+C1_q_a[0]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[0]_PORT_B_address_reg = DFFE(C1_q_a[0]_PORT_B_address, C1_q_a[0]_clock_0, , , );
+C1_q_a[0]_PORT_A_write_enable = memory_write;
+C1_q_a[0]_PORT_A_write_enable_reg = DFFE(C1_q_a[0]_PORT_A_write_enable, C1_q_a[0]_clock_0, , , );
+C1_q_a[0]_clock_0 = clock;
+C1_q_a[0]_PORT_A_data_out = MEMORY(C1_q_a[0]_PORT_A_data_in_reg, , C1_q_a[0]_PORT_A_address_reg, C1_q_a[0]_PORT_B_address_reg, C1_q_a[0]_PORT_A_write_enable_reg, , , , C1_q_a[0]_clock_0, , , , , );
+C1_q_a[0] = C1_q_a[0]_PORT_A_data_out[0];
+
+
+--C1_q_a[1] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[1]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[1]_PORT_A_data_in = register_AC[1];
+C1_q_a[1]_PORT_A_data_in_reg = DFFE(C1_q_a[1]_PORT_A_data_in, C1_q_a[1]_clock_0, , , );
+C1_q_a[1]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[1]_PORT_A_address_reg = DFFE(C1_q_a[1]_PORT_A_address, C1_q_a[1]_clock_0, , , );
+C1_q_a[1]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[1]_PORT_B_address_reg = DFFE(C1_q_a[1]_PORT_B_address, C1_q_a[1]_clock_0, , , );
+C1_q_a[1]_PORT_A_write_enable = memory_write;
+C1_q_a[1]_PORT_A_write_enable_reg = DFFE(C1_q_a[1]_PORT_A_write_enable, C1_q_a[1]_clock_0, , , );
+C1_q_a[1]_clock_0 = clock;
+C1_q_a[1]_PORT_A_data_out = MEMORY(C1_q_a[1]_PORT_A_data_in_reg, , C1_q_a[1]_PORT_A_address_reg, C1_q_a[1]_PORT_B_address_reg, C1_q_a[1]_PORT_A_write_enable_reg, , , , C1_q_a[1]_clock_0, , , , , );
+C1_q_a[1] = C1_q_a[1]_PORT_A_data_out[0];
+
+
+--C1_q_a[2] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[2]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[2]_PORT_A_data_in = register_AC[2];
+C1_q_a[2]_PORT_A_data_in_reg = DFFE(C1_q_a[2]_PORT_A_data_in, C1_q_a[2]_clock_0, , , );
+C1_q_a[2]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[2]_PORT_A_address_reg = DFFE(C1_q_a[2]_PORT_A_address, C1_q_a[2]_clock_0, , , );
+C1_q_a[2]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[2]_PORT_B_address_reg = DFFE(C1_q_a[2]_PORT_B_address, C1_q_a[2]_clock_0, , , );
+C1_q_a[2]_PORT_A_write_enable = memory_write;
+C1_q_a[2]_PORT_A_write_enable_reg = DFFE(C1_q_a[2]_PORT_A_write_enable, C1_q_a[2]_clock_0, , , );
+C1_q_a[2]_clock_0 = clock;
+C1_q_a[2]_PORT_A_data_out = MEMORY(C1_q_a[2]_PORT_A_data_in_reg, , C1_q_a[2]_PORT_A_address_reg, C1_q_a[2]_PORT_B_address_reg, C1_q_a[2]_PORT_A_write_enable_reg, , , , C1_q_a[2]_clock_0, , , , , );
+C1_q_a[2] = C1_q_a[2]_PORT_A_data_out[0];
+
+
+--C1_q_a[3] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[3]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[3]_PORT_A_data_in = register_AC[3];
+C1_q_a[3]_PORT_A_data_in_reg = DFFE(C1_q_a[3]_PORT_A_data_in, C1_q_a[3]_clock_0, , , );
+C1_q_a[3]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[3]_PORT_A_address_reg = DFFE(C1_q_a[3]_PORT_A_address, C1_q_a[3]_clock_0, , , );
+C1_q_a[3]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[3]_PORT_B_address_reg = DFFE(C1_q_a[3]_PORT_B_address, C1_q_a[3]_clock_0, , , );
+C1_q_a[3]_PORT_A_write_enable = memory_write;
+C1_q_a[3]_PORT_A_write_enable_reg = DFFE(C1_q_a[3]_PORT_A_write_enable, C1_q_a[3]_clock_0, , , );
+C1_q_a[3]_clock_0 = clock;
+C1_q_a[3]_PORT_A_data_out = MEMORY(C1_q_a[3]_PORT_A_data_in_reg, , C1_q_a[3]_PORT_A_address_reg, C1_q_a[3]_PORT_B_address_reg, C1_q_a[3]_PORT_A_write_enable_reg, , , , C1_q_a[3]_clock_0, , , , , );
+C1_q_a[3] = C1_q_a[3]_PORT_A_data_out[0];
+
+
+--C1_q_a[4] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[4]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[4]_PORT_A_data_in = register_AC[4];
+C1_q_a[4]_PORT_A_data_in_reg = DFFE(C1_q_a[4]_PORT_A_data_in, C1_q_a[4]_clock_0, , , );
+C1_q_a[4]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[4]_PORT_A_address_reg = DFFE(C1_q_a[4]_PORT_A_address, C1_q_a[4]_clock_0, , , );
+C1_q_a[4]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[4]_PORT_B_address_reg = DFFE(C1_q_a[4]_PORT_B_address, C1_q_a[4]_clock_0, , , );
+C1_q_a[4]_PORT_A_write_enable = memory_write;
+C1_q_a[4]_PORT_A_write_enable_reg = DFFE(C1_q_a[4]_PORT_A_write_enable, C1_q_a[4]_clock_0, , , );
+C1_q_a[4]_clock_0 = clock;
+C1_q_a[4]_PORT_A_data_out = MEMORY(C1_q_a[4]_PORT_A_data_in_reg, , C1_q_a[4]_PORT_A_address_reg, C1_q_a[4]_PORT_B_address_reg, C1_q_a[4]_PORT_A_write_enable_reg, , , , C1_q_a[4]_clock_0, , , , , );
+C1_q_a[4] = C1_q_a[4]_PORT_A_data_out[0];
+
+
+--C1_q_a[5] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[5]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[5]_PORT_A_data_in = register_AC[5];
+C1_q_a[5]_PORT_A_data_in_reg = DFFE(C1_q_a[5]_PORT_A_data_in, C1_q_a[5]_clock_0, , , );
+C1_q_a[5]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[5]_PORT_A_address_reg = DFFE(C1_q_a[5]_PORT_A_address, C1_q_a[5]_clock_0, , , );
+C1_q_a[5]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[5]_PORT_B_address_reg = DFFE(C1_q_a[5]_PORT_B_address, C1_q_a[5]_clock_0, , , );
+C1_q_a[5]_PORT_A_write_enable = memory_write;
+C1_q_a[5]_PORT_A_write_enable_reg = DFFE(C1_q_a[5]_PORT_A_write_enable, C1_q_a[5]_clock_0, , , );
+C1_q_a[5]_clock_0 = clock;
+C1_q_a[5]_PORT_A_data_out = MEMORY(C1_q_a[5]_PORT_A_data_in_reg, , C1_q_a[5]_PORT_A_address_reg, C1_q_a[5]_PORT_B_address_reg, C1_q_a[5]_PORT_A_write_enable_reg, , , , C1_q_a[5]_clock_0, , , , , );
+C1_q_a[5] = C1_q_a[5]_PORT_A_data_out[0];
+
+
+--C1_q_a[6] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[6]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[6]_PORT_A_data_in = register_AC[6];
+C1_q_a[6]_PORT_A_data_in_reg = DFFE(C1_q_a[6]_PORT_A_data_in, C1_q_a[6]_clock_0, , , );
+C1_q_a[6]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[6]_PORT_A_address_reg = DFFE(C1_q_a[6]_PORT_A_address, C1_q_a[6]_clock_0, , , );
+C1_q_a[6]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[6]_PORT_B_address_reg = DFFE(C1_q_a[6]_PORT_B_address, C1_q_a[6]_clock_0, , , );
+C1_q_a[6]_PORT_A_write_enable = memory_write;
+C1_q_a[6]_PORT_A_write_enable_reg = DFFE(C1_q_a[6]_PORT_A_write_enable, C1_q_a[6]_clock_0, , , );
+C1_q_a[6]_clock_0 = clock;
+C1_q_a[6]_PORT_A_data_out = MEMORY(C1_q_a[6]_PORT_A_data_in_reg, , C1_q_a[6]_PORT_A_address_reg, C1_q_a[6]_PORT_B_address_reg, C1_q_a[6]_PORT_A_write_enable_reg, , , , C1_q_a[6]_clock_0, , , , , );
+C1_q_a[6] = C1_q_a[6]_PORT_A_data_out[0];
+
+
+--C1_q_a[7] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[7]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[7]_PORT_A_data_in = register_AC[7];
+C1_q_a[7]_PORT_A_data_in_reg = DFFE(C1_q_a[7]_PORT_A_data_in, C1_q_a[7]_clock_0, , , );
+C1_q_a[7]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[7]_PORT_A_address_reg = DFFE(C1_q_a[7]_PORT_A_address, C1_q_a[7]_clock_0, , , );
+C1_q_a[7]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[7]_PORT_B_address_reg = DFFE(C1_q_a[7]_PORT_B_address, C1_q_a[7]_clock_0, , , );
+C1_q_a[7]_PORT_A_write_enable = memory_write;
+C1_q_a[7]_PORT_A_write_enable_reg = DFFE(C1_q_a[7]_PORT_A_write_enable, C1_q_a[7]_clock_0, , , );
+C1_q_a[7]_clock_0 = clock;
+C1_q_a[7]_PORT_A_data_out = MEMORY(C1_q_a[7]_PORT_A_data_in_reg, , C1_q_a[7]_PORT_A_address_reg, C1_q_a[7]_PORT_B_address_reg, C1_q_a[7]_PORT_A_write_enable_reg, , , , C1_q_a[7]_clock_0, , , , , );
+C1_q_a[7] = C1_q_a[7]_PORT_A_data_out[0];
+
+
+--C1_q_a[8] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[8]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[8]_PORT_A_data_in = register_AC[8];
+C1_q_a[8]_PORT_A_data_in_reg = DFFE(C1_q_a[8]_PORT_A_data_in, C1_q_a[8]_clock_0, , , );
+C1_q_a[8]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[8]_PORT_A_address_reg = DFFE(C1_q_a[8]_PORT_A_address, C1_q_a[8]_clock_0, , , );
+C1_q_a[8]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[8]_PORT_B_address_reg = DFFE(C1_q_a[8]_PORT_B_address, C1_q_a[8]_clock_0, , , );
+C1_q_a[8]_PORT_A_write_enable = memory_write;
+C1_q_a[8]_PORT_A_write_enable_reg = DFFE(C1_q_a[8]_PORT_A_write_enable, C1_q_a[8]_clock_0, , , );
+C1_q_a[8]_clock_0 = clock;
+C1_q_a[8]_PORT_A_data_out = MEMORY(C1_q_a[8]_PORT_A_data_in_reg, , C1_q_a[8]_PORT_A_address_reg, C1_q_a[8]_PORT_B_address_reg, C1_q_a[8]_PORT_A_write_enable_reg, , , , C1_q_a[8]_clock_0, , , , , );
+C1_q_a[8] = C1_q_a[8]_PORT_A_data_out[0];
+
+
+--C1_q_a[9] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[9]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[9]_PORT_A_data_in = register_AC[9];
+C1_q_a[9]_PORT_A_data_in_reg = DFFE(C1_q_a[9]_PORT_A_data_in, C1_q_a[9]_clock_0, , , );
+C1_q_a[9]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[9]_PORT_A_address_reg = DFFE(C1_q_a[9]_PORT_A_address, C1_q_a[9]_clock_0, , , );
+C1_q_a[9]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[9]_PORT_B_address_reg = DFFE(C1_q_a[9]_PORT_B_address, C1_q_a[9]_clock_0, , , );
+C1_q_a[9]_PORT_A_write_enable = memory_write;
+C1_q_a[9]_PORT_A_write_enable_reg = DFFE(C1_q_a[9]_PORT_A_write_enable, C1_q_a[9]_clock_0, , , );
+C1_q_a[9]_clock_0 = clock;
+C1_q_a[9]_PORT_A_data_out = MEMORY(C1_q_a[9]_PORT_A_data_in_reg, , C1_q_a[9]_PORT_A_address_reg, C1_q_a[9]_PORT_B_address_reg, C1_q_a[9]_PORT_A_write_enable_reg, , , , C1_q_a[9]_clock_0, , , , , );
+C1_q_a[9] = C1_q_a[9]_PORT_A_data_out[0];
+
+
+--C1_q_a[10] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[10]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[10]_PORT_A_data_in = register_AC[10];
+C1_q_a[10]_PORT_A_data_in_reg = DFFE(C1_q_a[10]_PORT_A_data_in, C1_q_a[10]_clock_0, , , );
+C1_q_a[10]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[10]_PORT_A_address_reg = DFFE(C1_q_a[10]_PORT_A_address, C1_q_a[10]_clock_0, , , );
+C1_q_a[10]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[10]_PORT_B_address_reg = DFFE(C1_q_a[10]_PORT_B_address, C1_q_a[10]_clock_0, , , );
+C1_q_a[10]_PORT_A_write_enable = memory_write;
+C1_q_a[10]_PORT_A_write_enable_reg = DFFE(C1_q_a[10]_PORT_A_write_enable, C1_q_a[10]_clock_0, , , );
+C1_q_a[10]_clock_0 = clock;
+C1_q_a[10]_PORT_A_data_out = MEMORY(C1_q_a[10]_PORT_A_data_in_reg, , C1_q_a[10]_PORT_A_address_reg, C1_q_a[10]_PORT_B_address_reg, C1_q_a[10]_PORT_A_write_enable_reg, , , , C1_q_a[10]_clock_0, , , , , );
+C1_q_a[10] = C1_q_a[10]_PORT_A_data_out[0];
+
+
+--C1_q_a[11] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[11]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[11]_PORT_A_data_in = register_AC[11];
+C1_q_a[11]_PORT_A_data_in_reg = DFFE(C1_q_a[11]_PORT_A_data_in, C1_q_a[11]_clock_0, , , );
+C1_q_a[11]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[11]_PORT_A_address_reg = DFFE(C1_q_a[11]_PORT_A_address, C1_q_a[11]_clock_0, , , );
+C1_q_a[11]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[11]_PORT_B_address_reg = DFFE(C1_q_a[11]_PORT_B_address, C1_q_a[11]_clock_0, , , );
+C1_q_a[11]_PORT_A_write_enable = memory_write;
+C1_q_a[11]_PORT_A_write_enable_reg = DFFE(C1_q_a[11]_PORT_A_write_enable, C1_q_a[11]_clock_0, , , );
+C1_q_a[11]_clock_0 = clock;
+C1_q_a[11]_PORT_A_data_out = MEMORY(C1_q_a[11]_PORT_A_data_in_reg, , C1_q_a[11]_PORT_A_address_reg, C1_q_a[11]_PORT_B_address_reg, C1_q_a[11]_PORT_A_write_enable_reg, , , , C1_q_a[11]_clock_0, , , , , );
+C1_q_a[11] = C1_q_a[11]_PORT_A_data_out[0];
+
+
+--C1_q_a[12] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[12]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[12]_PORT_A_data_in = register_AC[12];
+C1_q_a[12]_PORT_A_data_in_reg = DFFE(C1_q_a[12]_PORT_A_data_in, C1_q_a[12]_clock_0, , , );
+C1_q_a[12]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[12]_PORT_A_address_reg = DFFE(C1_q_a[12]_PORT_A_address, C1_q_a[12]_clock_0, , , );
+C1_q_a[12]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[12]_PORT_B_address_reg = DFFE(C1_q_a[12]_PORT_B_address, C1_q_a[12]_clock_0, , , );
+C1_q_a[12]_PORT_A_write_enable = memory_write;
+C1_q_a[12]_PORT_A_write_enable_reg = DFFE(C1_q_a[12]_PORT_A_write_enable, C1_q_a[12]_clock_0, , , );
+C1_q_a[12]_clock_0 = clock;
+C1_q_a[12]_PORT_A_data_out = MEMORY(C1_q_a[12]_PORT_A_data_in_reg, , C1_q_a[12]_PORT_A_address_reg, C1_q_a[12]_PORT_B_address_reg, C1_q_a[12]_PORT_A_write_enable_reg, , , , C1_q_a[12]_clock_0, , , , , );
+C1_q_a[12] = C1_q_a[12]_PORT_A_data_out[0];
+
+
+--C1_q_a[13] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[13]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[13]_PORT_A_data_in = register_AC[13];
+C1_q_a[13]_PORT_A_data_in_reg = DFFE(C1_q_a[13]_PORT_A_data_in, C1_q_a[13]_clock_0, , , );
+C1_q_a[13]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[13]_PORT_A_address_reg = DFFE(C1_q_a[13]_PORT_A_address, C1_q_a[13]_clock_0, , , );
+C1_q_a[13]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[13]_PORT_B_address_reg = DFFE(C1_q_a[13]_PORT_B_address, C1_q_a[13]_clock_0, , , );
+C1_q_a[13]_PORT_A_write_enable = memory_write;
+C1_q_a[13]_PORT_A_write_enable_reg = DFFE(C1_q_a[13]_PORT_A_write_enable, C1_q_a[13]_clock_0, , , );
+C1_q_a[13]_clock_0 = clock;
+C1_q_a[13]_PORT_A_data_out = MEMORY(C1_q_a[13]_PORT_A_data_in_reg, , C1_q_a[13]_PORT_A_address_reg, C1_q_a[13]_PORT_B_address_reg, C1_q_a[13]_PORT_A_write_enable_reg, , , , C1_q_a[13]_clock_0, , , , , );
+C1_q_a[13] = C1_q_a[13]_PORT_A_data_out[0];
+
+
+--C1_q_a[14] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[14]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[14]_PORT_A_data_in = register_AC[14];
+C1_q_a[14]_PORT_A_data_in_reg = DFFE(C1_q_a[14]_PORT_A_data_in, C1_q_a[14]_clock_0, , , );
+C1_q_a[14]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[14]_PORT_A_address_reg = DFFE(C1_q_a[14]_PORT_A_address, C1_q_a[14]_clock_0, , , );
+C1_q_a[14]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[14]_PORT_B_address_reg = DFFE(C1_q_a[14]_PORT_B_address, C1_q_a[14]_clock_0, , , );
+C1_q_a[14]_PORT_A_write_enable = memory_write;
+C1_q_a[14]_PORT_A_write_enable_reg = DFFE(C1_q_a[14]_PORT_A_write_enable, C1_q_a[14]_clock_0, , , );
+C1_q_a[14]_clock_0 = clock;
+C1_q_a[14]_PORT_A_data_out = MEMORY(C1_q_a[14]_PORT_A_data_in_reg, , C1_q_a[14]_PORT_A_address_reg, C1_q_a[14]_PORT_B_address_reg, C1_q_a[14]_PORT_A_write_enable_reg, , , , C1_q_a[14]_clock_0, , , , , );
+C1_q_a[14] = C1_q_a[14]_PORT_A_data_out[0];
+
+
+--C1_q_a[15] is altsyncram:memory|altsyncram_91h3:auto_generated|q_a[15]
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 256, Port A Width: 1
+--Port A Logical Depth: 256, Port A Logical Width: 16
+--Port A Input: Registered, Port A Output: Un-registered
+C1_q_a[15]_PORT_A_data_in = register_AC[15];
+C1_q_a[15]_PORT_A_data_in_reg = DFFE(C1_q_a[15]_PORT_A_data_in, C1_q_a[15]_clock_0, , , );
+C1_q_a[15]_PORT_A_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[15]_PORT_A_address_reg = DFFE(C1_q_a[15]_PORT_A_address, C1_q_a[15]_clock_0, , , );
+C1_q_a[15]_PORT_B_address = BUS(A1L184, A1L183, A1L182, A1L181, A1L180, A1L179, A1L178, A1L177);
+C1_q_a[15]_PORT_B_address_reg = DFFE(C1_q_a[15]_PORT_B_address, C1_q_a[15]_clock_0, , , );
+C1_q_a[15]_PORT_A_write_enable = memory_write;
+C1_q_a[15]_PORT_A_write_enable_reg = DFFE(C1_q_a[15]_PORT_A_write_enable, C1_q_a[15]_clock_0, , , );
+C1_q_a[15]_clock_0 = clock;
+C1_q_a[15]_PORT_A_data_out = MEMORY(C1_q_a[15]_PORT_A_data_in_reg, , C1_q_a[15]_PORT_A_address_reg, C1_q_a[15]_PORT_B_address_reg, C1_q_a[15]_PORT_A_write_enable_reg, , , , C1_q_a[15]_clock_0, , , , , );
+C1_q_a[15] = C1_q_a[15]_PORT_A_data_out[0];
+
+
+--instruction_register[0] is instruction_register[0]
+instruction_register[0] = DFFEAS(C1_q_a[0], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--state.execute_jump is state.execute_jump
+state.execute_jump = DFFEAS(A1L197, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--state.decode is state.decode
+state.decode = DFFEAS(state.fetch, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--state.execute_store is state.execute_store
+state.execute_store = DFFEAS(A1L198, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--state.execute_store2 is state.execute_store2
+state.execute_store2 = DFFEAS(state.execute_store, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--WideOr7 is WideOr7
+WideOr7 = state.execute_jump # state.decode # state.execute_store # state.execute_store2;
+
+
+--state.execute_add is state.execute_add
+state.execute_add = DFFEAS(A1L199, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--state.execute_load is state.execute_load
+state.execute_load = DFFEAS(A1L200, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--state.fetch is state.fetch
+state.fetch = DFFEAS(A1L176, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--state.execute_store3 is state.execute_store3
+state.execute_store3 = DFFEAS(state.execute_store2, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--A1L201 is WideOr6~12
+A1L201 = state.execute_add # state.execute_load # state.fetch # state.execute_store3;
+
+
+--A1L184 is Selector33~78
+A1L184 = program_counter[0] & (A1L201 # instruction_register[0] & WideOr7) # !program_counter[0] & instruction_register[0] & WideOr7;
+
+
+--instruction_register[1] is instruction_register[1]
+instruction_register[1] = DFFEAS(C1_q_a[1], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L183 is Selector32~78
+A1L183 = program_counter[1] & (A1L201 # WideOr7 & instruction_register[1]) # !program_counter[1] & WideOr7 & instruction_register[1];
+
+
+--instruction_register[2] is instruction_register[2]
+instruction_register[2] = DFFEAS(C1_q_a[2], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L182 is Selector31~78
+A1L182 = program_counter[2] & (A1L201 # WideOr7 & instruction_register[2]) # !program_counter[2] & WideOr7 & instruction_register[2];
+
+
+--instruction_register[3] is instruction_register[3]
+instruction_register[3] = DFFEAS(C1_q_a[3], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L181 is Selector30~78
+A1L181 = program_counter[3] & (A1L201 # WideOr7 & instruction_register[3]) # !program_counter[3] & WideOr7 & instruction_register[3];
+
+
+--instruction_register[4] is instruction_register[4]
+instruction_register[4] = DFFEAS(C1_q_a[4], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L180 is Selector29~78
+A1L180 = program_counter[4] & (A1L201 # WideOr7 & instruction_register[4]) # !program_counter[4] & WideOr7 & instruction_register[4];
+
+
+--instruction_register[5] is instruction_register[5]
+instruction_register[5] = DFFEAS(C1_q_a[5], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L179 is Selector28~78
+A1L179 = program_counter[5] & (A1L201 # WideOr7 & instruction_register[5]) # !program_counter[5] & WideOr7 & instruction_register[5];
+
+
+--instruction_register[6] is instruction_register[6]
+instruction_register[6] = DFFEAS(C1_q_a[6], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L178 is Selector27~78
+A1L178 = program_counter[6] & (A1L201 # WideOr7 & instruction_register[6]) # !program_counter[6] & WideOr7 & instruction_register[6];
+
+
+--instruction_register[7] is instruction_register[7]
+instruction_register[7] = DFFEAS(C1_q_a[7], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L177 is Selector26~78
+A1L177 = program_counter[7] & (A1L201 # WideOr7 & instruction_register[7]) # !program_counter[7] & WideOr7 & instruction_register[7];
+
+
+--A1L1 is Add0~164
+A1L1 = program_counter[0] $ VCC;
+
+--A1L2 is Add0~165
+A1L2 = CARRY(program_counter[0]);
+
+
+--A1L159 is Selector7~22
+A1L159 = state.execute_jump & instruction_register[0] # !state.execute_jump & (state.fetch & A1L1);
+
+
+--state.reset_pc is state.reset_pc
+state.reset_pc = DFFEAS(VCC, clock, !reset,  ,  ,  ,  ,  ,  );
+
+
+--A1L99 is program_counter[0]~54
+A1L99 = !reset & (state.execute_jump # state.fetch # !state.reset_pc);
+
+
+--A1L3 is Add0~166
+A1L3 = program_counter[1] & !A1L2 # !program_counter[1] & (A1L2 # GND);
+
+--A1L4 is Add0~167
+A1L4 = CARRY(!A1L2 # !program_counter[1]);
+
+
+--A1L158 is Selector6~22
+A1L158 = state.execute_jump & instruction_register[1] # !state.execute_jump & (state.fetch & A1L3);
+
+
+--A1L5 is Add0~168
+A1L5 = program_counter[2] & (A1L4 $ GND) # !program_counter[2] & !A1L4 & VCC;
+
+--A1L6 is Add0~169
+A1L6 = CARRY(program_counter[2] & !A1L4);
+
+
+--A1L157 is Selector5~22
+A1L157 = state.execute_jump & instruction_register[2] # !state.execute_jump & (state.fetch & A1L5);
+
+
+--A1L7 is Add0~170
+A1L7 = program_counter[3] & !A1L6 # !program_counter[3] & (A1L6 # GND);
+
+--A1L8 is Add0~171
+A1L8 = CARRY(!A1L6 # !program_counter[3]);
+
+
+--A1L156 is Selector4~22
+A1L156 = state.execute_jump & instruction_register[3] # !state.execute_jump & (state.fetch & A1L7);
+
+
+--A1L9 is Add0~172
+A1L9 = program_counter[4] & (A1L8 $ GND) # !program_counter[4] & !A1L8 & VCC;
+
+--A1L10 is Add0~173
+A1L10 = CARRY(program_counter[4] & !A1L8);
+
+
+--A1L155 is Selector3~22
+A1L155 = state.execute_jump & instruction_register[4] # !state.execute_jump & (state.fetch & A1L9);
+
+
+--A1L11 is Add0~174
+A1L11 = program_counter[5] & !A1L10 # !program_counter[5] & (A1L10 # GND);
+
+--A1L12 is Add0~175
+A1L12 = CARRY(!A1L10 # !program_counter[5]);
+
+
+--A1L154 is Selector2~22
+A1L154 = state.execute_jump & instruction_register[5] # !state.execute_jump & (state.fetch & A1L11);
+
+
+--A1L13 is Add0~176
+A1L13 = program_counter[6] & (A1L12 $ GND) # !program_counter[6] & !A1L12 & VCC;
+
+--A1L14 is Add0~177
+A1L14 = CARRY(program_counter[6] & !A1L12);
+
+
+--A1L153 is Selector1~22
+A1L153 = state.execute_jump & instruction_register[6] # !state.execute_jump & (state.fetch & A1L13);
+
+
+--A1L15 is Add0~178
+A1L15 = program_counter[7] $ A1L14;
+
+
+--A1L152 is Selector0~22
+A1L152 = state.execute_jump & instruction_register[7] # !state.execute_jump & (A1L15 & state.fetch);
+
+
+--A1L17 is Add1~392
+A1L17 = C1_q_a[0] & (register_AC[0] $ VCC) # !C1_q_a[0] & register_AC[0] & VCC;
+
+--A1L18 is Add1~393
+A1L18 = CARRY(C1_q_a[0] & register_AC[0]);
+
+
+--A1L175 is Selector23~22
+A1L175 = state.execute_load & C1_q_a[0] # !state.execute_load & (state.execute_add & A1L17);
+
+
+--A1L118 is register_AC[0]~86
+A1L118 = !reset & (state.execute_add # state.execute_load # !state.reset_pc);
+
+
+--A1L19 is Add1~394
+A1L19 = C1_q_a[1] & (register_AC[1] & A1L18 & VCC # !register_AC[1] & !A1L18) # !C1_q_a[1] & (register_AC[1] & !A1L18 # !register_AC[1] & (A1L18 # GND));
+
+--A1L20 is Add1~395
+A1L20 = CARRY(C1_q_a[1] & !register_AC[1] & !A1L18 # !C1_q_a[1] & (!A1L18 # !register_AC[1]));
+
+
+--A1L174 is Selector22~22
+A1L174 = state.execute_load & C1_q_a[1] # !state.execute_load & (state.execute_add & A1L19);
+
+
+--A1L21 is Add1~396
+A1L21 = (C1_q_a[2] $ register_AC[2] $ !A1L20) # GND;
+
+--A1L22 is Add1~397
+A1L22 = CARRY(C1_q_a[2] & (register_AC[2] # !A1L20) # !C1_q_a[2] & register_AC[2] & !A1L20);
+
+
+--A1L173 is Selector21~22
+A1L173 = state.execute_load & C1_q_a[2] # !state.execute_load & (state.execute_add & A1L21);
+
+
+--A1L23 is Add1~398
+A1L23 = C1_q_a[3] & (register_AC[3] & A1L22 & VCC # !register_AC[3] & !A1L22) # !C1_q_a[3] & (register_AC[3] & !A1L22 # !register_AC[3] & (A1L22 # GND));
+
+--A1L24 is Add1~399
+A1L24 = CARRY(C1_q_a[3] & !register_AC[3] & !A1L22 # !C1_q_a[3] & (!A1L22 # !register_AC[3]));
+
+
+--A1L172 is Selector20~22
+A1L172 = state.execute_load & C1_q_a[3] # !state.execute_load & (state.execute_add & A1L23);
+
+
+--A1L25 is Add1~400
+A1L25 = (C1_q_a[4] $ register_AC[4] $ !A1L24) # GND;
+
+--A1L26 is Add1~401
+A1L26 = CARRY(C1_q_a[4] & (register_AC[4] # !A1L24) # !C1_q_a[4] & register_AC[4] & !A1L24);
+
+
+--A1L171 is Selector19~22
+A1L171 = state.execute_load & C1_q_a[4] # !state.execute_load & (state.execute_add & A1L25);
+
+
+--A1L27 is Add1~402
+A1L27 = C1_q_a[5] & (register_AC[5] & A1L26 & VCC # !register_AC[5] & !A1L26) # !C1_q_a[5] & (register_AC[5] & !A1L26 # !register_AC[5] & (A1L26 # GND));
+
+--A1L28 is Add1~403
+A1L28 = CARRY(C1_q_a[5] & !register_AC[5] & !A1L26 # !C1_q_a[5] & (!A1L26 # !register_AC[5]));
+
+
+--A1L170 is Selector18~22
+A1L170 = state.execute_load & C1_q_a[5] # !state.execute_load & (state.execute_add & A1L27);
+
+
+--A1L29 is Add1~404
+A1L29 = (C1_q_a[6] $ register_AC[6] $ !A1L28) # GND;
+
+--A1L30 is Add1~405
+A1L30 = CARRY(C1_q_a[6] & (register_AC[6] # !A1L28) # !C1_q_a[6] & register_AC[6] & !A1L28);
+
+
+--A1L169 is Selector17~22
+A1L169 = state.execute_load & C1_q_a[6] # !state.execute_load & (state.execute_add & A1L29);
+
+
+--A1L31 is Add1~406
+A1L31 = C1_q_a[7] & (register_AC[7] & A1L30 & VCC # !register_AC[7] & !A1L30) # !C1_q_a[7] & (register_AC[7] & !A1L30 # !register_AC[7] & (A1L30 # GND));
+
+--A1L32 is Add1~407
+A1L32 = CARRY(C1_q_a[7] & !register_AC[7] & !A1L30 # !C1_q_a[7] & (!A1L30 # !register_AC[7]));
+
+
+--A1L168 is Selector16~22
+A1L168 = state.execute_load & C1_q_a[7] # !state.execute_load & (state.execute_add & A1L31);
+
+
+--A1L33 is Add1~408
+A1L33 = (C1_q_a[8] $ register_AC[8] $ !A1L32) # GND;
+
+--A1L34 is Add1~409
+A1L34 = CARRY(C1_q_a[8] & (register_AC[8] # !A1L32) # !C1_q_a[8] & register_AC[8] & !A1L32);
+
+
+--A1L167 is Selector15~22
+A1L167 = state.execute_load & C1_q_a[8] # !state.execute_load & (state.execute_add & A1L33);
+
+
+--A1L35 is Add1~410
+A1L35 = C1_q_a[9] & (register_AC[9] & A1L34 & VCC # !register_AC[9] & !A1L34) # !C1_q_a[9] & (register_AC[9] & !A1L34 # !register_AC[9] & (A1L34 # GND));
+
+--A1L36 is Add1~411
+A1L36 = CARRY(C1_q_a[9] & !register_AC[9] & !A1L34 # !C1_q_a[9] & (!A1L34 # !register_AC[9]));
+
+
+--A1L166 is Selector14~22
+A1L166 = state.execute_load & C1_q_a[9] # !state.execute_load & (state.execute_add & A1L35);
+
+
+--A1L37 is Add1~412
+A1L37 = (C1_q_a[10] $ register_AC[10] $ !A1L36) # GND;
+
+--A1L38 is Add1~413
+A1L38 = CARRY(C1_q_a[10] & (register_AC[10] # !A1L36) # !C1_q_a[10] & register_AC[10] & !A1L36);
+
+
+--A1L165 is Selector13~22
+A1L165 = state.execute_load & C1_q_a[10] # !state.execute_load & (state.execute_add & A1L37);
+
+
+--A1L39 is Add1~414
+A1L39 = C1_q_a[11] & (register_AC[11] & A1L38 & VCC # !register_AC[11] & !A1L38) # !C1_q_a[11] & (register_AC[11] & !A1L38 # !register_AC[11] & (A1L38 # GND));
+
+--A1L40 is Add1~415
+A1L40 = CARRY(C1_q_a[11] & !register_AC[11] & !A1L38 # !C1_q_a[11] & (!A1L38 # !register_AC[11]));
+
+
+--A1L164 is Selector12~22
+A1L164 = state.execute_load & C1_q_a[11] # !state.execute_load & (state.execute_add & A1L39);
+
+
+--A1L41 is Add1~416
+A1L41 = (C1_q_a[12] $ register_AC[12] $ !A1L40) # GND;
+
+--A1L42 is Add1~417
+A1L42 = CARRY(C1_q_a[12] & (register_AC[12] # !A1L40) # !C1_q_a[12] & register_AC[12] & !A1L40);
+
+
+--A1L163 is Selector11~22
+A1L163 = state.execute_load & C1_q_a[12] # !state.execute_load & (state.execute_add & A1L41);
+
+
+--A1L43 is Add1~418
+A1L43 = C1_q_a[13] & (register_AC[13] & A1L42 & VCC # !register_AC[13] & !A1L42) # !C1_q_a[13] & (register_AC[13] & !A1L42 # !register_AC[13] & (A1L42 # GND));
+
+--A1L44 is Add1~419
+A1L44 = CARRY(C1_q_a[13] & !register_AC[13] & !A1L42 # !C1_q_a[13] & (!A1L42 # !register_AC[13]));
+
+
+--A1L162 is Selector10~22
+A1L162 = state.execute_load & C1_q_a[13] # !state.execute_load & (state.execute_add & A1L43);
+
+
+--A1L45 is Add1~420
+A1L45 = (C1_q_a[14] $ register_AC[14] $ !A1L44) # GND;
+
+--A1L46 is Add1~421
+A1L46 = CARRY(C1_q_a[14] & (register_AC[14] # !A1L44) # !C1_q_a[14] & register_AC[14] & !A1L44);
+
+
+--A1L161 is Selector9~22
+A1L161 = state.execute_load & C1_q_a[14] # !state.execute_load & (state.execute_add & A1L45);
+
+
+--A1L47 is Add1~422
+A1L47 = C1_q_a[15] $ register_AC[15] $ A1L46;
+
+
+--A1L160 is Selector8~22
+A1L160 = state.execute_load & C1_q_a[15] # !state.execute_load & (A1L47 & state.execute_add);
+
+
+--memory_write is memory_write
+memory_write = DFFEAS(A1L96, clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L52 is instruction_register[0]~567
+A1L52 = state.fetch & !reset;
+
+
+--instruction_register[8] is instruction_register[8]
+instruction_register[8] = DFFEAS(C1_q_a[8], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--instruction_register[9] is instruction_register[9]
+instruction_register[9] = DFFEAS(C1_q_a[9], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--instruction_register[15] is instruction_register[15]
+instruction_register[15] = DFFEAS(C1_q_a[15], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--instruction_register[14] is instruction_register[14]
+instruction_register[14] = DFFEAS(C1_q_a[14], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--instruction_register[13] is instruction_register[13]
+instruction_register[13] = DFFEAS(C1_q_a[13], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--instruction_register[12] is instruction_register[12]
+instruction_register[12] = DFFEAS(C1_q_a[12], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L195 is state~107
+A1L195 = !instruction_register[15] & !instruction_register[14] & !instruction_register[13] & !instruction_register[12];
+
+
+--instruction_register[11] is instruction_register[11]
+instruction_register[11] = DFFEAS(C1_q_a[11], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--instruction_register[10] is instruction_register[10]
+instruction_register[10] = DFFEAS(C1_q_a[10], clock,  ,  , A1L52,  ,  ,  ,  );
+
+
+--A1L196 is state~108
+A1L196 = A1L195 & !instruction_register[11] & !instruction_register[10];
+
+
+--A1L197 is state~109
+A1L197 = state.decode & instruction_register[8] & instruction_register[9] & A1L196;
+
+
+--A1L198 is state~110
+A1L198 = state.decode & instruction_register[8] & A1L196 & !instruction_register[9];
+
+
+--A1L199 is state~111
+A1L199 = state.decode & A1L196 & !instruction_register[8] & !instruction_register[9];
+
+
+--A1L200 is state~112
+A1L200 = state.decode & instruction_register[9] & A1L196 & !instruction_register[8];
+
+
+--A1L193 is state.fetch~46
+A1L193 = !state.execute_store & !state.execute_store2;
+
+
+--A1L176 is Selector25~99
+A1L176 = state.decode & (!A1L196) # !state.decode & A1L193 & !state.fetch;
+
+
+--A1L95 is memory_write~57
+A1L95 = state.reset_pc & !state.execute_store2 & !state.fetch;
+
+
+--A1L96 is memory_write~58
+A1L96 = reset & memory_write # !reset & (state.execute_store # memory_write & A1L95);
+
+
+--clock is clock
+--operation mode is input
+
+clock = INPUT();
+
+
+--reset is reset
+--operation mode is input
+
+reset = INPUT();
+
+
+--program_counter_out[0] is program_counter_out[0]
+--operation mode is output
+
+program_counter_out[0] = OUTPUT(program_counter[0]);
+
+
+--program_counter_out[1] is program_counter_out[1]
+--operation mode is output
+
+program_counter_out[1] = OUTPUT(program_counter[1]);
+
+
+--program_counter_out[2] is program_counter_out[2]
+--operation mode is output
+
+program_counter_out[2] = OUTPUT(program_counter[2]);
+
+
+--program_counter_out[3] is program_counter_out[3]
+--operation mode is output
+
+program_counter_out[3] = OUTPUT(program_counter[3]);
+
+
+--program_counter_out[4] is program_counter_out[4]
+--operation mode is output
+
+program_counter_out[4] = OUTPUT(program_counter[4]);
+
+
+--program_counter_out[5] is program_counter_out[5]
+--operation mode is output
+
+program_counter_out[5] = OUTPUT(program_counter[5]);
+
+
+--program_counter_out[6] is program_counter_out[6]
+--operation mode is output
+
+program_counter_out[6] = OUTPUT(program_counter[6]);
+
+
+--program_counter_out[7] is program_counter_out[7]
+--operation mode is output
+
+program_counter_out[7] = OUTPUT(program_counter[7]);
+
+
+--register_AC_out[0] is register_AC_out[0]
+--operation mode is output
+
+register_AC_out[0] = OUTPUT(register_AC[0]);
+
+
+--register_AC_out[1] is register_AC_out[1]
+--operation mode is output
+
+register_AC_out[1] = OUTPUT(register_AC[1]);
+
+
+--register_AC_out[2] is register_AC_out[2]
+--operation mode is output
+
+register_AC_out[2] = OUTPUT(register_AC[2]);
+
+
+--register_AC_out[3] is register_AC_out[3]
+--operation mode is output
+
+register_AC_out[3] = OUTPUT(register_AC[3]);
+
+
+--register_AC_out[4] is register_AC_out[4]
+--operation mode is output
+
+register_AC_out[4] = OUTPUT(register_AC[4]);
+
+
+--register_AC_out[5] is register_AC_out[5]
+--operation mode is output
+
+register_AC_out[5] = OUTPUT(register_AC[5]);
+
+
+--register_AC_out[6] is register_AC_out[6]
+--operation mode is output
+
+register_AC_out[6] = OUTPUT(register_AC[6]);
+
+
+--register_AC_out[7] is register_AC_out[7]
+--operation mode is output
+
+register_AC_out[7] = OUTPUT(register_AC[7]);
+
+
+--register_AC_out[8] is register_AC_out[8]
+--operation mode is output
+
+register_AC_out[8] = OUTPUT(register_AC[8]);
+
+
+--register_AC_out[9] is register_AC_out[9]
+--operation mode is output
+
+register_AC_out[9] = OUTPUT(register_AC[9]);
+
+
+--register_AC_out[10] is register_AC_out[10]
+--operation mode is output
+
+register_AC_out[10] = OUTPUT(register_AC[10]);
+
+
+--register_AC_out[11] is register_AC_out[11]
+--operation mode is output
+
+register_AC_out[11] = OUTPUT(register_AC[11]);
+
+
+--register_AC_out[12] is register_AC_out[12]
+--operation mode is output
+
+register_AC_out[12] = OUTPUT(register_AC[12]);
+
+
+--register_AC_out[13] is register_AC_out[13]
+--operation mode is output
+
+register_AC_out[13] = OUTPUT(register_AC[13]);
+
+
+--register_AC_out[14] is register_AC_out[14]
+--operation mode is output
+
+register_AC_out[14] = OUTPUT(register_AC[14]);
+
+
+--register_AC_out[15] is register_AC_out[15]
+--operation mode is output
+
+register_AC_out[15] = OUTPUT(register_AC[15]);
+
+
+--memory_data_register_out[0] is memory_data_register_out[0]
+--operation mode is output
+
+memory_data_register_out[0] = OUTPUT(C1_q_a[0]);
+
+
+--memory_data_register_out[1] is memory_data_register_out[1]
+--operation mode is output
+
+memory_data_register_out[1] = OUTPUT(C1_q_a[1]);
+
+
+--memory_data_register_out[2] is memory_data_register_out[2]
+--operation mode is output
+
+memory_data_register_out[2] = OUTPUT(C1_q_a[2]);
+
+
+--memory_data_register_out[3] is memory_data_register_out[3]
+--operation mode is output
+
+memory_data_register_out[3] = OUTPUT(C1_q_a[3]);
+
+
+--memory_data_register_out[4] is memory_data_register_out[4]
+--operation mode is output
+
+memory_data_register_out[4] = OUTPUT(C1_q_a[4]);
+
+
+--memory_data_register_out[5] is memory_data_register_out[5]
+--operation mode is output
+
+memory_data_register_out[5] = OUTPUT(C1_q_a[5]);
+
+
+--memory_data_register_out[6] is memory_data_register_out[6]
+--operation mode is output
+
+memory_data_register_out[6] = OUTPUT(C1_q_a[6]);
+
+
+--memory_data_register_out[7] is memory_data_register_out[7]
+--operation mode is output
+
+memory_data_register_out[7] = OUTPUT(C1_q_a[7]);
+
+
+--memory_data_register_out[8] is memory_data_register_out[8]
+--operation mode is output
+
+memory_data_register_out[8] = OUTPUT(C1_q_a[8]);
+
+
+--memory_data_register_out[9] is memory_data_register_out[9]
+--operation mode is output
+
+memory_data_register_out[9] = OUTPUT(C1_q_a[9]);
+
+
+--memory_data_register_out[10] is memory_data_register_out[10]
+--operation mode is output
+
+memory_data_register_out[10] = OUTPUT(C1_q_a[10]);
+
+
+--memory_data_register_out[11] is memory_data_register_out[11]
+--operation mode is output
+
+memory_data_register_out[11] = OUTPUT(C1_q_a[11]);
+
+
+--memory_data_register_out[12] is memory_data_register_out[12]
+--operation mode is output
+
+memory_data_register_out[12] = OUTPUT(C1_q_a[12]);
+
+
+--memory_data_register_out[13] is memory_data_register_out[13]
+--operation mode is output
+
+memory_data_register_out[13] = OUTPUT(C1_q_a[13]);
+
+
+--memory_data_register_out[14] is memory_data_register_out[14]
+--operation mode is output
+
+memory_data_register_out[14] = OUTPUT(C1_q_a[14]);
+
+
+--memory_data_register_out[15] is memory_data_register_out[15]
+--operation mode is output
+
+memory_data_register_out[15] = OUTPUT(C1_q_a[15]);
+
+
+--memory_address_register_out[0] is memory_address_register_out[0]
+--operation mode is output
+
+memory_address_register_out[0] = OUTPUT(A1L184);
+
+
+--memory_address_register_out[1] is memory_address_register_out[1]
+--operation mode is output
+
+memory_address_register_out[1] = OUTPUT(A1L183);
+
+
+--memory_address_register_out[2] is memory_address_register_out[2]
+--operation mode is output
+
+memory_address_register_out[2] = OUTPUT(A1L182);
+
+
+--memory_address_register_out[3] is memory_address_register_out[3]
+--operation mode is output
+
+memory_address_register_out[3] = OUTPUT(A1L181);
+
+
+--memory_address_register_out[4] is memory_address_register_out[4]
+--operation mode is output
+
+memory_address_register_out[4] = OUTPUT(A1L180);
+
+
+--memory_address_register_out[5] is memory_address_register_out[5]
+--operation mode is output
+
+memory_address_register_out[5] = OUTPUT(A1L179);
+
+
+--memory_address_register_out[6] is memory_address_register_out[6]
+--operation mode is output
+
+memory_address_register_out[6] = OUTPUT(A1L178);
+
+
+--memory_address_register_out[7] is memory_address_register_out[7]
+--operation mode is output
+
+memory_address_register_out[7] = OUTPUT(A1L177);
+
+

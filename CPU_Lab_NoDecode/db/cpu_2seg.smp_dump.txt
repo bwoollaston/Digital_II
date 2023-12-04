@@ -1,0 +1,10 @@
+
+State Machine - |cpu_2seg|state_reg
+Name state_reg.execute_jump state_reg.execute_store2 state_reg.execute_store state_reg.execute_load state_reg.execute_add state_reg.fetch state_reg.INIT 
+state_reg.INIT 0 0 0 0 0 0 0 
+state_reg.fetch 0 0 0 0 0 1 1 
+state_reg.execute_add 0 0 0 0 1 0 1 
+state_reg.execute_load 0 0 0 1 0 0 1 
+state_reg.execute_store 0 0 1 0 0 0 1 
+state_reg.execute_store2 0 1 0 0 0 0 1 
+state_reg.execute_jump 1 0 0 0 0 0 1 

@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+dC:\ModelSim\altera\13.0sp1
+Ecpu_2seg
+Z0 w1701678797
+Z1 DPx9 altera_mf 20 altera_mf_components 0 22 dN>@>Mze:JEj3f_7zNO2S2
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab_NoDecode
+Z6 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg.vhd
+Z7 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg.vhd
+l0
+L8
+V_V@HM2?^Y_GV9E<o;3UAF0
+!s100 XJM_YK`efVS[OD:G=n]bn0
+Z8 OV;C;10.1d;51
+32
+!i10b 1
+Z9 !s108 1701678827.720000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg.vhd|
+Z11 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+Aa
+R1
+R2
+R3
+R4
+Z14 DEx4 work 8 cpu_2seg 0 22 _V@HM2?^Y_GV9E<o;3UAF0
+l27
+L17
+VJVV=94C<XNSJZLWjYMJa;2
+!s100 eamRUg@1Ye@<`8iBheZ010
+R8
+32
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Ecpu_2seg_tb
+Z15 w1701589831
+R2
+R3
+R4
+R5
+Z16 8C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg_tb.vhd
+Z17 FC:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg_tb.vhd
+l0
+L5
+VN3^o5OC8aaPH2i=Nm>zGV3
+R8
+32
+Z18 !s108 1701677917.944000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg_tb.vhd|
+Z20 !s107 C:/Users/cwool/OneDrive/Documents/EngineeringPhysics/Digital_II/CPU_Lab_NoDecode/cpu_2seg_tb.vhd|
+R12
+R13
+!s100 TkP:EE3HQKSg1e;[PO<nD2
+!i10b 1
+Aarch
+R1
+R14
+R2
+R3
+R4
+DEx4 work 11 cpu_2seg_tb 0 22 N3^o5OC8aaPH2i=Nm>zGV3
+l16
+L8
+VWmVchmAiGP^WCO]DoVUS11
+!s100 TWB0NjO<j^WDDVM`hhCdE0
+R8
+32
+R18
+R19
+R20
+R12
+R13
+!i10b 1
