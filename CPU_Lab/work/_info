@@ -4,7 +4,7 @@ K3
 cModel Technology
 dC:\ModelSim\altera\13.0sp1
 Ecpu_2seg
-Z0 w1701588413
+Z0 w1701665255
 Z1 DPx9 altera_mf 20 altera_mf_components 0 22 dN>@>Mze:JEj3f_7zNO2S2
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
@@ -17,7 +17,7 @@ L8
 V_V@HM2?^Y_GV9E<o;3UAF0
 Z8 OV;C;10.1d;51
 32
-Z9 !s108 1701589849.812000
+Z9 !s108 1701665271.615000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg.vhd|
 Z11 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg.vhd|
 Z12 o-work work -2002 -explicit -O0
@@ -32,8 +32,7 @@ R4
 Z14 DEx4 work 8 cpu_2seg 0 22 _V@HM2?^Y_GV9E<o;3UAF0
 l27
 L17
-V[?lQmcUVT9b@V7Y=SHV_P3
-!s100 h;EMO5YgWAVI`OoFHCI8i1
+VdclSWU^UM?j655Cz_ccH[0
 R8
 32
 R9
@@ -41,6 +40,7 @@ R10
 R11
 R12
 R13
+!s100 1@IP>M9GSd9RkF@T3YfJQ0
 !i10b 1
 Ecpu_2seg_tb
 Z15 w1701589831
@@ -57,7 +57,7 @@ VN3^o5OC8aaPH2i=Nm>zGV3
 R8
 32
 !i10b 1
-Z18 !s108 1701589849.942000
+Z18 !s108 1701665271.762000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg_tb.vhd|
 Z20 !s107 C:\Users\cwool\OneDrive\Documents\EngineeringPhysics\Digital_II\CPU_Lab\cpu_2seg_tb.vhd|
 R12
@@ -71,8 +71,8 @@ R4
 Z21 DEx4 work 11 cpu_2seg_tb 0 22 N3^o5OC8aaPH2i=Nm>zGV3
 l16
 L8
-VWmVchmAiGP^WCO]DoVUS11
-!s100 TWB0NjO<j^WDDVM`hhCdE0
+Z22 VWmVchmAiGP^WCO]DoVUS11
+Z23 !s100 TWB0NjO<j^WDDVM`hhCdE0
 R8
 32
 !i10b 1

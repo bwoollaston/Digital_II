@@ -13,8 +13,8 @@ CONTENT
 	02		:	0012;	% ADD MEM(12) to AC %
 	03		:	0113;	% STORE	AC in MEM(13) %
 	04		:	0210;	% LOAD AC with MEM(10) "Destroy AC" %
-	05		:	0212;	% LOAD AC with MEM(13) check for new value of FFFF %
-	06		:	0304;	% JUMP to 04 (loop forever) %
+	05		:	0213;	% LOAD AC with MEM(13) check for new value of FFFF %
+	06		:	0306;	% JUMP to 04 (loop forever) %
 	10		:	1111;	% Data Value of B %
 	11		:	2222;	% Data Value of C %
 	12		:	4444;	% Data Value of D %

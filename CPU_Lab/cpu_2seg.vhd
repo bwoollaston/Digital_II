@@ -23,7 +23,7 @@ ARCHITECTURE a OF cpu_2seg IS
   SIGNAL pc_reg, pc_next : unsigned( 7 DOWNTO 0 );
   SIGNAL mem_data_bus    : std_logic_vector(15 DOWNTO 0 );
   SIGNAL mem_address_bus : std_logic_vector( 7 DOWNTO 0 );
-  SIGNAL memory_write : STD_LOGIC;
+  SIGNAL memory_write    : STD_LOGIC;
   BEGIN
 
   -- Use Altsyncram function for computer's memory (256 16-bit words)
@@ -35,7 +35,7 @@ ARCHITECTURE a OF cpu_2seg IS
   	        lpm_type => "altsyncram",
   	        outdata_reg_a => "UNREGISTERED",
   		      -- Reads in mif file for initial program and data values
-  	        init_file => "program.mif",
+  	        init_file => "PROGRAM.mif",
   	        intended_device_family => "Cyclone")
 
       PORT MAP (
@@ -54,21 +54,22 @@ ARCHITECTURE a OF cpu_2seg IS
 
   PROCESS ( clock, reset )
   BEGIN
-    IF(reset = '0') THEN
+    IF(reset = '1') THEN
       state_reg <= fetch;
       pc_reg 	<= "00000000";
       ac_reg	<= "0000000000000000";
-      mem_address_bus <= "00000000";
+      ir_reg <= "0000000000000000";
 
     ELSIF(clock'EVENT AND clock = '1') THEN
       state_reg <= state_next;
       pc_reg <= pc_next;
       ac_reg <= ac_next;
+      ir_reg <= ir_next;
 
     END IF;
   END PROCESS;
 
-  PROCESS(state_reg, pc_reg, ac_reg, ir_reg)
+  PROCESS(state_reg, pc_reg, ac_reg, ir_reg, mem_data_bus)
   BEGIN
     state_next <= state_reg;
     pc_next <= pc_reg;

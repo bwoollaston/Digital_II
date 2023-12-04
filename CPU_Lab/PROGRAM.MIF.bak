@@ -1,0 +1,22 @@
+DEPTH = 256;	% Memory depth and width are required	%
+WIDTH = 16;		% Enter a decimal number	%
+
+ADDRESS_RADIX = HEX;	% Address and value radixes are optional	%
+DATA_RADIX = HEX;		% Enter BIN, DEC, HEX, or OCT; unless 	%
+						% otherwise specified, radixes = HEX	%
+-- Specify values for addresses, which can be single address or range
+CONTENT
+	BEGIN
+[00..FF]	:	0000;	% Range--Every address from 00 to FF = 0000 (Default)	%
+	00		:	0210;	% LOAD AC with MEM(10) %
+	01		:	0011;	% ADD MEM(11) to AC %
+	02		:	0012;	% ADD MEM(12) to AC %
+	03		:	0113;	% STORE	AC in MEM(13) %
+	04		:	0210;	% LOAD AC with MEM(10) "Destroy AC" %
+	05		:	0213;	% LOAD AC with MEM(13) check for new value of FFFF %
+	06		:	0304;	% JUMP to 04 (loop forever) %
+	10		:	1111;	% Data Value of B %
+	11		:	2222;	% Data Value of C %
+	12		:	4444;	% Data Value of D %
+	13    : 0000; % Data Value stored by AC %
+END ;
