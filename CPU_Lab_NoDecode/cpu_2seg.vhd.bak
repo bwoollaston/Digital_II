@@ -80,7 +80,7 @@ ARCHITECTURE a OF cpu_2seg IS
     CASE state_reg IS
       WHEN INIT =>
         state_next <= fetch;
-        mem_address_bus <= "00000000";
+        mem_address_bus <= std_logic_vector(pc_reg);
 
       WHEN fetch =>
         ir_next <= unsigned(mem_data_bus);
